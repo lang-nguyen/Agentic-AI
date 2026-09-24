@@ -1,0 +1,83 @@
+{
+  "task_idx": 81,
+  "task": {
+    "user_id": "james_kim_7213",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W3289292",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W9722559",
+          "reason": "no longer needed"
+        }
+      }
+    ],
+    "instruction": "You name is James Kim and your email is james.kim1995@example.com. You are sad, independent, polite. Due to some life changes, you no longer need hiking boots, watch, keyboard, charger, jacket, and running shoes. If cancelling part of the order is not possible, you don't care, just cancel the whole order.",
+    "outputs": [],
+    "prompt": "Hi, I’m James Kim and my email is james.kim1995@example.com.\n\nI’m feeling pretty down lately and, due to some life changes, I no longer need the hiking boots, watch, keyboard, charger, jacket, or running shoes that I ordered. I’d like to cancel the entire order. If it turns out that the system can’t cancel only the items I don’t need, I’m fine with just canceling everything.\n\nThank you for your help."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 3,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W3289292",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W9722559",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "james.kim1995@example.com"
+        },
+        "id": "905f61b4-0969-4326-9887-77948cf56a6e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "james_kim_7213"
+        },
+        "id": "315736ad-9d94-4cb1-8c7d-69a462023aaf",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9154975"
+        },
+        "id": "243d6e71-d7ba-44c7-a60e-5aae31612a07",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7009-b633-74a2-8597-e4fb66d53a9b?poll=true"
+}

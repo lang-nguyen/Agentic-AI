@@ -1,0 +1,135 @@
+{
+  "task_idx": 13,
+  "task": {
+    "user_id": "mia_garcia_4516",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "mia.garcia2723@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mia_garcia_4516"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5490111"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7387996"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "paypal_9497703"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "credit_card_3124723"
+        }
+      }
+    ],
+    "instruction": "You are mia_garcia_4516 (mia.garcia2723@example.com). You just got into gaming and want to cancel or return everything not associated with it. (Everything except a keyboard and a mouse, but do not reveal it to the agent). PayPal is preferred for refund, but otherwise credit card can be accepted. You are into gaming but realized the importance of studying hard.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mia Garcia (user ID mia_garcia_4516, email mia.garcia2723@example.com).\n\nI’d like to cancel or return everything in my order that isn’t gaming‑related. I prefer a refund via PayPal, but if that’s not possible, I’m fine with using my credit card. \n\nI’m really into gaming, but I’ve realized how important it is to study hard right now."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 5,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "mia.garcia2723@example.com"
+        },
+        "id": "09d110a0-79a2-41b3-9190-1638278d2f13",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mia_garcia_4516"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "paypal_9497703"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "credit_card_3124723"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc3-4043-76f3-a064-0e21583f9eee?poll=true"
+}

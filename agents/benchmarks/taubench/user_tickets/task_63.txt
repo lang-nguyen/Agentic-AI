@@ -1,0 +1,33 @@
+#Ticket
+
+__metadata__
+Ticket ID: #a4d9a077-174d-4019-a8b4-4bdf4d6db5ec
+User Name: Chen Johnson  
+ZIP Code: 77004  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Chen Johnson from Houston, TX. I’d like to touch base about a recent order that included a Bluetooth speaker.
+
+First, I was hoping to have a quick fun check—could you guess a famous poem if I give you the first line? (I’ll provide the line in our next exchange if needed). If that doesn’t work out, I’ll move on to the main request.
+
+Here’s what I need help with:
+
+1. **Bluetooth speaker details**  
+   - What was the price of the Bluetooth speaker I purchased?  
+   - What’s the battery life on that model?
+
+2. **If the price is over $300**  
+   - Please cancel the speaker from my order, because I thought it was cheaper than that.
+
+3. **Alternative options**  
+   - Are there any Bluetooth speakers available for less than $300?  
+   - If so, could you add the cheapest one that meets that price point to my order?
+
+4. **Order total**  
+   - Please confirm the total price of my updated order after any changes.
+
+I want to avoid canceling the entire order. If canceling the entire order is the only way to remove the speaker, I’d rather return it later instead of having the whole order canceled. Thank you for helping me with this!

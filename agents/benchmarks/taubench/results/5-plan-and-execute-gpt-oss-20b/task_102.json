@@ -1,0 +1,151 @@
+{
+  "task_idx": 102,
+  "task": {
+    "user_id": "noah_ito_3850",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W4219264",
+          "address1": "144 Lakeview Drive",
+          "address2": "Suite 925",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10228"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4219264",
+          "item_ids": [
+            "8886009523"
+          ],
+          "new_item_ids": [
+            "2407258246"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W6729841",
+          "item_ids": [
+            "3076708684"
+          ],
+          "new_item_ids": [
+            "8302289002"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        }
+      }
+    ],
+    "instruction": "You name is Noah Ito and your zip code is 98187. You are logical, impatient. You just placed an order with two watches, you wan to change its address to your New York address (you don't want to reveal it but it's in your other order). You also want to modify the silicone watch to a metal one. If multiple colors available, you prefer white. For the air purifier you received along with a speaker, you want to exchange the purifier to large size and night mode, but still with HEPA filter. You like to say things in pieces.",
+    "outputs": [],
+    "prompt": "Hi, I’m Noah Ito, zip code 98187. I just placed an order that includes two watches, an air purifier, and a speaker.\n\nFirst, I’d like to change the shipping address to my New York address – the same one I used for a previous order (I’ll provide the details separately to keep it private).\n\nSecond, for the watches:  \n- I want to replace the silicone watch with a metal one.  \n- If there are multiple color options available, my preference is white.\n\nThird, for the air purifier that came with the speaker:  \n- I’d like to exchange it for a larger size that includes a night‑mode feature.  \n- It must still have a HEPA filter.\n\nCould you please process all of these changes in a single request? Thank you!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 3,
+      "extra": 5,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W4219264",
+          "address1": "144 Lakeview Drive",
+          "address2": "Suite 925",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10228"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W4219264",
+          "item_ids": [
+            "8886009523"
+          ],
+          "new_item_ids": [
+            "2407258246"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W6729841",
+          "item_ids": [
+            "3076708684"
+          ],
+          "new_item_ids": [
+            "8302289002"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Noah",
+          "last_name": "Ito",
+          "zip": "98187"
+        },
+        "id": "3539be8e-2d80-4626-aa41-1111e4cd34fe",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "noah_ito_3850"
+        },
+        "id": "2f94babe-0466-460d-a650-528411e496d2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3445693"
+        },
+        "id": "e0319ba4-78a2-44a0-a5b0-1f11a64711c9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4219264"
+        },
+        "id": "805d9abd-2d2c-4f05-a2d4-5534b8d653eb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6729841"
+        },
+        "id": "13061995-0af3-4b8d-912f-00c21e1dd2c4",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7026-cfd8-76f2-a5bd-f043dea6a0a1?poll=true"
+}

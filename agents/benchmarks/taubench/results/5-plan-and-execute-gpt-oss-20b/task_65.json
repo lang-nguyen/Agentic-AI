@@ -1,0 +1,87 @@
+{
+  "task_idx": 65,
+  "task": {
+    "user_id": "james_kovacs_9247",
+    "annotator": "3",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "James",
+          "last_name": "Kovacs",
+          "zip": "95190"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "james_kovacs_9247"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5362037"
+        }
+      }
+    ],
+    "instruction": "You are James Kovacs from San Jose CA, 95190. You want to exchange the bookshelf from your most recent order for a camera that is closest but not more expensive than the price of the bookshelf.",
+    "outputs": [],
+    "prompt": "Hi, I’m James Kovacs from San Jose, CA 95190. I’d like to exchange the bookshelf from my most recent order for a camera that’s as close as possible in price to the bookshelf, but not more expensive than the bookshelf’s price."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 0,
+      "extra": 2,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "James",
+          "last_name": "Kovacs",
+          "zip": "95190"
+        },
+        "id": "e0f46022-4059-47ac-8972-4dbae4c12c38",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "james_kovacs_9247"
+        },
+        "id": "5a9cac80-7b24-4ce0-bcce-ac0fb144d6bf",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5362037"
+        },
+        "id": "b5e2df10-f3e4-4228-b82c-e9ffb1396ba9",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "58b7c8e7-2442-4f82-adc6-e4fdcdd3369a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8940227892"
+        },
+        "id": "c5455d94-b97b-43f7-9462-e4c4cc023aae",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ffb-6462-7992-8778-f8983a8091c4?poll=true"
+}

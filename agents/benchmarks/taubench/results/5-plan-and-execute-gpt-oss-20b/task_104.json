@@ -1,0 +1,307 @@
+{
+  "task_idx": 104,
+  "task": {
+    "user_id": "lucas_brown_6720",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W6239298",
+          "item_ids": [
+            "4900661478",
+            "3614853563"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9218746",
+          "item_ids": [
+            "7824298782"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W4860251",
+          "address1": "921 Park Avenue",
+          "address2": "Suite 892",
+          "city": "Chicago",
+          "country": "USA",
+          "state": "IL",
+          "zip": "60612"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4860251",
+          "item_ids": [
+            "5209958006"
+          ],
+          "new_item_ids": [
+            "8964750292"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        }
+      }
+    ],
+    "instruction": "You name is Lucas Brown and your email is lucas.brown9344@example.com. You are busy, happy, outgoing, messy, optimistic. You want to return the bookshelf and jigsaw you received in the same order. Make sure you mention at the beginning that you want to cancel these two things, and they are from the same order. You also want to return the backpack you received with the vacuum cleaner. You also want to change your pending order address to the default Chicago one, and change its item color to red. You want to get the tracking number of your cancelled order. You like to say one thing at a time.",
+    "outputs": [
+      "286422338955"
+    ],
+    "prompt": "Hi, I’m Lucas Brown and my email is lucas.brown9344@example.com.\n\nI’d like to cancel the bookshelf and the jigsaw that I received in the same order.\n\nNext, I want to return the backpack that came with the vacuum cleaner.\n\nAlso, please change the address of my pending order to my default Chicago address and update the item’s color to red.\n\nCould you please provide me with the tracking number for the cancelled order?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 0,
+      "extra": 17,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W6239298",
+          "item_ids": [
+            "4900661478",
+            "3614853563"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "cf521936-e143-40b9-8158-4f774b5cd7ec",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "7824298782"
+          ],
+          "order_id": "#W9218746",
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "33981824-f42d-4ebe-8045-70246cf9b67e",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "921 Park Avenue",
+          "address2": "Suite 892",
+          "city": "Chicago",
+          "country": "USA",
+          "state": "IL",
+          "zip": "60612",
+          "order_id": "#W4860251"
+        },
+        "id": "e4d5488a-3029-4160-9a29-b9d152a959bf",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "lucas.brown9344@example.com"
+        },
+        "id": "ccb94e04-a449-4959-a021-8a7df3d88243",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W0000000"
+        },
+        "id": "3fe251b3-c720-40cb-b3d0-2e1d1e331d75",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lucas_brown_6720"
+        },
+        "id": "f7b2f94c-65d2-4dce-84d2-b1335dd28a8c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6239298"
+        },
+        "id": "72ab97f4-958a-4478-8f45-cc3190056da6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8660475"
+        },
+        "id": "e4aa0775-620e-4914-8a6d-845174dc1978",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1154986"
+        },
+        "id": "eedd7bcf-9344-4f4b-8d7b-15a2d6d82e55",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9218746"
+        },
+        "id": "66970557-2010-4c4e-b7b3-b7ba0c6b2f2f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4860251"
+        },
+        "id": "020e0d4b-8780-4fcf-86d5-e75dac0f68db",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4860251"
+        },
+        "id": "2af9ffc4-ea5c-4146-8d31-ef147551ac74",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6239298"
+        },
+        "id": "0a2b3465-eb8d-4df3-a628-a79b10623af1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9218746"
+        },
+        "id": "4ae16943-da38-4c31-8198-dd696bc87b68",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "5209958006"
+          ],
+          "new_item_ids": [
+            "5209958006"
+          ],
+          "order_id": "#W4860251",
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "f0d0a938-4d73-4ec4-8bbf-21b243929030",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9218746"
+        },
+        "id": "e7817802-3937-40d9-a727-31d81b27f84c",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "7824298782"
+          ],
+          "order_id": "#W9218746",
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "46f38ca6-e414-492c-af18-948f32da413d",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "921 Park Avenue",
+          "address2": "Suite 892",
+          "city": "Chicago",
+          "country": "USA",
+          "order_id": "#W4860251",
+          "state": "IL",
+          "zip": "60612"
+        },
+        "id": "17c132ff-5f9b-4620-98e6-308e0eb5956d",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "5209958006"
+          ],
+          "new_item_ids": [
+            "5209958006"
+          ],
+          "order_id": "#W4860251",
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "297776b9-59e4-4e0b-9730-72b46a0fbd4c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4860251"
+        },
+        "id": "717c50ec-79b3-4631-87ae-844f556651ad",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "item_ids": [
+              "5209958006"
+            ],
+            "new_item_ids": [
+              "5209958006"
+            ],
+            "order_id": "#W4860251",
+            "payment_method_id": "credit_card_2112420"
+          },
+          "id": "f0d0a938-4d73-4ec4-8bbf-21b243929030",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W4860251",
+            "item_ids": [
+              "5209958006"
+            ],
+            "new_item_ids": [
+              "8964750292"
+            ],
+            "payment_method_id": "credit_card_2112420"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7028-e021-7111-953c-70c4831ede72?poll=true"
+}

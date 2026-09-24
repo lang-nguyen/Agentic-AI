@@ -1,0 +1,147 @@
+{
+  "task_idx": 35,
+  "task": {
+    "user_id": "aarav_santos_2259",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "aarav.santos8321@example.com"
+        }
+      },
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "aarav.santos8320@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "aarav_santos_2259"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9672333"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4760268021"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W8528674",
+          "item_ids": [
+            "6704763132"
+          ],
+          "payment_method_id": "paypal_7664977"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9672333",
+          "item_ids": [
+            "1684786391"
+          ],
+          "new_item_ids": [
+            "5052031638"
+          ],
+          "payment_method_id": "paypal_7664977"
+        }
+      }
+    ],
+    "instruction": "You are aarav_santos_2259 and aarav.santos8321@example.com and aarav.santos8320@example.com. You want to return the speaker that is more expensive yet not resistant to water. Also, You want to modify the 17-inch laptop to the 13-inch version in another order. If no exact item is available, you want to know all available 13-inch options, and you prefer i5 over i7, and prefer silver and black than other colors. You are a rude person.",
+    "outputs": [],
+    "prompt": "Hi, I’m Aarav Santos, user ID aarav_santos_2259, and my emails are aarav.santos8321@example.com and aarav.santos8320@example.com.\n\nI want to return the speaker that’s more expensive but not water‑resistant. Also, I’d like to modify a 17‑inch laptop I ordered in another order to a 13‑inch version. If there’s no exact match, give me a list of all available 13‑inch options. I’d rather have an i5 processor than an i7, and I prefer silver or black over any other color. I’m not going to wait around for any extra information—just give me what I need."
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 5,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "aarav.santos8321@example.com"
+        },
+        "id": "e22d8f82-2a66-4be5-96a7-885eca60b6dd",
+        "type": "tool_call"
+      },
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "aarav.santos8320@example.com"
+        },
+        "id": "6d3b2102-3f54-4469-aa6f-a6c4d2fb3c29",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "aarav_santos_2259"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9672333"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4760268021"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W8528674",
+          "item_ids": [
+            "6704763132"
+          ],
+          "payment_method_id": "paypal_7664977"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W9672333",
+          "item_ids": [
+            "1684786391"
+          ],
+          "new_item_ids": [
+            "5052031638"
+          ],
+          "payment_method_id": "paypal_7664977"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fde-8611-7432-8baa-ee2dbcf843c7?poll=true"
+}

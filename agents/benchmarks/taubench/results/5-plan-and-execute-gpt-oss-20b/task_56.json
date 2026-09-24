@@ -1,0 +1,158 @@
+{
+  "task_idx": 56,
+  "task": {
+    "user_id": "ivan_hernandez_6923",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Ivan",
+          "last_name": "Hernandez",
+          "zip": "92133"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "ivan_hernandez_6923"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5838674"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4284542"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2782744"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "3821016478"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4284542",
+          "item_ids": [
+            "8302289002"
+          ],
+          "new_item_ids": [
+            "9534205511"
+          ],
+          "payment_method_id": "gift_card_9368765"
+        }
+      }
+    ],
+    "instruction": "You are ivan_hernandez_6923 living in San Diego, 92133. You wonder when is your air purifier is arriving. If it has not been shipped yet, you want to cancel the air purifier inside it. If you cannot cancel just the air purifier, you want to modify it to the cheapest possible air purifier, and refund to the gift card. You do not remember your gift card id but it should be in your user account. If you cannot modify it or refund to the gift card, no action. You are polite but brief and firm.",
+    "outputs": [],
+    "prompt": "Hi, I’m Ivan Hernandez, user ID ivan_hernandez_6923, living in San Diego, 92133.  \n\nI’d like to know when my air purifier will arrive. If it hasn’t shipped yet, please cancel it. If cancellation isn’t possible, I’d like to change the order to the cheapest available air purifier and have the refund applied to my gift card (which is linked to my account). If neither cancellation nor the modification/refund can be done, please do nothing. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 2,
+      "extra": 2,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ivan",
+          "last_name": "Hernandez",
+          "zip": "92133"
+        },
+        "id": "b5cab8fb-7530-4eb8-a677-cf6f5f251b33",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "ivan_hernandez_6923"
+        },
+        "id": "93aa139e-a755-434d-8325-0de3b4a5eeef",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5838674"
+        },
+        "id": "8cff3c8d-d007-4321-bef3-1fa8c77fd2dd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4284542"
+        },
+        "id": "c8d7535e-f894-48f1-8378-aa50aa77398d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2782744"
+        },
+        "id": "e3f872cd-bf3c-41d8-b184-03b64f68d6be",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "3821016478"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W4284542",
+          "item_ids": [
+            "8302289002"
+          ],
+          "new_item_ids": [
+            "9534205511"
+          ],
+          "payment_method_id": "gift_card_9368765"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "1989fda6-e051-4712-97e0-4ac96baf66ae",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4284542"
+        },
+        "id": "940f96c2-5736-4346-9769-4088349ceedd",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff3-0a73-7a73-b97e-bcded6669ef0?poll=true"
+}

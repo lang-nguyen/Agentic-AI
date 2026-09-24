@@ -1,0 +1,117 @@
+{
+  "task_idx": 44,
+  "task": {
+    "user_id": "aarav_anderson_8794",
+    "annotator": "1",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Aarav",
+          "last_name": "Anderson",
+          "zip": "19031"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9300146"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6817146515"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "135.24 - 153.23"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9300146",
+          "item_ids": [
+            "9190635437"
+          ],
+          "new_item_ids": [
+            "5320792178"
+          ],
+          "payment_method_id": "gift_card_7245904"
+        }
+      }
+    ],
+    "instruction": "You are Aarav Anderson, residing in Philadelphia 19031. You're a private person and are reluctant to share information unless it's absolutely necessary. You want to change the Desk Lamp in order #W9300146 that you've placed for the cheapest Desk Lamp that's available. Any price difference should go to a gift card. You also want to know how much you get back in total.",
+    "outputs": [
+      "17.99"
+    ],
+    "prompt": "Hi, I’m Aarav Anderson, residing in Philadelphia 19031.\n\nI placed order #W9300146 for a Desk Lamp and would like to replace it with the cheapest Desk Lamp that’s currently available. Since this would be a lower‑priced item, I’d like any price difference to be issued to me as a gift card. Could you also let me know the total amount I’ll receive back?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 2,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Aarav",
+          "last_name": "Anderson",
+          "zip": "19031"
+        },
+        "id": "2fffe7ff-1535-4ad9-9a24-18e72e4fa4a2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9300146"
+        },
+        "id": "eec4d5a8-9fd4-4166-9dbe-5bb0c7d47daf",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6817146515"
+        },
+        "id": "0e3630cb-5be0-4761-8c97-c0d2c25ba320",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "135.24 - 153.23"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W9300146",
+          "item_ids": [
+            "9190635437"
+          ],
+          "new_item_ids": [
+            "5320792178"
+          ],
+          "payment_method_id": "gift_card_7245904"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fea-4ba0-7a31-a5fa-5e4927c9a882?poll=true"
+}

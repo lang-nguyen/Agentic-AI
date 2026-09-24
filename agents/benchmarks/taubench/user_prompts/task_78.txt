@@ -1,0 +1,9 @@
+Hi, I’m Yara Muller and my email is yara.muller9246@example.com.
+
+I’d like to make a few changes to my orders:
+
+1. For order #W5056519, please change the shipping address to match the address on order #W8277957.  
+2. Still for order #W5056519, I’d like to exchange the Makeup Kit that currently has skin tone “light”, kit size “professional”, brand “Brand B” for a new Makeup Kit with skin tone “dark” and brand “Brand A” (kit size isn’t a concern).  
+3. Please cancel order #W5995614 because it was ordered by mistake.
+
+Thank you for handling all of this in one go.

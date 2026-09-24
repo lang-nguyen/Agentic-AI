@@ -1,0 +1,125 @@
+{
+  "task_idx": 114,
+  "task": {
+    "user_id": "yara_muller_8652",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W5056519",
+          "reason": "ordered by mistake"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W5995614",
+          "reason": "ordered by mistake"
+        }
+      }
+    ],
+    "instruction": "You name is Yara Muller and your zip code is 85041. You are mysterious and want to cancel all pending orders. You don't want to reveal the reason until the agent asks. You'd say ordered by mistake if asked.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yara Muller and my zip code is 85041.\n\nI’d like to cancel all of my pending orders. I’d prefer not to share a reason right now; if you ask, I’ll say it was ordered by mistake."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 8,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W5056519",
+          "reason": "ordered by mistake"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W5995614",
+          "reason": "ordered by mistake"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yara",
+          "last_name": "Muller",
+          "zip": "85041"
+        },
+        "id": "0285f1a8-1fec-437e-9f1c-90a3c6e6e02a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_muller_8652"
+        },
+        "id": "dd066450-619d-4b5c-aa20-be6a2529f560",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9384736"
+        },
+        "id": "fb24279d-0ec1-49c5-8b58-7d4555e63b7f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5056519"
+        },
+        "id": "51aeb175-0444-4c70-9557-4849d1b797cc",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5995614"
+        },
+        "id": "b1f4fd8b-2bff-4011-bf36-c1fb27052052",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8277957"
+        },
+        "id": "e514c789-2d57-4a7b-b1c6-6b9ae67ce570",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5056519"
+        },
+        "id": "81f5ef02-517d-40ba-ad82-1cdb56f51d14",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5995614"
+        },
+        "id": "995dc089-9479-4579-8bf3-78caed43e939",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7038-eb4c-7010-9a6e-ab1ec63edf3c?poll=true"
+}

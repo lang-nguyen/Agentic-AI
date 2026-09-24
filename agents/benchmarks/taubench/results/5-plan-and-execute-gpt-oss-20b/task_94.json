@@ -1,0 +1,121 @@
+{
+  "task_idx": 94,
+  "task": {
+    "user_id": "lei_wilson_4541",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W2905754",
+          "item_ids": [
+            "3478699712"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        }
+      }
+    ],
+    "instruction": "You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 16GB.",
+    "outputs": [],
+    "prompt": "Hi, I’m Lei Wilson from zip code 32255. I’m confident, organized, creative, and a bit impatient. I recently received a laptop and would like to exchange it for one with an i7 processor, 8 GB of RAM, and a 1 TB SSD. The laptop I received is a 15‑inch model with 16 GB of RAM, in case that helps you identify it."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 8,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W2905754",
+          "item_ids": [
+            "3478699712"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Lei",
+          "last_name": "Wilson",
+          "zip": "32255"
+        },
+        "id": "31bb6eb5-69df-4cb6-b37c-ee2fb9970d2e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lei_wilson_4541"
+        },
+        "id": "41ff7edd-d94b-43f7-9d05-f6fac002a978",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3826449"
+        },
+        "id": "fc9f6a31-20d6-4c42-9a55-91306e2e58b9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2905754"
+        },
+        "id": "ebed152b-e688-43e8-8368-d66799719161",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4073673"
+        },
+        "id": "6aa9099e-4887-4264-946c-b6102166063a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2905754"
+        },
+        "id": "405340d0-b617-467c-958e-06caca8eb97a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4760268021"
+        },
+        "id": "39dd3d99-b6b5-416c-9243-ebd019b77337",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lei_wilson_4541"
+        },
+        "id": "0fc82c41-b261-4080-985a-2b0d26080faa",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7019-a302-7100-8c0a-66e2f1a4a2df?poll=true"
+}

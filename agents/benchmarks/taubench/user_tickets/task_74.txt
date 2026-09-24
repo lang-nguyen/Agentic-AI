@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #49c57c20-cdf6-49f4-ac5d-4e07d1d97547
+User Name: Lei Li
+ZIP Code: 85033
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Lei Li. I’m a bit shy and insecure, but I need help with a couple of things.
+
+First, I recently bought a laptop, but I’d like to exchange it for one with an i9 CPU. If there are multiple storage options, I’d prefer a 256 GB SSD. If there are multiple colors available, I’d prefer silver.
+
+Second, I have a pending order that contains five items, but I don’t remember the order ID. I’d like to cancel that entire order because I no longer need those items.
+
+Please let me know what steps I need to take for both the exchange and the cancellation.

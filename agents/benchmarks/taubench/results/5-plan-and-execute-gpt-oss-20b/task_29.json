@@ -1,0 +1,178 @@
+{
+  "task_idx": 29,
+  "task": {
+    "user_id": "isabella_johansson_2152",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "isabella_johansson_2152"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3792453"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "1968349452"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3792453",
+          "item_ids": [
+            "4293355847"
+          ],
+          "new_item_ids": [
+            "8176740019"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7181492",
+          "item_ids": [
+            "5753502325"
+          ],
+          "new_item_ids": [
+            "5206946487"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      }
+    ],
+    "instruction": "You are Isabella Johansson, and you live in 32286. You want to exchange your skateboard for a shorter bamboo material one. If several options are available, you want to know all options and their prices, and choose the most expensive one because you believe price is quality. Also, you want to exchange the garden hose you received to the type that you just ordered (pending). You are a chill person but want to get both things done.",
+    "outputs": [
+      "180.1",
+      "189.57",
+      "208.6"
+    ],
+    "prompt": "Hi, I’m Isabella Johansson from 32286.\n\nI’d like to exchange my skateboard for a shorter bamboo model. If there are multiple options available, please send me all the choices and their prices—I'd like to pick the most expensive one because I believe higher price means better quality.\n\nAlso, I received a garden hose but had ordered a different type that’s still pending. I’d like to exchange the hose I have for the type I just ordered.\n\nI’m pretty relaxed, but I’d appreciate it if both exchanges could be handled in one go."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 2,
+      "extra": 4,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        },
+        "id": "03add5f0-78ca-4ad2-8020-68108a5d1703",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_johansson_2152"
+        },
+        "id": "2d411fb0-13b0-4954-a1ab-eea755257e6c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3792453"
+        },
+        "id": "ae39fca1-a806-493f-acf4-eee02681ac0f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1968349452"
+        },
+        "id": "14e8dc23-0493-473f-ae71-37d898916238",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W3792453",
+          "item_ids": [
+            "4293355847"
+          ],
+          "new_item_ids": [
+            "8176740019"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W7181492",
+          "item_ids": [
+            "5753502325"
+          ],
+          "new_item_ids": [
+            "5206946487"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "cb8b5662-28ca-426b-9a88-bd35a55a22e1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7181492"
+        },
+        "id": "ffa14ced-24c1-4c15-ba39-b2b77dc7e683",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "4ad021f0-0ec8-465e-889b-1244a2e0fbf0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2575533"
+        },
+        "id": "f8ab40bd-b326-4dff-9bbf-79d504e2de39",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fd0-abcf-7bd2-9415-536bb45b448d?poll=true"
+}

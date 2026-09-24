@@ -1,0 +1,337 @@
+{
+  "task_idx": 4,
+  "task": {
+    "user_id": "yusuf_rossi_9620",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6086499569"
+        }
+      },
+      {
+        "name": "list_all_product_types",
+        "kwargs": {}
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yusuf_rossi_9620"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6247578"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9711842"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4776164"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6679257"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2378156"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yusuf_rossi_9620"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W6247578",
+          "item_ids": [
+            "3799046073"
+          ],
+          "new_item_ids": [
+            "9647292434"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4776164",
+          "item_ids": [
+            "8349118980"
+          ],
+          "new_item_ids": [
+            "9647292434"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        }
+      }
+    ],
+    "instruction": "You are Yusuf Rossi in 19122. You want to know how many tshirt options are available in the online store right now. You want to modify all your pending tshirts (i.e., your 2 relevant orders) to purple, s size, same v-neck, and prefer polyester. You are a private person that does not want to reveal much about yourself.",
+    "outputs": [
+      "10"
+    ],
+    "prompt": "Hi, I'm Yusuf Rossi in 19122.\n\nI was wondering how many t‑shirt options are available in the online store right now. Also, I have two pending t‑shirt orders that I’d like to change. I’d like each of them to be purple, size S, with the same V‑neck style, and made of polyester. Could you update both orders accordingly? Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 4,
+      "extra": 3,
+      "mismatch": 6
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        },
+        "id": "f87ac6db-ab87-4172-9a04-48f2e9e72ed3",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "0fb7020a-6043-4b06-9b15-2204f471c27d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "0604cb7d-2b4f-4d2d-b894-65271d94a4a4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "92047406-5f15-40f0-bb01-cb6ccd38e116",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_rossi_9620"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_rossi_9620"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W6247578",
+          "item_ids": [
+            "3799046073"
+          ],
+          "new_item_ids": [
+            "9647292434"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W4776164",
+          "item_ids": [
+            "8349118980"
+          ],
+          "new_item_ids": [
+            "9647292434"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "9c248b84-86bb-4126-839e-80c04d3dd3c2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W0000001"
+        },
+        "id": "eec49621-7731-4d75-a589-219dd559e2a1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W0000002"
+        },
+        "id": "418ae0e7-11de-4acd-ad1d-fbb5fb870eec",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "9523456873"
+          },
+          "id": "0604cb7d-2b4f-4d2d-b894-65271d94a4a4",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "6086499569"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W0000001"
+          },
+          "id": "eec49621-7731-4d75-a589-219dd559e2a1",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W6247578"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W0000001"
+          },
+          "id": "eec49621-7731-4d75-a589-219dd559e2a1",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9711842"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W0000001"
+          },
+          "id": "eec49621-7731-4d75-a589-219dd559e2a1",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W4776164"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W0000001"
+          },
+          "id": "eec49621-7731-4d75-a589-219dd559e2a1",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W6679257"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W0000001"
+          },
+          "id": "eec49621-7731-4d75-a589-219dd559e2a1",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W2378156"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fbb-9c93-7903-946f-0adb2bcd92de?poll=true"
+}

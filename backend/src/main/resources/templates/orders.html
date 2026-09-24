@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/layout :: head('My Orders')}"></head>
+
+<body>
+    <nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>My Orders</h1>
+            <p>Hello <strong th:text="${@userService.getFullName(currentUser)}">User</strong>, here is your order list.</p>
+        </div>
+
+        <div class="orders-list" th:if="${orders != null && !orders.isEmpty()}">
+            <a th:each="order : ${orders}" th:href="@{/orders/{id}(id=${order.orderId})}" class="order-card">
+                <div class="order-card-header">
+                    <div>
+                        <span class="order-id" th:text="${order.orderId}">ID</span>
+                        <span style="margin-left: 16px;"
+                            th:text="${@orderService.getItemCount(order) + ' items'}"></span>
+                    </div>
+                    <span class="badge" th:classappend="${order.status == 'pending' ? 'badge-pending' :
+                                       order.status == 'processed' ? 'badge-processed' :
+                                       order.status == 'delivered' ? 'badge-delivered' : 'badge-cancelled'}"
+                        th:text="${order.status}">Status</span>
+                </div>
+                <div class="order-card-body">
+                    <div class="order-items-preview">
+                        <span class="item-tag" th:each="item : ${order.items}"
+                            style="display: inline-flex; align-items: center; gap: 8px; background: white; padding: 4px 8px; border: 1px solid #ddd; border-radius: 20px; font-size: 0.85rem;">
+                            <img th:src="${item.imageUrl != null ? item.imageUrl : '/images/no-image.png'}" alt="Item"
+                                style="width: 20px; height: 20px; object-fit: cover; border-radius: 50%;"
+                                onerror="this.onerror=null; this.src='https://placehold.co/20x20?text=+';">
+                            <span
+                                th:text="${item.quantity > 1 ? item.name + ' (x' + item.quantity + ')' : item.name}">Item</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="order-card-footer">
+                    <span class="item-count">View details →</span>
+                    <span class="total"
+                        th:text="'$' + ${#numbers.formatDecimal(@orderService.getOrderTotal(order), 1, 2)}">$0</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="empty-state" th:if="${orders == null || orders.isEmpty()}">
+            <div class="icon">📭</div>
+            <h3>No orders yet</h3>
+            <p>You don't have any orders.</p>
+            <a th:href="@{/}" class="btn btn-primary mt-16">Discover products</a>
+        </div>
+    </div>
+
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
+    <div th:replace="~{fragments/layout :: chatbot}"></div>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #11f44ef7-814a-4b26-8299-6465b9cb8948
+User Name: Ethan Garcia
+ZIP Code: 80280
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Ethan Garcia from Denver. I’d like to change my user address and all order addresses to 101 Highway, New York, 10001. However, I’ve decided to revert the address back to the original address that was on my account before this change. I’m a bit private and prefer not to share more personal details. Thank you.

@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #b05c9dd4-1fdc-4a8a-b51c-1b0633da9e65
+User Name: Olivia Lopez
+ZIP Code: 76171
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Olivia Lopez from Texas (76171). I just received my tablet, but it was damaged when I opened the package. Could you give me the tracking number for the order?
+
+I’d like to exchange the tablet for a new one of the same model if possible. If an exchange isn’t available, I’d like to return it. If the tablet is returned, please cancel the charger I just bought since it’s for the tablet.
+
+Also, I need to return the sneaker I purchased.
+
+I’d prefer to handle each request one at a time and would appreciate concise updates. Thank you.

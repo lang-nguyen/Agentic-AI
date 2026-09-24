@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/admin-layout :: head('Product Management')}"></head>
+<body>
+
+<div class="admin-container">
+    <div th:replace="~{fragments/admin-layout :: sidebar('products')}"></div>
+    <div class="admin-content">
+        <div th:replace="~{fragments/admin-layout :: topbar}"></div>
+        <main class="admin-main">
+            <div class="admin-page-header">
+                <div>
+                    <h1 class="admin-page-title">Products</h1>
+                    <p style="color: #6b7280; font-size: 0.95rem; margin-top: 4px;">Manage all products in the system</p>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <form id="searchForm" th:action="@{/admin/products}" method="get" style="display: flex; gap: 5px;">
+                        <input type="text" name="search" th:value="${search}" oninput="clearTimeout(window.searchTimeout); window.searchTimeout = setTimeout(() => { document.getElementById('searchForm').submit(); }, 500);" placeholder="Search products..." class="form-control" style="width: 250px; border-radius: 6px; border: 1px solid #d1d5db; padding: 6px 12px; font-size: 0.9rem;">
+                        <a th:href="@{/admin/products}" th:if="${search != null and search != ''}" class="btn btn-outline" style="text-decoration: none;">Clear filter</a>
+                    </form>
+                    <button class="btn btn-primary" onclick="alert('Add product feature is under development.')">+ Add product</button>
+                </div>
+            </div>
+
+            <div style="background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden;">
+                <table class="admin-table">
+                    <thead>
+                    <tr>
+                        <th style="width: 80px;">Image</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>ID (SKU)</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="prod : ${products}">
+                        <td>
+                            <img src="https://placehold.co/400x400?text=Product" alt="img" style="width: 48px; height: 48px; object-fit: cover; border-radius: 6px; border: 1px solid #e5e7eb;">
+                        </td>
+                        <td style="font-weight: 600;" th:text="${prod.displayName != null ? prod.displayName : prod.name}">Tên</td>
+                        <td>-</td>
+                        <td style="font-family: monospace; color: #6b7280;" th:text="${prod.productId}">ID</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline" style="padding: 4px 8px; font-size: 0.8rem;" onclick="alert('Edit not supported yet')">Edit</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+{
+  "task_idx": 108,
+  "task": {
+    "user_id": "yara_ito_8499",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W1304208",
+          "item_ids": [
+            "1615379700"
+          ],
+          "new_item_ids": [
+            "1615379700"
+          ],
+          "payment_method_id": "paypal_1679017"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W8353027",
+          "item_ids": [
+            "6245746168"
+          ],
+          "new_item_ids": [
+            "3112842858"
+          ],
+          "payment_method_id": "paypal_1679017"
+        }
+      }
+    ],
+    "instruction": "You name is Yara Ito and your zip code is 75284. You are happy, messy. Your received hiking boots but seem like already worn, you are unhappy about it and want to send for a new pair with the same specs. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yara Ito, zip code 75284, and I’m a happy but somewhat messy person.  \n\nI received a pair of hiking boots with my recent order, but they already look worn out. I’m not happy with that and would like to send them back for a new pair that has the same specifications as the original.  \n\nI also ordered a jigsaw puzzle, but I’d like to exchange it for one with a more fancy theme. I’d prefer the new puzzle to have 500 pieces fewer, while keeping the same difficulty level.  \n\nPlease let me know how to proceed with both the replacement boots and the jigsaw exchange."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 0,
+      "extra": 10,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "6245746168"
+          ],
+          "new_item_ids": [
+            "3112842858"
+          ],
+          "order_id": "#W8353027",
+          "payment_method_id": "paypal_1679017"
+        },
+        "id": "59ff8fb1-6c23-4ab6-97db-b735c4613785",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yara",
+          "last_name": "Ito",
+          "zip": "75284"
+        },
+        "id": "bd11b735-d556-4b4a-841a-80380960f971",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_ito_8499"
+        },
+        "id": "9367a1a7-14ed-4c38-84b3-7e17969cec15",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1304208"
+        },
+        "id": "3e3ddec1-8c1f-49ed-aef9-09696c91d37e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8353027"
+        },
+        "id": "dbb1625e-55e0-4c6d-9b94-3f92dba89b3b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1808611083"
+        },
+        "id": "deb2b848-568d-4433-8abb-dfbc61daf150",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_ito_8499"
+        },
+        "id": "afdd1188-f250-476f-bc33-c8fcbaf40266",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1304208"
+        },
+        "id": "b2774314-b4e3-415d-b0f0-35b2afe5653b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8353027"
+        },
+        "id": "6bfeca49-b100-48ee-8433-0bf9d2495b24",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "1615379700"
+          ],
+          "order_id": "#W1304208",
+          "payment_method_id": "paypal_1679017"
+        },
+        "id": "b8b898b9-ef4e-453b-a84c-97c5f13b50e3",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "6245746168"
+          ],
+          "new_item_ids": [
+            "3112842858"
+          ],
+          "order_id": "#W8353027",
+          "payment_method_id": "paypal_1679017"
+        },
+        "id": "e22f51b6-2f25-4c77-a1dc-606e933941c4",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "item_ids": [
+              "6245746168"
+            ],
+            "new_item_ids": [
+              "3112842858"
+            ],
+            "order_id": "#W8353027",
+            "payment_method_id": "paypal_1679017"
+          },
+          "id": "59ff8fb1-6c23-4ab6-97db-b735c4613785",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "order_id": "#W1304208",
+            "item_ids": [
+              "1615379700"
+            ],
+            "new_item_ids": [
+              "1615379700"
+            ],
+            "payment_method_id": "paypal_1679017"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7030-1412-7f62-8601-fe378b055eaa?poll=true"
+}

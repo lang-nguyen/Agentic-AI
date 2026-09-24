@@ -1,0 +1,20 @@
+#Ticket
+
+__metadata__
+Ticket ID: #a571762a-f41d-4d3a-80c5-913250e3f9af
+User Name: Emma Kovacs  
+ZIP Code: unknown  
+Email: emma.kovacs2974@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Emma Kovacs. I just placed an order for a digital camera and I’m writing to clarify a few details.
+
+1. Could you confirm whether the camera I purchased comes with a 10‑x zoom?  
+2. If it does **not** have a 10‑x zoom, I’d like to modify the item to include a 10‑x zoom while keeping all other options the same.  
+3. If a 10‑x zoom is not available for this model, please cancel the order with the reason “no longer needed.”  
+4. If a 10‑x zoom is available but the price is over $3,000, please cancel the order with the reason “ordered by mistake.”
+
+I’m a bit relaxed but also somewhat impatient to get this sorted out quickly. Thanks for your help!

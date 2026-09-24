@@ -1,0 +1,154 @@
+{
+  "task_idx": 59,
+  "task": {
+    "user_id": "yusuf_taylor_7149",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Yusuf",
+          "last_name": "Taylor",
+          "zip": "95154"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2702727"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W8268610"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "164.28"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W8268610",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W2702727",
+          "address1": "1234 Elm St",
+          "address2": "",
+          "city": "Springfield",
+          "state": "IL",
+          "country": "USA",
+          "zip": "62701"
+        }
+      }
+    ],
+    "instruction": "You are Yusuf Taylor from San Jose, CA, 95154. You recently placed two orders, and now you would like to make several changes and checks. You'll first inquire about the status difference between your two orders, #W2702727 and #W8268610, since both are \"pending,\" but one was placed much earlier in the year. You are considering cancelling the older order as you find the wait time unreasonable. If the agent cannot guarantee the older order will be processed within 5 days, you want to cancel it. You also want to confirm the total price of the refund.\n\nFor order #W2702727, you intend to switch the shipping address to your new home in a different city because you plan to move prior to its delivery next month. Your new address is 1234 Elm St, Springfield, IL, 62701. You want the agent to confirm the change and ensure the order will be delivered to the new address. You also want to confirm the total price of the order after the address change.\n\nYour approach will be firm, as you are unhappy with the pending status's duration but try to make all requests in one go and ask for them to be resolved efficiently and correctly in context with each other.",
+    "outputs": [
+      "164.28",
+      "625.60"
+    ],
+    "prompt": "Hi, I’m Yusuf Taylor from San Jose, CA 95154.\n\nI recently placed two orders, #W2702727 and #W8268610, and I need several updates and confirmations for both.\n\nFirst, both orders are currently marked “pending.” Since #W2702727 was placed earlier in the year and I’m finding the wait time unreasonable, please let me know the status difference between the two orders. If you can’t guarantee that #W2702727 will be processed and shipped within the next 5 days, I want to cancel it and receive a full refund. Please confirm the total amount I will be refunded for that cancellation.\n\nSecond, for order #W2702727 I want to change the shipping address to my new home because I’ll be moving before it arrives next month. The new address is:\n\n1234 Elm St  \nSpringfield, IL 62701\n\nPlease confirm that the address change has been applied and that the order will be delivered to this new address. Also, let me know the total price of the order after the address change.\n\nI’d appreciate it if you could address all of these requests together and confirm each item so I can move forward efficiently. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 1,
+      "extra": 1,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Taylor",
+          "zip": "95154"
+        },
+        "id": "29872f77-ade0-4f2f-9e85-e7b5a21988c1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2702727"
+        },
+        "id": "57cc2d5c-d46f-4410-b6c1-e41b8dbc174a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8268610"
+        },
+        "id": "8b47c286-cfed-42af-894e-0cdecc99eab0",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W2702727",
+          "address1": "1234 Elm St",
+          "address2": "",
+          "city": "Springfield",
+          "state": "IL",
+          "zip": "62701",
+          "country": "USA"
+        },
+        "id": "206f73a1-b4eb-4bef-a2e1-10dbb7279e5b",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "164.28"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W2702727",
+          "reason": "no longer needed"
+        },
+        "id": "7387740c-42fd-4622-8d12-c670982e6552",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "cancel_pending_order",
+          "args": {
+            "order_id": "#W2702727",
+            "reason": "no longer needed"
+          },
+          "id": "7387740c-42fd-4622-8d12-c670982e6552",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "cancel_pending_order",
+          "args": {
+            "order_id": "#W8268610",
+            "reason": "no longer needed"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff5-5931-7831-b18a-eba472e24c4c?poll=true"
+}

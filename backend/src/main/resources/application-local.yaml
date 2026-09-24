@@ -1,0 +1,4 @@
+application:
+  admin:
+    username: admin
+    password: admin123

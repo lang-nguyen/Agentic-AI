@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #8e4cf1e9-029c-49f4-977c-1668d8e49b88
+User Name: Isabella Johansson  
+ZIP Code: 32286  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Isabella Johansson from 32286.
+
+I’d like to return the following items: skateboard, garden hose, backpack, keyboard, and bed. I also want to cancel the hose I just ordered. If canceling a single item isn’t possible, just ignore that part—I only want to cancel the hose and nothing else.
+
+Could you let me know the total refund amount for these items?
+
+Thank you.

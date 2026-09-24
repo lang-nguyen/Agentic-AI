@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/admin-layout :: head('Order Management')}"></head>
+
+<body>
+
+    <div class="admin-container">
+        <div th:replace="~{fragments/admin-layout :: sidebar('orders')}"></div>
+        <div class="admin-content">
+            <div th:replace="~{fragments/admin-layout :: topbar}"></div>
+            <main class="admin-main">
+                <div class="admin-page-header">
+                    <div>
+                        <h1 class="admin-page-title">Orders</h1>
+                        <p style="color: #6b7280; font-size: 0.95rem; margin-top: 4px;">List of all placed orders
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <form id="searchForm" th:action="@{/admin/orders}" method="get"
+                            style="display: flex; gap: 5px;">
+                            <select name="status" onchange="document.getElementById('searchForm').submit()"
+                                class="form-control"
+                                style="border-radius: 6px; border: 1px solid #d1d5db; padding: 6px 12px; font-size: 0.9rem; background: white;">
+                                <option value="">All statuses</option>
+                                <option value="pending"
+                                    th:selected="${#strings.equalsIgnoreCase(selectedStatus, 'pending')}">PENDING
+                                </option>
+                                <option value="processed"
+                                    th:selected="${#strings.equalsIgnoreCase(selectedStatus, 'processed')}">PROCESSED
+                                </option>
+                                <option value="delivered"
+                                    th:selected="${#strings.equalsIgnoreCase(selectedStatus, 'delivered')}">DELIVERED
+                                </option>
+                                <option value="canceled"
+                                    th:selected="${#strings.equalsIgnoreCase(selectedStatus, 'canceled')}">CANCELED
+                                </option>
+                            </select>
+                            <input type="text" name="search" th:value="${search}"
+                                oninput="clearTimeout(window.searchTimeout); window.searchTimeout = setTimeout(() => { document.getElementById('searchForm').submit(); }, 500);"
+                                placeholder="Search Order ID, User ID..." class="form-control"
+                                style="width: 200px; border-radius: 6px; border: 1px solid #d1d5db; padding: 6px 12px; font-size: 0.9rem;">
+                            <a th:href="@{/admin/orders}"
+                                th:if="${(search != null and search != '') or (selectedStatus != null and selectedStatus != '')}"
+                                class="btn btn-outline" style="text-decoration: none;">Clear filter</a>
+                        </form>
+                    </div>
+                </div>
+
+                <div
+                    style="background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden;">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Quantity</th>
+                                <th>Value</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="order : ${orders}">
+                                <td style="font-family: monospace; font-weight: 600;" th:text="${order.orderId}">ID</td>
+                                <td th:text="${order.userId}">User</td>
+                                <td style="color: #4b5563;">
+                                    <span th:if="${order.items != null}" th:text="${order.items.size()}">0</span>
+                                    <span th:unless="${order.items != null}">0</span>
+                                </td>
+                                <td style="font-weight: 600; color: #111827;"
+                                    th:text="'$' + ${#numbers.formatDecimal(@orderService.getOrderTotal(order), 1, 2)}">
+                                    Total</td>
+                                <td>
+                                    <span class="badge" th:classappend="${
+                                #strings.equalsIgnoreCase(order.status, 'delivered') ? 'badge-success' : 
+                                (#strings.equalsIgnoreCase(order.status, 'canceled') ? 'badge-danger' : 
+                                (#strings.equalsIgnoreCase(order.status, 'pending') || #strings.equalsIgnoreCase(order.status, 'processed') ? 'badge-warning' : 'badge-info'))
+                            }" th:text="${#strings.toUpperCase(order.status)}">Status</span>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline" style="padding: 4px 8px; font-size: 0.8rem;"
+                                        onclick="alert('Update not supported yet')">Update</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

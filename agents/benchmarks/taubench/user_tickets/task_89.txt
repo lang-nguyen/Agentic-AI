@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #e6e488ba-231e-422b-8a87-9ed6dd9f199f
+User Name: Raj Santos  
+ZIP Code: 98157  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Raj Santos from zip 98157, and I’m dependent, flexible. I’d like some help with my mechanical keyboard.
+
+First, could you tell me what the cheapest available mechanical keyboard is right now and what options come with it (e.g., switch type, layout, keycap material, RGB, etc.)? I’m hoping to keep it under $200.
+
+If the price is less than $200, I would like to exchange my current keyboard for this one. If it’s above $200, I’d prefer to return my current keyboard instead.
+
+Thanks for your assistance!

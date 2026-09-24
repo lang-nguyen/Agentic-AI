@@ -1,0 +1,220 @@
+{
+  "task_idx": 2,
+  "task": {
+    "user_id": "yusuf_rossi_9620",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6086499569"
+        }
+      },
+      {
+        "name": "list_all_product_types",
+        "kwargs": {}
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yusuf_rossi_9620"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6247578"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9711842"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4776164"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6679257"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2378156"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W2378156",
+          "item_ids": [
+            "4602305039",
+            "4202497723",
+            "9408160950"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        }
+      }
+    ],
+    "instruction": "You are Yusuf Rossi in 19122. You want to know how many tshirt options are available in the online store right now. You want to also return the cleaner, headphone, and smart watch.",
+    "outputs": [
+      "10"
+    ],
+    "prompt": "Hi, I’m Yusuf Rossi in 19122.\n\nCould you let me know how many t‑shirt options are available in the online store right now? Also, I’d like to return the cleaner, the headphone, and the smart watch."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 8,
+      "extra": 0,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        },
+        "id": "a84343f3-d855-4ac9-be9f-b3be64d14b7b",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "7893e3aa-fca0-4bef-b321-18351d48c877",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "c0092bff-ac76-4590-8f94-cf7948b0ed3e",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_rossi_9620"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6247578"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9711842"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4776164"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6679257"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2378156"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W2378156",
+          "item_ids": [
+            "4602305039",
+            "4202497723",
+            "9408160950"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "9523456873"
+          },
+          "id": "c0092bff-ac76-4590-8f94-cf7948b0ed3e",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "6086499569"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fb7-e2cd-72d0-81c7-6568260b257f?poll=true"
+}

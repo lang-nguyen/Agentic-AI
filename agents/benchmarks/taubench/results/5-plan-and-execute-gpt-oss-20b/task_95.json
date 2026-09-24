@@ -1,0 +1,145 @@
+{
+  "task_idx": 95,
+  "task": {
+    "user_id": "lei_wilson_4541",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4073673",
+          "item_ids": [
+            "2216662955"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        }
+      }
+    ],
+    "instruction": "You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, 32GB.",
+    "outputs": [],
+    "prompt": "Hi, I’m Lei Wilson from zip code 32255. I recently received a laptop and would like to exchange it for a model with an i7 processor, 8 GB RAM, and a 1 TB SSD. If you need to know which laptop I’m referring to, it’s a 15‑inch unit that originally came with 32 GB. I’d appreciate a quick and straightforward resolution—thanks!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 11,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W4073673",
+          "item_ids": [
+            "2216662955"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Lei",
+          "last_name": "Wilson",
+          "zip": "32255"
+        },
+        "id": "e2663260-3d1c-496c-b066-20954ef013be",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lei_wilson_4541"
+        },
+        "id": "095b3154-a69c-48f0-95fc-e85c509a0bbb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3826449"
+        },
+        "id": "a7cc4818-352f-44d9-aee9-1440d7c6278c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2905754"
+        },
+        "id": "e9bba768-769a-4640-8854-c98ba2479a02",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4073673"
+        },
+        "id": "b7d45872-72aa-4c6a-b17b-29699b4b4b80",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4760268021"
+        },
+        "id": "74bc6676-91d6-4e0d-a6c9-1de7094842a3",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2905754"
+        },
+        "id": "5ce5fd51-0990-41c3-90f4-9999c09e27dd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4073673"
+        },
+        "id": "61b55c5e-34d6-4e02-829b-5de2692f03bd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3826449"
+        },
+        "id": "c5a9ded6-cba6-4f0d-b9ce-e9158f89d13a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4073673"
+        },
+        "id": "e34b0b62-dd21-4776-b6cc-c49a07e205a4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lei_wilson_4541"
+        },
+        "id": "2ebdf783-c4f4-4f0f-9d01-6e7c04d898a7",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e701a-d4a5-7d53-9b25-642d67d6dc05?poll=true"
+}

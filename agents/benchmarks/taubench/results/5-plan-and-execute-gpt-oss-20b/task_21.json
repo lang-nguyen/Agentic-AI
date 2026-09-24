@@ -1,0 +1,219 @@
+{
+  "task_idx": 21,
+  "task": {
+    "user_id": "ethan_garcia_1261",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Ethan",
+          "last_name": "Garcia",
+          "zip": "80280"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "ethan_garcia_1261"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4967593"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9911714"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5733668"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4107812777"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "1421289881"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "1656367028"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4107812777"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6938111410"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "155.33 - 147.05 + 268.77 - 235.13"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9911714",
+          "item_ids": [
+            "9791469541",
+            "1340995114"
+          ],
+          "new_item_ids": [
+            "4107812777",
+            "1421289881"
+          ],
+          "payment_method_id": "gift_card_4332117"
+        }
+      }
+    ],
+    "instruction": "You are Ethan Garcia, and you live in Denver, 80280. You want to exchange your shoes to 4107812777, and use GC to cover possible charges. But if the agent asks for confirmation, you change you mind and also want to change product 1656367028 to 1421289881. You are not familiar with the domain and might confuse product and item ids, so ask the agent to figure out the details on its own if needed. You want to know your GC balance after all these. You are a mysterious person and do not want to reveal much about yourself.",
+    "outputs": [
+      "44.08"
+    ],
+    "prompt": "Hi, I’m Ethan Garcia from Denver, 80280. I’d like to exchange my shoes for the item with ID 4107812777 and use my gift card to cover any charges. If the agent asks for confirmation, I’d also like to change product 1656367028 to product 1421289881 instead. I’m not very familiar with the product versus item IDs, so please figure out the details on your end if needed. After all these exchanges, could you let me know what my gift‑card balance is? Thanks."
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 7,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ethan",
+          "last_name": "Garcia",
+          "zip": "80280"
+        },
+        "id": "1e2058c8-955b-46ab-b3b1-9db6b8ec31f6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "ethan_garcia_1261"
+        },
+        "id": "3f3ed238-6e1d-422f-a3a8-588ead945591",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4967593"
+        },
+        "id": "6c5c5afe-1251-4dac-b611-769c71b895f7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9911714"
+        },
+        "id": "aed538a2-b73d-41ee-a93b-8cea8fb0f1d1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5733668"
+        },
+        "id": "b0942a8d-3d03-44c0-8989-e0600d31e22b",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4107812777"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1421289881"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1656367028"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4107812777"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6938111410"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "155.33 - 147.05 + 268.77 - 235.13"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W9911714",
+          "item_ids": [
+            "9791469541",
+            "1340995114"
+          ],
+          "new_item_ids": [
+            "4107812777",
+            "1421289881"
+          ],
+          "payment_method_id": "gift_card_4332117"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc9-53ec-7341-81e9-1bde20ade265?poll=true"
+}

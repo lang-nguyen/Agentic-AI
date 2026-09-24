@@ -1,0 +1,194 @@
+{
+  "task_idx": 33,
+  "task": {
+    "user_id": "noah_patel_6952",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Noah",
+          "last_name": "Patel",
+          "zip": "10108"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "noah_patel_6952"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6111398"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7043598"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W1845024"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "noah_patel_6952",
+          "address1": "517 Lakeview Drive",
+          "address2": "Suite 183",
+          "city": "Seattle",
+          "country": "USA",
+          "state": "WA",
+          "zip": "98195"
+        }
+      }
+    ],
+    "instruction": "You are an interesting guy called Noah Patel, living in the Big Apple in 10108. You had a work-from-home situation and ordered three home office items along with some hiking items, so that you can go back to your parent's place at Seattle to remote work and enjoy outdoor life. But your company just announced that you will be back to the office soon. If cancelling partial items is possible with the agent, you want to return the office items (your forgot what) and keep the hiking items. You want to know the total amount you will get back, and you want to get the refund on your original payment method. If cancelling partial items is not possible, just keep the order and forget about it, but change your default user profile address to the Seattle parent house shown in your order (you do not want to reveal it in chat). You are a funny guy but recently the WFH situation made you a bit anxious.",
+    "outputs": [],
+    "prompt": "Hi, I’m Noah Patel, living in the Big Apple, zip 10108.  \n\nI recently ordered three home‑office items and some hiking gear because I was planning to head back to my parents’ place in Seattle for remote work and outdoor life. Now my company just announced that I’ll be back to the office soon. If it’s possible to cancel just the office items, I’d like to return those (I can’t recall the exact models) and keep the hiking items. Could you let me know the total amount I’ll get refunded and confirm that the refund will be issued to my original payment method?  \n\nIf partial cancellation isn’t possible, I’ll just keep the order, but I’d like to change my default address to my parents’ house in Seattle (I don’t want to share the exact address here). I’m usually a funny guy, but this WFH situation has made me a bit anxious."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 0,
+      "extra": 3,
+      "mismatch": 3
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Noah",
+          "last_name": "Patel",
+          "zip": "10108"
+        },
+        "id": "df863c11-5579-4a01-b706-d353430df544",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "noah_patel_6952"
+        },
+        "id": "79ea9b50-3315-4ac7-8da4-7c38b7bd04db",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1845024"
+        },
+        "id": "33d18619-bc14-416a-b193-6d6d6b5eb668",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1845024"
+        },
+        "id": "94924a5f-614e-482b-a30a-6db4795aa2ee",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "235.13+511.24"
+        },
+        "id": "7f487862-8e70-4edb-9094-4bc06083f86f",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "address1": "123 Seattle Ave",
+          "address2": "Apt 4B",
+          "city": "Seattle",
+          "country": "USA",
+          "state": "WA",
+          "user_id": "noah_patel_6952",
+          "zip": "98101"
+        },
+        "id": "495edff0-d0a1-4e1a-aaff-4dcfd818982f",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W1845024"
+          },
+          "id": "33d18619-bc14-416a-b193-6d6d6b5eb668",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W6111398"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W1845024"
+          },
+          "id": "33d18619-bc14-416a-b193-6d6d6b5eb668",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W7043598"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_user_address",
+          "args": {
+            "address1": "123 Seattle Ave",
+            "address2": "Apt 4B",
+            "city": "Seattle",
+            "country": "USA",
+            "state": "WA",
+            "user_id": "noah_patel_6952",
+            "zip": "98101"
+          },
+          "id": "495edff0-d0a1-4e1a-aaff-4dcfd818982f",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_user_address",
+          "args": {
+            "user_id": "noah_patel_6952",
+            "address1": "517 Lakeview Drive",
+            "address2": "Suite 183",
+            "city": "Seattle",
+            "country": "USA",
+            "state": "WA",
+            "zip": "98195"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fdc-143c-7823-94ea-af123045ff51?poll=true"
+}

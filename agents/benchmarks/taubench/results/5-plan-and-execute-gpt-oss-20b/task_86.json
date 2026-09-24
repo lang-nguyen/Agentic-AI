@@ -1,0 +1,185 @@
+{
+  "task_idx": 86,
+  "task": {
+    "user_id": "yusuf_hernandez_6785",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W2466703",
+          "item_ids": [
+            "9385662952"
+          ],
+          "new_item_ids": [
+            "8733974883"
+          ],
+          "payment_method_id": "paypal_7529813"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "yusuf_hernandez_6785",
+          "address1": "565 Maple Drive",
+          "address2": "Suite 501",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "zip": "20307"
+        }
+      }
+    ],
+    "instruction": "You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com. You are shy, rigid. You want to exchange your Fleece Jacket to red color and half zipper. You also want to want to change your default address to your Washington DC address (which you do not want to reveal but is in one of the orders).",
+    "outputs": [],
+    "prompt": "Hi, I’m Yusuf Hernandez, and my email is yusuf.hernandez8836@example.com.\n\nI’m a bit shy about this, but I’d like to request a few changes to my account. First, I want to exchange the Fleece Jacket I ordered for a version that’s red and has a half‑zip design. Second, I’d like to change my default shipping address to the Washington, DC address that’s already on file in one of my orders. I don’t want to disclose the full address details here, but please use the DC address that’s already associated with my account. \n\nThank you for handling both requests in one go."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 1,
+      "extra": 12,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "modify_user_address",
+        "args": {
+          "address1": "565 Maple Drive",
+          "address2": "Suite 501",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "user_id": "yusuf_hernandez_6785",
+          "zip": "20307"
+        },
+        "id": "1849c147-cb0d-4dfa-89de-f01e53450297",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W2466703",
+          "item_ids": [
+            "9385662952"
+          ],
+          "new_item_ids": [
+            "8733974883"
+          ],
+          "payment_method_id": "paypal_7529813"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "yusuf.hernandez8836@example.com"
+        },
+        "id": "57db37a0-32eb-4b00-8c99-fc049f0bf747",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_hernandez_6785"
+        },
+        "id": "59939158-de2f-41a7-816c-bc092f7a7a07",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2166301"
+        },
+        "id": "1cf2d6c1-1c6d-4eda-81e9-70c93a8411ce",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "8a7449fd-3e6f-468a-b156-11286afd70b8",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6832752"
+        },
+        "id": "8bba0ffc-3a42-4bd6-aeb0-660c9b9fbf14",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7739115"
+        },
+        "id": "c1fe4e37-5bc6-4264-bab7-7a8cfa1319ab",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1994898"
+        },
+        "id": "14c342c2-e097-41ba-b874-562417189c1f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8560156827"
+        },
+        "id": "f86152fa-cb73-4c30-bd6e-772ca0433c4c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "eb2dda62-624d-4060-bffb-5fbebef0e2dd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "6fc1527e-f1ee-4879-b880-e982b2b96b51",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8560156827"
+        },
+        "id": "d983b08b-08ff-4398-858d-81d7a238eb3e",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "9385662952"
+          ],
+          "new_item_ids": [
+            "8733974883"
+          ],
+          "order_id": "#W2466703",
+          "payment_method_id": "paypal_7529813"
+        },
+        "id": "5a938242-b013-429e-bada-10a7d73778ba",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e700e-f08a-79f1-9de4-272408f98bed?poll=true"
+}

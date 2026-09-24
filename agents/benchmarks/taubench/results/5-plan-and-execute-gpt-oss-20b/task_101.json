@@ -1,0 +1,155 @@
+{
+  "task_idx": 101,
+  "task": {
+    "user_id": "liam_thomas_7882",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W3295833",
+          "item_ids": [
+            "8926329222",
+            "5312063289"
+          ],
+          "new_item_ids": [
+            "7160999700",
+            "6956751343"
+          ],
+          "payment_method_id": "credit_card_3261838"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W8488728",
+          "item_ids": [
+            "5676696062"
+          ],
+          "payment_method_id": "paypal_3650980"
+        }
+      }
+    ],
+    "instruction": "You name is Liam Thomas and your zip code is 85049. You are pessimistic, insecure. You want to return your luggage set and get the exact same item but with red color, and return you skateboard in the same order to {'length': '34 inch', 'design': 'custom'}; You also want to return the hiking boots.",
+    "outputs": [],
+    "prompt": "Hi, I’m Liam Thomas from zip code 85049.\n\nI’m a bit unsure about this, but I’d like to handle a few returns all at once. First, I want to return my luggage set and receive the exact same item back in red. Next, I’d like to return my skateboard and get a replacement that’s 34 inches long with a custom design. Finally, I’d like to return my hiking boots. I’d appreciate it if all of these exchanges and returns could be processed together."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 9,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W3295833",
+          "item_ids": [
+            "8926329222",
+            "5312063289"
+          ],
+          "new_item_ids": [
+            "7160999700",
+            "6956751343"
+          ],
+          "payment_method_id": "credit_card_3261838"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W8488728",
+          "item_ids": [
+            "5676696062"
+          ],
+          "payment_method_id": "paypal_3650980"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Liam",
+          "last_name": "Thomas",
+          "zip": "85049"
+        },
+        "id": "58a7c340-9d12-41e3-8c97-f9f7fee617d2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "liam_thomas_7882"
+        },
+        "id": "7ce94b91-83a8-4c31-a0b4-dea4ef702326",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1654931"
+        },
+        "id": "4f782793-f9d5-483a-b837-2ed32b0fa1d1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8488728"
+        },
+        "id": "6209ef61-417d-4b11-ba22-6e65183d1009",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6397299"
+        },
+        "id": "e4855ca1-8ab4-4669-b84f-71625aedf2b1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6231698"
+        },
+        "id": "471b2cbd-60ad-4c58-b83a-84f2ba64b753",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3295833"
+        },
+        "id": "56813a3e-44b1-4e1f-b48b-6aa4e4ca606c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3295833"
+        },
+        "id": "e59ba77e-d7d2-453f-ae46-bb9069ce6e20",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8488728"
+        },
+        "id": "1700eea0-66c2-48ec-ad85-80bbcb7c372a",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7025-8f7b-7833-8e49-ce8d4cee30db?poll=true"
+}

@@ -1,0 +1,26 @@
+#Ticket
+
+__metadata__
+Ticket ID: #f4de85d4-10d7-41cf-808f-a3de51935926
+User Name: Isabella Lopez
+ZIP Code: unknown
+Email: isabella.lopez3271@example.com
+
+---
+
+__Content__
+
+Hi there,
+
+I’m Isabella Lopez, a college student who’s currently swamped with final exams and student loan payments, so I’d really appreciate a quick resolution.
+
+I have a few questions about my recent order and my gift card:
+
+1. What is the current balance on my gift card?  
+2. Which credit card—Visa, MasterCard, or AmEx—was used to pay for the most recent order?  
+3. Can I apply the gift card balance to that order?  
+4. If the gift card can’t be applied, I’d like to change the payment method for the order to Visa, since my MasterCard and AmEx have plenty of available balance.
+
+Please let me know the answers and what steps I need to take next. Thanks so much for your help!
+
+---

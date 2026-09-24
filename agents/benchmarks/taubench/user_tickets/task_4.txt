@@ -1,0 +1,27 @@
+#Ticket
+
+__metadata__
+Ticket ID: #36db64dd-e74d-48ca-bac8-6c10655ab84c
+User Name: Yusuf Rossi  
+ZIP Code: 19122  
+Email: unknown  
+
+---
+
+__Content__
+
+Hello,
+
+I’m Yusuf Rossi from ZIP 19122. I have a couple of questions and a request regarding my current orders.
+
+First, could you let me know how many t‑shirt options are available in the online store right now?
+
+Second, I would like to update all my pending t‑shirt orders (there are two of them) to the following specifications:
+- Color: Purple
+- Size: Small (S)
+- Neck: V‑neck (same as current)
+- Material: Polyester
+
+I’m a private individual and prefer not to share more personal details.
+
+Thanks for your help.

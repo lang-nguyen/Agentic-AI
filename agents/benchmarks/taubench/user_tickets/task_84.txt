@@ -1,0 +1,17 @@
+#Ticket
+
+__metadata__
+Ticket ID: #c4458e0b-ead6-4a55-9bf1-e20bca7e41ca
+User Name: Chen Silva
+ZIP Code: 46281
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Chen Silva from zip 46281. I recently received an order that included two tablets, but I only need one. I’d like to return the other one and have the refund credited to my credit card.
+
+However, if you need me to confirm the return details, I’ll actually prefer to return the more expensive tablet instead and receive the refund on my Gift Card (GC) instead of the credit card. 
+
+Please let me know what information you need from me and the next steps to process this return. I’m flexible about how we handle it, so just guide me through the process.

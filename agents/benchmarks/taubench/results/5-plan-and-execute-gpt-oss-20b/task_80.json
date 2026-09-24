@@ -1,0 +1,87 @@
+{
+  "task_idx": 80,
+  "task": {
+    "user_id": "amelia_gonzalez_4098",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7209932",
+          "item_ids": [
+            "5047954489"
+          ],
+          "new_item_ids": [
+            "9354168549"
+          ],
+          "payment_method_id": "gift_card_2611937"
+        }
+      }
+    ],
+    "instruction": "You name is Amelia Gonzalez and your email is amelia.gonzalez4271@example.com. You are curious, patient, outgoing. For #W7209932, exchange T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'}; Use the gift card. Try to make the conversation as confusing for the agent as possible.",
+    "outputs": [],
+    "prompt": "Hi, I’m Amelia Gonzalez and my email is amelia.gonzalez4271@example.com. I’m a curious, patient, outgoing person who loves a good puzzle.\n\nI’d like to exchange the T‑shirt in my order #W7209932—currently a blue, size S, polyester, v‑neck—into a new one that’s red, size XXL, cotton, crew‑neck. Please use my gift card to cover any price difference.\n\nAnd just to keep things interesting, I’d love this conversation to be a bit confusing for the agent—think of it as a game of telephone, but I’m sure we can get it sorted out!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 4,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W7209932",
+          "item_ids": [
+            "5047954489"
+          ],
+          "new_item_ids": [
+            "9354168549"
+          ],
+          "payment_method_id": "gift_card_2611937"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "amelia.gonzalez4271@example.com"
+        },
+        "id": "d048cca6-71a3-4fc1-ae09-c31cf27bd72a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7209932"
+        },
+        "id": "8d97b05e-8d16-4b9d-87a4-a2bd7dddc1c7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "4579f4e2-e461-41c4-9843-23a563d305b5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "amelia_gonzalez_4098"
+        },
+        "id": "64ef2d53-5c0e-4030-992d-499d3e8f4584",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7009-508c-7312-a652-caeac87a17e7?poll=true"
+}

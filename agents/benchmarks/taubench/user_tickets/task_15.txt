@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #42f1b583-325a-48b0-9c5c-2c7936aa1f13
+User Name: Fatima Johnson
+ZIP Code: 78712
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Fatima Johnson from ZIP code 78712, and I’m writing to request a modification to my pending boots order.
+
+I’d like to change the size to an 8 and confirm the material used. I’m not concerned about whether they are waterproof or not.
+
+As a private individual, I prefer not to share additional personal details beyond what’s necessary.
+
+Thank you for your help.

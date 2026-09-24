@@ -1,0 +1,183 @@
+{
+  "task_idx": 45,
+  "task": {
+    "user_id": "daiki_johnson_9523",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Daiki",
+          "last_name": "Johnson",
+          "zip": "80273"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9502127"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "1762337868"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "652.61 - 642.72"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9502127",
+          "item_ids": [
+            "6259501109"
+          ],
+          "new_item_ids": [
+            "7958300294"
+          ],
+          "payment_method_id": "paypal_2433177"
+        }
+      }
+    ],
+    "instruction": "You are daiki_johnson_9523 living in Denver, USA, 80273. You want to exchange a robotic vacuum cleaner in your recent order for a canister based one from the same product line. When asked for order ID, provide 9502127 first. If that doesn't work, respond exactly with 'I forgot the W at the beginning'. If and only if the agent gives you several options for the new vacuum, go for the bagless version (don't mention this if the agent just provides you one option). Ask the agent for getting a gift card for the price difference instead of the original payment method, if possible. You randomly insert typos into your messages.",
+    "outputs": [
+      "9.89"
+    ],
+    "prompt": "Hi, I’m daiki_johnson_9523 from Denver, USA, 80273. I recently bought a robotic vacuum cleaner and would like to exchange it for a canister‑based one from the same product line. My order ID is 9502127. If that doesn’t work, I forgot the W at the beginning.  \n\nCould you please help me swap the vacuum? If there are multiple options for the new vacuum, I’d prefer the bagles version. Also, instead of using the original payment method, could I get a gift carrd for the price difference? Thanks!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 2,
+      "extra": 5,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1762337868"
+        },
+        "id": "5375f6bb-6eff-4f1e-a34c-1f441364019e",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "652.61 - 642.72"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W9502127",
+          "item_ids": [
+            "6259501109"
+          ],
+          "new_item_ids": [
+            "7958300294"
+          ],
+          "payment_method_id": "paypal_2433177"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "daiki",
+          "last_name": "johnson",
+          "zip": "80273"
+        },
+        "id": "4b51f01c-0872-41c0-a27a-7649b0d5b016",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "9502127"
+        },
+        "id": "e2dc4be7-da08-4a04-aab6-0bbc947d94de",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "W9502127"
+        },
+        "id": "44aba3bf-5fd3-4719-b2c6-1b26a98cf33a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9502127"
+        },
+        "id": "f19d03bd-3baa-40cc-aabb-41afc144153c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "daiki_johnson_9523"
+        },
+        "id": "9294fe8e-24ba-4c48-80c3-82fb23365e17",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "daiki",
+            "last_name": "johnson",
+            "zip": "80273"
+          },
+          "id": "4b51f01c-0872-41c0-a27a-7649b0d5b016",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Daiki",
+            "last_name": "Johnson",
+            "zip": "80273"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "9502127"
+          },
+          "id": "e2dc4be7-da08-4a04-aab6-0bbc947d94de",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9502127"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fea-a702-76e1-8067-37fbc0b49a85?poll=true"
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/admin-layout :: head('Customer Management')}"></head>
+<body>
+
+<div class="admin-container">
+    <div th:replace="~{fragments/admin-layout :: sidebar('users')}"></div>
+    <div class="admin-content">
+        <div th:replace="~{fragments/admin-layout :: topbar}"></div>
+        <main class="admin-main">
+            <div class="admin-page-header">
+                <div>
+                    <h1 class="admin-page-title">Customers</h1>
+                    <p style="color: #6b7280; font-size: 0.95rem; margin-top: 4px;">List of registered accounts in the system</p>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <form id="searchForm" th:action="@{/admin/users}" method="get" style="display: flex; gap: 5px;">
+                        <input type="text" name="search" th:value="${search}" oninput="clearTimeout(window.searchTimeout); window.searchTimeout = setTimeout(() => { document.getElementById('searchForm').submit(); }, 500);" placeholder="Search name, email, ID..." class="form-control" style="width: 250px; border-radius: 6px; border: 1px solid #d1d5db; padding: 6px 12px; font-size: 0.9rem;">
+                        <a th:href="@{/admin/users}" th:if="${search != null and search != ''}" class="btn btn-outline" style="text-decoration: none;">Clear filter</a>
+                    </form>
+                </div>
+            </div>
+
+            <div style="background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden;">
+                <table class="admin-table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Full Name</th>
+                        <th>Role</th>
+                        <th>Join Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="user : ${users}">
+                        <td style="font-family: monospace; color: #6b7280;" th:text="${#strings.substring(user.id, 0, 8)}">ID</td>
+                        <td style="font-weight: 600;" th:text="${user.email}">Email</td>
+                        <td th:text="${(user.name?.firstName ?: '') + ' ' + (user.name?.lastName ?: '')}">Name</td>
+                        <td>
+                            <span class="badge" th:classappend="${user.email == 'admin@lkstore.com' ? 'badge-danger' : 'badge-info'}" th:text="${user.email == 'admin@lkstore.com' ? 'ADMIN' : 'USER'}">Role</span>
+                        </td>
+                        <td style="color: #6b7280; font-size: 0.9rem;">-</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

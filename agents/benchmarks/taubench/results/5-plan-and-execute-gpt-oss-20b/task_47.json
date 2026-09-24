@@ -1,0 +1,219 @@
+{
+  "task_idx": 47,
+  "task": {
+    "user_id": "daiki_johnson_9523",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Daiki",
+          "last_name": "Johnson",
+          "zip": "80273"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#9502126"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#9502127"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9502127"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "622.12 + 473.43"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9502127",
+          "item_ids": [
+            "2872451762",
+            "9534205511"
+          ],
+          "payment_method_id": "paypal_2433177"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "2623.69 - 1095.55"
+        }
+      }
+    ],
+    "instruction": "You are daiki_johnson_9523 living in Denver, USA, 80273. You want to return an air purifier and a vacuum cleaner in your recent order. When asked for order ID, provide 9502126 first. If the agent asks you to double check, then say that you made a mistake and provide 9502127. If that doesn't work, say that you forgot the 'W' at the beginning. If the agent asks you for which vacuum cleaner, mention the canister one. You are impatient and want the refund as soon as possible. Ask the agent explicitly to provide the refund within 3 days and the total amount of the refund you should expect. After the return is complete, ask the agent about the total amount you paid for the remaining items in the same order.",
+    "outputs": [
+      "1095.55",
+      "1528.14"
+    ],
+    "prompt": "Hi, I’m daiki_johnson_9523 living in Denver, USA, 80273.\n\nI recently received an order that includes an air purifier and a canister vacuum cleaner, and I’d like to return both items. The order ID is 9502126. If you need to double‑check, I apologize—I actually used the wrong number and it should be 9502127. If that still doesn’t work, I forgot there’s a leading “W” and the correct ID is W9502127.\n\nI’m in a hurry and would like the refund processed as soon as possible. Could you please confirm that I’ll receive the full refund within 3 days and let me know the exact amount I should expect back?\n\nOnce the return is complete, I’d also like to know the total amount I paid for the remaining items in that same order."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 3,
+      "extra": 4,
+      "mismatch": 4
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "622.12 + 473.43"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W9502127",
+          "item_ids": [
+            "2872451762",
+            "9534205511"
+          ],
+          "payment_method_id": "paypal_2433177"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "2623.69 - 1095.55"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "daiki",
+          "last_name": "johnson",
+          "zip": "80273"
+        },
+        "id": "a317e17a-096e-42bf-b892-a05d69ae5918",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "W9502127"
+        },
+        "id": "1e75dfec-e7f5-46d0-8380-9ef4a8384c13",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "9502126"
+        },
+        "id": "9c3f3676-9911-40f8-80e2-6bd352a8ac68",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "9502127"
+        },
+        "id": "9419b568-be93-4928-890c-2324762100ef",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "daiki",
+            "last_name": "johnson",
+            "zip": "80273"
+          },
+          "id": "a317e17a-096e-42bf-b892-a05d69ae5918",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Daiki",
+            "last_name": "Johnson",
+            "zip": "80273"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "W9502127"
+          },
+          "id": "1e75dfec-e7f5-46d0-8380-9ef4a8384c13",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#9502126"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "W9502127"
+          },
+          "id": "1e75dfec-e7f5-46d0-8380-9ef4a8384c13",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#9502127"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "W9502127"
+          },
+          "id": "1e75dfec-e7f5-46d0-8380-9ef4a8384c13",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9502127"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fed-4d44-7573-aa18-8abc01e48c29?poll=true"
+}

@@ -1,0 +1,196 @@
+{
+  "task_idx": 15,
+  "task": {
+    "user_id": "fatima_johnson_7581",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Fatima",
+          "last_name": "Johnson",
+          "zip": "78712"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "fatima_johnson_7581"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9389413"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W8665881"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5199551"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "7363354090"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5199551",
+          "item_ids": [
+            "1615379700"
+          ],
+          "new_item_ids": [
+            "3613716226"
+          ],
+          "payment_method_id": "paypal_5364164"
+        }
+      }
+    ],
+    "instruction": "You are Fatima Johnson in 78712. You want to modify the pending boots to a size 8, and want the material, but do not care about waterproof or not. You are a private person that does not want to reveal much about yourself.",
+    "outputs": [],
+    "prompt": "Hi, I’m Fatima Johnson from 78712. I have a pending order for boots and would like to change the size to 8. I’d also like to know what material the boots are made from, but I’m not concerned about whether they’re waterproof or not. I’m a private person and don’t want to reveal much more about myself."
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 0,
+      "extra": 4,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Fatima",
+          "last_name": "Johnson",
+          "zip": "78712"
+        },
+        "id": "2fd2ee23-b86c-4b91-859b-fd41eed4665e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "fatima_johnson_7581"
+        },
+        "id": "fcbb7921-591b-490d-8d69-76126b982747",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5199551"
+        },
+        "id": "893d3a73-92ed-416b-a115-fcf4d78b2bab",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "7363354090"
+        },
+        "id": "604df344-dae7-45b1-8c72-87e26a220836",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W5199551",
+          "item_ids": [
+            "1615379700"
+          ],
+          "new_item_ids": [
+            "3613716226"
+          ],
+          "payment_method_id": "paypal_5364164"
+        },
+        "id": "0654d0a5-9401-48b0-b70e-b06879abc96c",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8665881"
+        },
+        "id": "80b64aef-a36f-4577-9a71-0df644f80321",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9389413"
+        },
+        "id": "a22ded02-a2d3-4c06-80d6-fe0f2fed46a7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "7363354090"
+        },
+        "id": "0ebfa940-8f77-4074-ae55-0453d3861dc0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "7363354090"
+        },
+        "id": "8f15680f-7327-478f-967c-892a8b19cf55",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W5199551"
+          },
+          "id": "893d3a73-92ed-416b-a115-fcf4d78b2bab",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9389413"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W5199551"
+          },
+          "id": "893d3a73-92ed-416b-a115-fcf4d78b2bab",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W8665881"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc4-dce1-7c43-b52b-4c85097d9bfb?poll=true"
+}

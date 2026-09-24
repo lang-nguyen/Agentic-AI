@@ -1,0 +1,193 @@
+{
+  "task_idx": 78,
+  "task": {
+    "user_id": "yara_muller_8652",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W5056519",
+          "address1": "380 Maple Drive",
+          "address2": "Suite 960",
+          "city": "San Diego",
+          "country": "USA",
+          "state": "CA",
+          "zip": "92101"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5056519",
+          "item_ids": [
+            "7902309762"
+          ],
+          "new_item_ids": [
+            "1573035764"
+          ],
+          "payment_method_id": "credit_card_3095586"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W5995614",
+          "reason": "ordered by mistake"
+        }
+      }
+    ],
+    "instruction": "You name is Yara Muller and your email is yara.muller9246@example.com. You are sad, organized, pessimistic. For #W5056519, change address to same as #W8277957. For #W5056519, exchange Makeup Kit {'skin tone': 'light', 'kit size': 'professional', 'brand': 'Brand B'} to {'skin tone': 'dark', 'brand': 'Brand A'}; Cancel order #W5995614 because ordered by mistake. ",
+    "outputs": [],
+    "prompt": "Hi, I’m Yara Muller and my email is yara.muller9246@example.com.\n\nI’d like to make a few changes to my orders:\n\n1. For order #W5056519, please change the shipping address to match the address on order #W8277957.  \n2. Still for order #W5056519, I’d like to exchange the Makeup Kit that currently has skin tone “light”, kit size “professional”, brand “Brand B” for a new Makeup Kit with skin tone “dark” and brand “Brand A” (kit size isn’t a concern).  \n3. Please cancel order #W5995614 because it was ordered by mistake.\n\nThank you for handling all of this in one go."
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 0,
+      "extra": 8,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "380 Maple Drive",
+          "address2": "Suite 960",
+          "city": "San Diego",
+          "country": "USA",
+          "state": "CA",
+          "zip": "92101",
+          "order_id": "#W5056519"
+        },
+        "id": "f40f3289-165e-4d6d-b1ad-f8402d7aacf6",
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W5995614",
+          "reason": "ordered by mistake"
+        },
+        "id": "39dd0ab1-a82d-41b7-bcd5-bb45f21fb024",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "yara.muller9246@example.com"
+        },
+        "id": "c4c6bfd7-81aa-4a9f-ba7d-ccdfc6f2980d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5056519"
+        },
+        "id": "c488fedc-a9be-4768-b46f-eb59567b78da",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8277957"
+        },
+        "id": "84737458-868d-49ae-a794-768958e74188",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5056519"
+        },
+        "id": "fd216e75-f684-4a85-9978-f887b671f146",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "7902309762"
+          ],
+          "new_item_ids": [
+            "1234567890"
+          ],
+          "order_id": "#W5056519",
+          "payment_method_id": "credit_card_3095586"
+        },
+        "id": "44ef343d-0593-42a3-b001-7cf686808af9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "5149340237"
+        },
+        "id": "55bad928-3e9a-4496-a4f7-f76ee6a68df4",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "7902309762"
+          ],
+          "new_item_ids": [
+            "1573035764"
+          ],
+          "order_id": "#W5056519",
+          "payment_method_id": "credit_card_3095586"
+        },
+        "id": "075bb845-0b34-4171-ab5d-748a5521b27a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5995614"
+        },
+        "id": "7144c8d0-5bf5-4563-94b8-6b28bf7e2adc",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "item_ids": [
+              "7902309762"
+            ],
+            "new_item_ids": [
+              "1234567890"
+            ],
+            "order_id": "#W5056519",
+            "payment_method_id": "credit_card_3095586"
+          },
+          "id": "44ef343d-0593-42a3-b001-7cf686808af9",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W5056519",
+            "item_ids": [
+              "7902309762"
+            ],
+            "new_item_ids": [
+              "1573035764"
+            ],
+            "payment_method_id": "credit_card_3095586"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7005-7fd0-78e3-acf6-a837c75aa5f5?poll=true"
+}

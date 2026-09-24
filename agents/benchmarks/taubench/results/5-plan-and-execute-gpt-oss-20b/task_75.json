@@ -1,0 +1,125 @@
+{
+  "task_idx": 75,
+  "task": {
+    "user_id": "liam_moore_4057",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W6908222",
+          "item_ids": [
+            "8555936349"
+          ],
+          "new_item_ids": [
+            "4063058357"
+          ],
+          "payment_method_id": "paypal_4518393"
+        }
+      }
+    ],
+    "instruction": "You name is Liam Moore and your email is liam.moore6985@example.com. You are direct, patient, organized, optimistic. For #W6908222, exchange Wireless Earbuds {'color': 'blue', 'battery life': '8 hours', 'water resistance': 'IPX4'} to {'color': 'black', 'battery life': '4 hours', 'water resistance': 'not resistant'}; ",
+    "outputs": [],
+    "prompt": "Hi, I’m Liam Moore (liam.moore6985@example.com). I’m writing about order #W6908222. I’d like to exchange the Wireless Earbuds that came in blue with an 8‑hour battery life and IPX4 water‑resistance for a black pair that has a 4‑hour battery life and is not water‑resistant. I’m hoping we can sort this out smoothly."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 6,
+      "mismatch": 1
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "liam.moore6985@example.com"
+        },
+        "id": "96b91a2f-09ce-49cb-8dd6-7267a635dec2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6908222"
+        },
+        "id": "95466422-540a-4dc3-8a01-da4c567905d1",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "e81eb275-8e7d-4474-b053-7dcbc437a976",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9924732112"
+        },
+        "id": "0edf9457-8695-43e5-896b-e152aa8492fe",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "226.49-243.34"
+        },
+        "id": "426d9ef5-d391-4367-8931-09357ab02a31",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "8555936349"
+          ],
+          "new_item_ids": [
+            "4063058357"
+          ],
+          "order_id": "#W6908222",
+          "payment_method_id": "credit_card_1234567"
+        },
+        "id": "fb0314ab-b450-4332-98d2-74c9d2e062af",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "item_ids": [
+              "8555936349"
+            ],
+            "new_item_ids": [
+              "4063058357"
+            ],
+            "order_id": "#W6908222",
+            "payment_method_id": "credit_card_1234567"
+          },
+          "id": "fb0314ab-b450-4332-98d2-74c9d2e062af",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "order_id": "#W6908222",
+            "item_ids": [
+              "8555936349"
+            ],
+            "new_item_ids": [
+              "4063058357"
+            ],
+            "payment_method_id": "paypal_4518393"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7002-5dae-7d11-b6bf-29a4e8f31e27?poll=true"
+}

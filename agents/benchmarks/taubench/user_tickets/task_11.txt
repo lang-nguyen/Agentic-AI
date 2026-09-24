@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #f9e4f435-30ee-4c73-8aad-af13e660024b
+User Name: mia_garcia_4516  
+ZIP Code: unknown  
+Email: mia.garcia2723@example.com  
+
+---
+
+__Content__
+
+Hi, I’m mia_garcia_4516 (mia.garcia2723@example.com). I want to return everything from my two orders. I’d like each order refunded to the other order’s payment method. If that can’t be done, I’ll be very upset and swear a few times, then accept the refund to the original payment method. I’m a mysterious person and don’t want to say more.

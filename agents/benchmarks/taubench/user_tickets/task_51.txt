@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #7db44f6d-11e9-4a13-bfad-6a6ad9ddd50f
+User Name: Sofia Li
+ZIP Code: 78260
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Sofia Li from San Antonio, 78260. I received a digital camera in my recent order and would like to return it. I believe the order number is #W8855135, but I’m not entirely certain that’s correct. Regardless, I want to process a return and receive a full refund back to the original payment method. Please let me know what information you need from me to complete this request. Thank you.

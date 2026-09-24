@@ -1,0 +1,27 @@
+#Ticket
+
+__metadata__
+Ticket ID: #01a777ab-83c7-4060-aa65-eb157ef6b64b
+User Name: Liam Moore  
+ZIP Code: unknown  
+Email: liam.moore6985@example.com  
+
+---
+
+__Content__
+
+Hello, I’m Liam Moore and I’m writing about order #W6908222.
+
+I’d like to exchange the Wireless Earbuds I received. The current earbuds have the following specifications:
+
+- Color: blue  
+- Battery life: 8 hours  
+- Water resistance: IPX4  
+
+I would like to replace them with a pair that has these specifications instead:
+
+- Color: black  
+- Battery life: 4 hours  
+- Water resistance: not resistant  
+
+I’m optimistic that this can be sorted out smoothly and appreciate your help. Thank you!

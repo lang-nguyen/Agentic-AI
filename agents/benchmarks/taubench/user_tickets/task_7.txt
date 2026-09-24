@@ -1,0 +1,22 @@
+#Ticket
+
+__metadata__
+Ticket ID: #5c646069-913e-4fe1-b8dd-18a5322e48da
+User Name: mei_kovacs_8020  
+ZIP Code: 28236  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m mei_kovacs_8020 from ZIP 28236 and I’m writing about my recent order.
+
+I’d like to exchange two items:
+
+- **Water bottle** – I want a larger size.
+- **Desk lamp** – I want a brighter lamp. My preferred power source order is battery > USB > AC.
+
+If the agent asks me for any confirmation, I only want to proceed with the desk lamp exchange. I do not wish to exchange the water bottle if confirmation is required.
+
+Thank you for your help!

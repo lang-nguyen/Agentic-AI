@@ -1,0 +1,133 @@
+{
+  "task_idx": 51,
+  "task": {
+    "user_id": "sofia_li_9219",
+    "annotator": "1",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W8855135"
+        }
+      },
+      {
+        "name": "list_all_product_types",
+        "kwargs": {}
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "8940227892"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "sofia_li_9219"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4689314"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4689314",
+          "item_ids": [
+            "5996159312"
+          ],
+          "payment_method_id": "credit_card_8105988"
+        }
+      }
+    ],
+    "instruction": "You are Sofia Li, residing in San Antonio, 78260. You want to return the digital camera that you received. You guess that the order number is #W8855135, but you're not 100% sure. Insist that you want to return the camera and get a refund to the original payment method.",
+    "outputs": [],
+    "prompt": "Hi, I’m Sofia Li, living in San Antonio, 78260.\n\nI received a digital camera in my recent shipment and I’d like to return it for a full refund to the original payment method. I believe the order number is #W8855135, but I’m not 100% certain."
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 5,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        },
+        "id": "c6435956-6205-4630-b9f5-9f8a71c8ed6c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8855135"
+        },
+        "id": "f3fbe211-c4e2-4e37-aeff-5687497b6973",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8940227892"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_li_9219"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4689314"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W4689314",
+          "item_ids": [
+            "5996159312"
+          ],
+          "payment_method_id": "credit_card_8105988"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fef-a36b-7390-9dc4-becb0bd6486c?poll=true"
+}

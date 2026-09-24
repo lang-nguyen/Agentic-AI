@@ -1,0 +1,84 @@
+[
+  {
+    "scenario_name": "Scenario 1: Auto Approved Refund (Under 7 Days)",
+    "description": "Khách hàng yêu cầu hoàn tiền cho áo thun (25 USD) mua trong vòng 5 ngày (dưới hạn 7 ngày). Hệ thống duyệt tự động hoàn tiền nhanh.",
+    "request": {
+      "request_id": "REQ_TEST_001",
+      "days_since_delivery": 5,
+      "category": "T-shirt",
+      "item_value": 25.0
+    },
+    "expected_result": {
+      "mode": "AUTO",
+      "status": "APPROVED",
+      "action": "REFUND_IMMEDIATELY",
+      "rule_id": "RB_UNDER_7_DAYS"
+    }
+  },
+  {
+    "scenario_name": "Scenario 2: High Value Items (> 100 USD)",
+    "description": "Khách hàng yêu cầu hoàn tiền cho giày trị giá 150 USD (> 100 USD). Đây là hàng giá trị cao nên chuyển sang duyệt bán tự động bởi nhân viên.",
+    "request": {
+      "request_id": "REQ_TEST_002",
+      "days_since_delivery": 10,
+      "category": "Shoes",
+      "item_value": 150.0
+    },
+    "expected_result": {
+      "mode": "SEMI-AUTO",
+      "status": "PENDING_PROCESSING",
+      "action": "WAIT_FOR_APPROVAL",
+      "rule_id": "RB_HIGH_VALUE"
+    }
+  },
+  {
+    "scenario_name": "Scenario 3: Damaged Product (NLP AI match)",
+    "description": "Khách hàng gửi yêu cầu kèm mô tả sản phẩm bị rách. Luật AI nhận diện hỏng hóc thực tế và đề xuất đổi trả bán tự động.",
+    "request": {
+      "request_id": "REQ_TEST_003",
+      "days_since_delivery": 12,
+      "category": "T-shirt",
+      "item_value": 30.0,
+      "user_text_description": "áo bị rách một đường dài ở tay áo"
+    },
+    "expected_result": {
+      "mode": "SEMI-AUTO",
+      "status": "PENDING_PROCESSING",
+      "action": "WAIT_FOR_APPROVAL",
+      "rule_id": "NLP_DAMAGED"
+    }
+  },
+  {
+    "scenario_name": "Scenario 4: Neither matched (Manual Review Fallback)",
+    "description": "Yêu cầu đổi trả với lý do chủ quan (không thích nữa), không khớp bất kỳ chính sách nào. Rơi vào duyệt thủ công.",
+    "request": {
+      "request_id": "REQ_TEST_004",
+      "days_since_delivery": 14,
+      "category": "Jeans",
+      "item_value": 45.0,
+      "user_text_description": "tôi không thích sản phẩm này nữa và muốn trả hàng"
+    },
+    "expected_result": {
+      "mode": "MANUAL",
+      "status": "PENDING_PROCESSING",
+      "action": null,
+      "rule_id": null
+    }
+  },
+  {
+    "scenario_name": "Scenario 5: Match deactivated rule (Should fallback to MANUAL)",
+    "description": "Yêu cầu khớp với luật bị vô hiệu hóa (active = false). Hệ thống bỏ qua luật này và rơi vào duyệt thủ công.",
+    "request": {
+      "request_id": "REQ_TEST_005",
+      "days_since_delivery": 20,
+      "category": "T-shirt",
+      "item_value": 25.0
+    },
+    "expected_result": {
+      "mode": "MANUAL",
+      "status": "PENDING_PROCESSING",
+      "action": null,
+      "rule_id": null
+    }
+  }
+]

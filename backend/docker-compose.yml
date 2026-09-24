@@ -1,0 +1,42 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    restart: unless-stopped
+    networks:
+      main:
+        aliases:
+          - mongodb
+
+  spring:
+    build:
+      context: .
+    container_name: spring
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    env_file:
+      - .env
+    environment:
+      - SPRING_MONGODB_URI=mongodb://mongodb:27017/kltn_ecommerce
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017/kltn_ecommerce
+      - APP_AI_BASE_URL=http://langgraph-api:8000
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    networks:
+      main:
+        aliases:
+          - spring
+
+networks:
+  main:
+    driver: bridge
+
+volumes:
+  mongodb_data:

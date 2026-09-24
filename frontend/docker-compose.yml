@@ -1,0 +1,24 @@
+services:
+  nextjs:
+    build:
+      context: /home/developer/demo/kltn-frontend
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_RULES_ENGINE_API_URL=${NEXT_PUBLIC_RULES_ENGINE_API_URL:-https://langgraph.nludemo.id.vn}
+        - NEXT_PUBLIC_WEB_BACKEND_API_URL=${NEXT_PUBLIC_WEB_BACKEND_API_URL:-https://api.nludemo.id.vn}
+        - NEXT_PUBLIC_LANGGRAPH_API_URL=${NEXT_PUBLIC_LANGGRAPH_API_URL:-https://langgraph.nludemo.id.vn}
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-https://langgraph.nludemo.id.vn}
+        - NEXT_PUBLIC_ASSISTANT_ID=${NEXT_PUBLIC_ASSISTANT_ID:-guardian_graph}
+        - LANGGRAPH_API_URL=${LANGGRAPH_API_URL:-https://langgraph.nludemo.id.vn}
+    container_name: nextjs
+    expose:
+      - "3000"
+    restart: unless-stopped
+    networks:
+      main:
+        aliases:
+          - nextjs
+
+networks:
+  main:
+    external: true

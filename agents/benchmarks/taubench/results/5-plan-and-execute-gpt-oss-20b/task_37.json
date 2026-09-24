@@ -1,0 +1,304 @@
+{
+  "task_idx": 37,
+  "task": {
+    "user_id": "daiki_sanchez_3253",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "daikisanchez1479@example.com"
+        }
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Daiki",
+          "last_name": "Sanchez",
+          "zip": "46236"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "daiki_sanchez_3253"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9348897"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "3377618313"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9743693396"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6817146515"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "2524789262"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9348897",
+          "item_ids": [
+            "6117189161",
+            "7453605304",
+            "3799046073"
+          ],
+          "new_item_ids": [
+            "6700049080",
+            "5320792178",
+            "3234800602"
+          ],
+          "payment_method_id": "credit_card_8853416"
+        }
+      }
+    ],
+    "instruction": "Your name is Daiki Sanchez, and you live in 46236, your email is daikisanchez1479@example.com. You just placed an order but you realize that your card has only $1150 credit left, but the order total is more than $1160. You wonder if the agent can help split the payment with another card. If not, you wonder what the most expensive item and its price, and if you can just cancel that item. If not, you wonder if you can switch all items to their cheapest options and bring the cost down to $1150. If so, do it. If not, you wonder if the agent can just cancel the order so that you can order again. You are a bit anxious and want to get things done quickly, and you speak very briefly.",
+    "outputs": [
+      "camera",
+      "481.5"
+    ],
+    "prompt": "Hi, I’m Daiki Sanchez from 46236, email daikisanchez1479@example.com. I just placed an order, but my card only has $1150 credit left while the total is over $1160. Can you split the payment with another card? If that’s not possible, could you tell me the most expensive item and its price, and whether I can cancel just that item? If canceling it still leaves the order above $1150, can we replace all items with the cheapest options to bring the cost down to $1150? If that works, please do it. If not, could you cancel the order so I can place a new one? I’m a bit anxious and want this resolved quickly."
+  },
+  "scores": {
+    "scores": {
+      "correct": 8,
+      "missing": 0,
+      "extra": 7,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "daikisanchez1479@example.com"
+        },
+        "id": "93a43f36-b579-436e-8cf2-8cd9b521cfde",
+        "type": "tool_call"
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Daiki",
+          "last_name": "Sanchez",
+          "zip": "46236"
+        },
+        "id": "ee47ba76-ca69-459f-8871-cd63bd9f71a5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "daiki_sanchez_3253"
+        },
+        "id": "fc445233-2319-4217-bd12-e1fc76524799",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9348897"
+        },
+        "id": "e0aea901-6772-4d0f-8925-c412a9fc63c9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "3377618313"
+        },
+        "id": "4df6e4f1-7db4-48cb-80c2-ad23161887b7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9743693396"
+        },
+        "id": "275e9458-db37-4996-a6b1-2e7147634fe4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6817146515"
+        },
+        "id": "376ebbe2-37f8-45a7-93d8-d3b215c8b5fc",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "4c483e91-5192-4af0-81d1-3246abb86c61",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "2524789262"
+        },
+        "id": "206c6c1a-6dd7-43dd-8f7e-bc7394dcdf47",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9348897"
+        },
+        "id": "6e561e78-ef1d-42fb-9253-838b5c214d85",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9348897"
+        },
+        "id": "bfd115d9-f40c-4906-a0b0-82514424034a",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "481.5+288.82+150.01+53.27+193.38"
+        },
+        "id": "cbb4c0e7-fb65-4207-8a8e-6768dd68a744",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "481.5"
+        },
+        "id": "9c67ca7f-5355-4396-bb04-51c61a8496d2",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "466.75+288.82+135.24+46.66+193.38"
+        },
+        "id": "d9a748b6-438a-4b69-b515-33825a655d03",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W9348897",
+          "item_ids": [
+            "6117189161",
+            "9879255677",
+            "7453605304",
+            "3799046073",
+            "9851293632"
+          ],
+          "new_item_ids": [
+            "6700049080",
+            "9879255677",
+            "5320792178",
+            "3234800602",
+            "9851293632"
+          ],
+          "payment_method_id": "credit_card_8853416"
+        },
+        "id": "4bfa0e03-c242-4305-b359-db637bc9a046",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "9523456873"
+          },
+          "id": "4c483e91-5192-4af0-81d1-3246abb86c61",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "2524789262"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W9348897",
+            "item_ids": [
+              "6117189161",
+              "9879255677",
+              "7453605304",
+              "3799046073",
+              "9851293632"
+            ],
+            "new_item_ids": [
+              "6700049080",
+              "9879255677",
+              "5320792178",
+              "3234800602",
+              "9851293632"
+            ],
+            "payment_method_id": "credit_card_8853416"
+          },
+          "id": "4bfa0e03-c242-4305-b359-db637bc9a046",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W9348897",
+            "item_ids": [
+              "6117189161",
+              "7453605304",
+              "3799046073"
+            ],
+            "new_item_ids": [
+              "6700049080",
+              "5320792178",
+              "3234800602"
+            ],
+            "payment_method_id": "credit_card_8853416"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fe0-bdbe-7e52-926b-74ffc12595bf?poll=true",
+  "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+}

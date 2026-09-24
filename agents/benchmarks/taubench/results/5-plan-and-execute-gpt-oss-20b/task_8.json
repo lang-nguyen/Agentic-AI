@@ -1,0 +1,152 @@
+{
+  "task_idx": 8,
+  "task": {
+    "user_id": "mei_kovacs_8020",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Mei",
+          "last_name": "Kovacs",
+          "zip": "28236"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mei_kovacs_8020"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6390527"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "8310926033"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6817146515"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W6390527",
+          "item_ids": [
+            "8384507844"
+          ],
+          "new_item_ids": [
+            "9083642334"
+          ],
+          "payment_method_id": "paypal_7644869"
+        }
+      }
+    ],
+    "instruction": "You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a brighter one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp.",
+    "outputs": [],
+    "prompt": "Hi, I’m mei_kovacs_8020 from zip code 28236.  \n\nI’d like to exchange my water bottle for a larger size, and my desk lamp for a less bright version that prefers an AC adapter over battery or USB. If you need to confirm the request, please only process the desk lamp exchange."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 5,
+      "extra": 1,
+      "mismatch": 1
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mei_kovacs_8020"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6390527"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8310926033"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6817146515"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W6390527",
+          "item_ids": [
+            "8384507844"
+          ],
+          "new_item_ids": [
+            "9083642334"
+          ],
+          "payment_method_id": "paypal_7644869"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "mei",
+          "last_name": "kovacs",
+          "zip": "28236"
+        },
+        "id": "830c8b1c-1963-4757-a148-ff086477ef0f",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "mei",
+            "last_name": "kovacs",
+            "zip": "28236"
+          },
+          "id": "830c8b1c-1963-4757-a148-ff086477ef0f",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Mei",
+            "last_name": "Kovacs",
+            "zip": "28236"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fbe-907c-7b72-9ea1-4f3586fb0ca5?poll=true"
+}

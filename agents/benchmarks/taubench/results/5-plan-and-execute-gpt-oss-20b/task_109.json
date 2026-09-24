@@ -1,0 +1,65 @@
+{
+  "task_idx": 109,
+  "task": {
+    "user_id": "yusuf_gonzalez_8900",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W1679211",
+          "item_ids": [
+            "9612497925",
+            "7127170374",
+            "6268080249"
+          ],
+          "payment_method_id": "paypal_3022415"
+        }
+      }
+    ],
+    "instruction": "You name is Yusuf Gonzalez and your zip code is 91455. You want to return everything but a tablet in a recently delivered order. You want to know how much you can get back.",
+    "outputs": [
+      "346.93"
+    ],
+    "prompt": "Hi, I’m Yusuf Gonzalez, zip code 91455.  \n\nI just received a recent delivery and would like to return everything except the tablet. Could you let me know how much I can expect to be refunded?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 1,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W1679211",
+          "item_ids": [
+            "9612497925",
+            "7127170374",
+            "6268080249"
+          ],
+          "payment_method_id": "paypal_3022415"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Gonzalez",
+          "zip": "91455"
+        },
+        "id": "b4f874e7-c190-4b70-bce0-600088a3926c",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7031-ec48-79c3-b562-26d248d15bcf?poll=true"
+}

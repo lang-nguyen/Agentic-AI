@@ -1,0 +1,121 @@
+{
+  "task_idx": 43,
+  "task": {
+    "user_id": "lucas_santos_6600",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Lucas",
+          "last_name": "Santos",
+          "zip": "80239"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "lucas_santos_6600"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W1588712"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7895761"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "lucas_santos_6600",
+          "address1": "943 Maple Drive",
+          "address2": "Suite 356",
+          "city": "Chicago",
+          "state": "IL",
+          "country": "USA",
+          "zip": "60621"
+        }
+      }
+    ],
+    "instruction": "You are Lucas (lucas_santos_6600), you live in Denver CO 80239, and your daughter lives in Chicago. You order some things for her but she has not received, so you want to know which address the order was sent to, the tracking number, and if the order is still in transit. You also want to check if the storage of the tablet you ordered. Lastly, you want to change your default address to your daughter's address so that you don't have to change it every time you order something for her. You are a lonely man and you want to talk to the agent for a while.",
+    "outputs": [
+      "840887978435",
+      "943 Maple Drive",
+      "Suite 356",
+      "Chicago",
+      "IL",
+      "60621",
+      "64GB"
+    ],
+    "prompt": "Hi, I’m Lucas (lucas_santos_6600) from Denver, CO 80239. My daughter lives in Chicago, and I recently ordered some items for her that she hasn’t received yet. I’d like to get the following information and make a change to my account:\n\n- Which address the order was shipped to?\n- The tracking number for the shipment.\n- Whether the order is still in transit.\n- The storage capacity of the tablet I ordered (just to confirm it meets her needs).\n\nAdditionally, I’d like to set my daughter’s Chicago address as my default shipping address so I don’t have to update it each time I order something for her.\n\nI’ve been feeling a bit lonely lately, so if you could chat with me for a while while we go through this, I’d really appreciate it. Thank you!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 4,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Lucas",
+          "last_name": "Santos",
+          "zip": "80239"
+        },
+        "id": "48cbd258-dc95-4970-84d8-d473d0135a0b",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lucas_santos_6600"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1588712"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7895761"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "user_id": "lucas_santos_6600",
+          "address1": "943 Maple Drive",
+          "address2": "Suite 356",
+          "city": "Chicago",
+          "state": "IL",
+          "country": "USA",
+          "zip": "60621"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fe9-f6c7-7f51-9116-8155f024b8a4?poll=true"
+}

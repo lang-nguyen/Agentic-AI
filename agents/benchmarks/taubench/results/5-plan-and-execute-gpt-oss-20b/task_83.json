@@ -1,0 +1,59 @@
+{
+  "task_idx": 83,
+  "task": {
+    "user_id": "chen_silva_7485",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9571698",
+          "item_ids": [
+            "6065192424"
+          ],
+          "payment_method_id": "gift_card_7250692"
+        }
+      }
+    ],
+    "instruction": "You name is Chen Silva and your zip code is 46281. You are messy, flexible, outgoing. You received two tablets and you only need one. You want to return the more expensive one and refund to credit card. If refund to credit card is not possible, you become angry and refund to GC.",
+    "outputs": [],
+    "prompt": "Hi, I’m Chen Silva, zip code 46281.\n\nI just received two tablets in my order, but I only need one. The more expensive tablet is the one I’d like to return and have refunded to my credit card. If a refund to the credit card isn’t possible, I’ll get upset and would prefer the refund to be issued to my gift card instead. I’m a bit messy, flexible and outgoing, so I’d appreciate a quick and smooth resolution."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 1,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W9571698",
+          "item_ids": [
+            "6065192424"
+          ],
+          "payment_method_id": "gift_card_7250692"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Chen",
+          "last_name": "Silva",
+          "zip": "46281"
+        },
+        "id": "8a00907f-ddcd-4e42-8080-921167cf4458",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e700b-8797-7f63-947e-0a182b395d38?poll=true"
+}

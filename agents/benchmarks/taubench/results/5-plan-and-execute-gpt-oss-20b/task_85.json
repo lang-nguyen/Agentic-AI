@@ -1,0 +1,127 @@
+{
+  "task_idx": 85,
+  "task": {
+    "user_id": "yusuf_hernandez_6785",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W2466703",
+          "item_ids": [
+            "9385662952"
+          ],
+          "new_item_ids": [
+            "8733974883"
+          ],
+          "payment_method_id": "paypal_7529813"
+        }
+      }
+    ],
+    "instruction": "You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com. You are shy, rigid. You want to exchange your Fleece Jacket for a large red Fleece Jacket with a half zipper",
+    "outputs": [],
+    "prompt": "Hi, I’m Yusuf Hernandez, email yusuf.hernandez8836@example.com. I’m a bit shy and rigid about my orders.\n\nI’d like to exchange the Fleece Jacket I bought for a large red Fleece Jacket with a half zipper."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 9,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W2466703",
+          "item_ids": [
+            "9385662952"
+          ],
+          "new_item_ids": [
+            "8733974883"
+          ],
+          "payment_method_id": "paypal_7529813"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "yusuf.hernandez8836@example.com"
+        },
+        "id": "3309965c-65a5-483f-9533-03cff6290a48",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_hernandez_6785"
+        },
+        "id": "214a7f41-7800-4ad6-b8f4-9e3c6f31e909",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2166301"
+        },
+        "id": "70871059-c58e-4687-a8ab-e01e24634f47",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "9481c94a-a12b-4b23-8a58-2f1c38165873",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6832752"
+        },
+        "id": "dbebffa6-4d26-41d8-8f53-3e9eb071fede",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7739115"
+        },
+        "id": "f176247e-d855-4e25-a6d1-63a65e7c42f4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1994898"
+        },
+        "id": "744abdeb-31df-47b9-86d8-281766f8da14",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "d4e75cbc-e690-4d45-925b-6be26b21d1b2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8560156827"
+        },
+        "id": "1ff3bb83-eb1b-471b-8e77-93818e23ebb3",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e700d-9d1c-79d3-aa22-73bcfd90ab6e?poll=true"
+}

@@ -1,0 +1,15 @@
+#Ticket
+
+__metadata__
+Ticket ID: #97407349-6759-42f1-b26f-03872728b750
+User Name: Yusuf Hernandez
+ZIP Code: unknown
+Email: yusuf.hernandez8836@example.com
+
+---
+
+__Content__
+
+Hi, I’m Yusuf Hernandez. I’m a shy, rigid person, and I’d like to exchange the fleece jacket I currently have for a large red fleece jacket with a half‑zipper.  
+
+Could you please process this exchange for me? Thank you.

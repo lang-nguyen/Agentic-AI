@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #c58b3d84-510f-44ce-86a1-6489ecdd9c31
+User Name: Isabella Johansson  
+ZIP Code: 32286  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Isabella Johansson and I’m writing because I need some urgent help with an order that was accidentally shipped to Texas.
+
+I’m not sure of the order number, but I know it was sent to Texas by mistake. I’d like to get the tracking number for that shipment so I can see where it is right now.
+
+Additionally, I want to return all the items that were shipped except for the pet bed. The pet bed is fine and I don’t want to return it.
+
+Please let me know how we can proceed with this request as quickly as possible.

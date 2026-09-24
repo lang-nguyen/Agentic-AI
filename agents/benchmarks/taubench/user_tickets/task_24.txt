@@ -1,0 +1,17 @@
+#Ticket
+
+__metadata__
+Ticket ID: #05592cab-3304-4c2e-8189-23ef869fd69d
+User Name: Sofia Hernandez
+ZIP Code: 98193
+Email: unknown
+
+---
+
+__Content__
+
+Hi there, I'm Sofia Hernandez from Seattle (ZIP 98193). I’d like to cancel the grill I ordered. However, if you need me to confirm the cancellation, I’d rather keep it—I just realized I might need it for an upcoming gathering.
+
+Also, in a separate order I placed, I ordered two t-shirts. Could you let me know which ones they are and what materials they’re made of? I’d like to know before making any further decisions.
+
+Thanks for your help!

@@ -1,0 +1,185 @@
+{
+  "task_idx": 92,
+  "task": {
+    "user_id": "mei_ahmed_4909",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7553978",
+          "item_ids": [
+            "4545791457",
+            "3098764622",
+            "1631806422"
+          ],
+          "payment_method_id": "credit_card_5902940"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3239882",
+          "item_ids": [
+            "9494281769"
+          ],
+          "payment_method_id": "credit_card_5902940"
+        }
+      }
+    ],
+    "instruction": "You name is Mei Ahmed and your zip code is 78705. You are polite, outgoing. You are angry about the quality of the two skateboards you just bought. You want to return them and refund to credit card. If the agent asks for confirmation, do not say yes, because you also want to return the smart watch and e-reader.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mei Ahmed from zip code 78705. I’m really disappointed with the quality of the two skateboards I just bought and would like to return both and get a refund to my credit card. I also want to return the smartwatch and e‑reader that came with the order. If you ask me to confirm the return, please don’t let me say yes until I’ve also arranged to return the smartwatch and e‑reader."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 8,
+      "mismatch": 2
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Mei",
+          "last_name": "Ahmed",
+          "zip": "78705"
+        },
+        "id": "aa3edce3-24a7-48f8-9348-fd82a1e05d7d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mei_ahmed_4909"
+        },
+        "id": "03e8f30d-7744-4a46-bed3-5def2f1d0c1b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7553978"
+        },
+        "id": "fcca4e6d-3cd6-4bfc-88b6-8fcc217d6982",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3239882"
+        },
+        "id": "7aae6033-bdd2-4718-a52a-e5e61118f227",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2598324"
+        },
+        "id": "45333f96-ff62-4b18-9ad1-b6817043b3ec",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W7553978",
+          "item_ids": [
+            "4545791457",
+            "3098764622"
+          ],
+          "payment_method_id": "credit_card_5902940"
+        },
+        "id": "6f2c8bc4-ebc4-42f3-9d1a-ec148547f56c",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "1631806422",
+            "9494281769"
+          ],
+          "order_id": "#W3239882",
+          "payment_method_id": "credit_card_5902940"
+        },
+        "id": "c10b3810-6a3f-4947-a3fb-3febdbc2d87d",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "1631806422"
+          ],
+          "order_id": "#W7553978",
+          "payment_method_id": "credit_card_5902940"
+        },
+        "id": "083f81f6-4905-47d4-a6d1-46c313b82681",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W7553978",
+            "item_ids": [
+              "4545791457",
+              "3098764622"
+            ],
+            "payment_method_id": "credit_card_5902940"
+          },
+          "id": "6f2c8bc4-ebc4-42f3-9d1a-ec148547f56c",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W7553978",
+            "item_ids": [
+              "4545791457",
+              "3098764622",
+              "1631806422"
+            ],
+            "payment_method_id": "credit_card_5902940"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W7553978",
+            "item_ids": [
+              "4545791457",
+              "3098764622"
+            ],
+            "payment_method_id": "credit_card_5902940"
+          },
+          "id": "6f2c8bc4-ebc4-42f3-9d1a-ec148547f56c",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W3239882",
+            "item_ids": [
+              "9494281769"
+            ],
+            "payment_method_id": "credit_card_5902940"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7017-0af7-7690-bec0-fc2ed63d82af?poll=true"
+}

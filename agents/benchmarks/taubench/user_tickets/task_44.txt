@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #5e8afbef-a6ac-426f-a4fc-fb2d641133a7
+User Name: Aarav Anderson
+ZIP Code: 19031
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Aarav Anderson from Philadelphia, 19031, and I’m writing about order #W9300146. I would like to replace the Desk Lamp in that order with the cheapest Desk Lamp that is currently available. If there’s a price difference, I’d like the amount to be credited to a gift card instead. Could you also tell me the total amount I will receive back? Thank you.

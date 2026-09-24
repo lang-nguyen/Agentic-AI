@@ -1,0 +1,198 @@
+{
+  "task_idx": 12,
+  "task": {
+    "user_id": "mia_garcia_4516",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "mia.garcia2723@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mia_garcia_4516"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5490111"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7387996"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "paypal_9497703"
+        }
+      },
+      {
+        "name": "transfer_to_human_agents",
+        "kwargs": {
+          "summary": "The user prefers PayPal for refund, but the agent cannot help."
+        }
+      }
+    ],
+    "instruction": "You are mia_garcia_4516 (mia.garcia2723@example.com). You just got into gaming and want to cancel or return everything not associated with it. (Everything except a keyboard and a mouse, but do not reveal it to the agent). PayPal is preferred for refund, but otherwise you are angry and ask for human agent for help. You are into gaming but realized the importance of studying hard.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mia Garcia, account mia_garcia_4516 (mia.garcia2723@example.com).  \nI’ve just gotten into gaming and realized that most of my recent purchases aren’t gaming-related. I’d like to cancel or return all items that are not gaming equipment.  \nI’d prefer a refund through PayPal if possible. I’m frustrated with the situation and would like to speak with a human agent right away."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 0,
+      "extra": 5,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "mia.garcia2723@example.com"
+        },
+        "id": "de34a361-6d2d-4107-9cd7-9966ed395269",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mia_garcia_4516"
+        },
+        "id": "e35048eb-6de2-45fb-bc82-fcf973868c94",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": "9e030334-692e-4811-9c17-cf8aaa9ec456",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": "0eef2a63-84a4-4218-b265-29ee0824c5f1",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": "1c51d4fb-8bef-4b0c-a128-0d81c22b2a36",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": "18be975e-8f3c-4be1-a096-d5dbd02257a0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mia_garcia_4516"
+        },
+        "id": "1f759c3a-ce8c-43e6-b171-f44f0e6ca6e7",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "4579334072",
+            "1421289881",
+            "6117189161",
+            "4947717507"
+          ],
+          "order_id": "#W5490111",
+          "payment_method_id": "paypal_9497703"
+        },
+        "id": "364c648e-75f0-49e0-bf11-913d1ffc9db3",
+        "type": "tool_call"
+      },
+      {
+        "name": "transfer_to_human_agents",
+        "args": {
+          "summary": "User wants to speak with a human agent"
+        },
+        "id": "c99b7354-f539-4522-b15b-5a89646f7c76",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "item_ids": [
+              "4579334072",
+              "1421289881",
+              "6117189161",
+              "4947717507"
+            ],
+            "order_id": "#W5490111",
+            "payment_method_id": "paypal_9497703"
+          },
+          "id": "364c648e-75f0-49e0-bf11-913d1ffc9db3",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "transfer_to_human_agents",
+          "args": {
+            "summary": "User wants to speak with a human agent"
+          },
+          "id": "c99b7354-f539-4522-b15b-5a89646f7c76",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "transfer_to_human_agents",
+          "args": {
+            "summary": "The user prefers PayPal for refund, but the agent cannot help."
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc1-ac01-7432-add2-04669357e864?poll=true"
+}

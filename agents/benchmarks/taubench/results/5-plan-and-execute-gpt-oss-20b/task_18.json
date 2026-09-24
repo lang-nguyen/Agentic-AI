@@ -1,0 +1,115 @@
+{
+  "task_idx": 18,
+  "task": {
+    "user_id": "mei_davis_8935",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Mei",
+          "last_name": "Davis",
+          "zip": "80217"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mei_davis_8935"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2890441"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4794339885"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W2890441",
+          "item_ids": [
+            "8069050545"
+          ],
+          "new_item_ids": [
+            "8069050545"
+          ],
+          "payment_method_id": "credit_card_1061405"
+        }
+      }
+    ],
+    "instruction": "You are Mei Davis in 80217. You want to return the office chair because it came with some broken pieces. But if the agent asks you for confirm, you say you want to rethink for a while, and then change your mind to exchange for the same item. You are in debt and sad today, but very brief.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mei Davis in 80217.  \nI’m writing because the office chair I bought arrived with some broken pieces, and I’d like to return it. However, if you need me to confirm, I’ll need a little time to rethink the decision. After that, I’ll change my mind and prefer to exchange the chair for a new one instead. I’m currently in debt and feeling sad today, but I appreciate your help."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 4,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Mei",
+          "last_name": "Davis",
+          "zip": "80217"
+        },
+        "id": "10160cf1-88a5-4228-aa74-77a0a44130c0",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mei_davis_8935"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2890441"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4794339885"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W2890441",
+          "item_ids": [
+            "8069050545"
+          ],
+          "new_item_ids": [
+            "8069050545"
+          ],
+          "payment_method_id": "credit_card_1061405"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc8-2063-7a32-b583-33b928537066?poll=true"
+}

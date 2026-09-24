@@ -1,0 +1,178 @@
+{
+  "task_idx": 26,
+  "task": {
+    "user_id": "isabella_johansson_2152",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "isabella_johansson_2152"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3792453"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7181492"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5565470"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2575533"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5565470",
+          "item_ids": [
+            "7602931732",
+            "9570044148"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      },
+      {
+        "name": "transfer_to_human_agents",
+        "kwargs": {
+          "summary": "The user wants to refund to the amex credit card, but the agent cannot help."
+        }
+      }
+    ],
+    "instruction": "You are Isabella Johansson, and you live in 32286. You have an order sent to Texas by accident, and you want to know the tracking number of the order, and return all items in it except the pet bed. You don't remember the order number. It is urgent.",
+    "outputs": [],
+    "prompt": "Hi, I’m Isabella Johansson from 32286. I just realized that an order was accidentally shipped to Texas instead of here, and I need help with it. I’d like to get the tracking number for that shipment, and I want to return all of the items in it except for the pet bed. Unfortunately I don’t remember the order number. This is urgent, so I’d appreciate a quick response."
+  },
+  "scores": {
+    "scores": {
+      "correct": 7,
+      "missing": 1,
+      "extra": 3,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        },
+        "id": "27fec759-522c-4ca4-ad53-577e283ef8d9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_johansson_2152"
+        },
+        "id": "72ed2964-9972-4b7c-a546-1bbc74d651f1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3792453"
+        },
+        "id": "35ca8f0d-9635-4280-892e-36f17b75332e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7181492"
+        },
+        "id": "317d4d4d-9bdb-4577-aa65-a7f5f559a3cf",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "7a06eaa9-21f6-46dc-a407-df019b0fd71e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2575533"
+        },
+        "id": "6b8731cb-1272-4674-97d9-2f939fcc7f38",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5565470",
+          "item_ids": [
+            "7602931732",
+            "9570044148"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": "d65e29f8-5295-41eb-976f-f83a436a366a",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "transfer_to_human_agents",
+        "args": {
+          "summary": "The user wants to refund to the amex credit card, but the agent cannot help."
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_johansson_2152"
+        },
+        "id": "f85c7c25-eb36-47e3-a388-2f8803d4d768",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "9ee19c9c-38d0-4a65-9eae-433568fdb279",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "fb331170-ab32-49ef-ad0a-141137454ee9",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fcd-3985-7091-9ff7-558764420842?poll=true"
+}

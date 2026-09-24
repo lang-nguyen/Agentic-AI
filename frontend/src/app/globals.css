@@ -1,0 +1,273 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+/* LKStore Design System CSS variables & Warm Orange theme tokens */
+:root {
+  /* Surface & Base colors */
+  --background: oklch(0.99 0.003 40);
+  /* Soft warm white */
+  --foreground: oklch(0.18 0.015 30);
+  /* Dark slate grey */
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.015 30);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.015 30);
+
+  /* Primary Brand colors (LKStore Vibrant Orange) */
+  --primary: oklch(0.62 0.23 45);
+  /* Brand orange */
+  --primary-foreground: oklch(1 0 0);
+  /* Pure white */
+
+  /* Secondary Brand colors (Amber/Warm slate accents) */
+  --secondary: oklch(0.965 0.018 45);
+  /* Very light orange/amber tint */
+  --secondary-foreground: oklch(0.35 0.04 45);
+  /* Dark warm slate */
+
+  /* System states */
+  --muted: oklch(0.965 0.018 45);
+  --muted-foreground: oklch(0.55 0.02 30);
+
+  --accent: oklch(0.965 0.018 45);
+  --accent-foreground: oklch(0.35 0.04 45);
+
+  --destructive: oklch(0.58 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+
+  --border: oklch(0.93 0.012 45);
+  /* Soft border with a hint of warm cream */
+  --input: oklch(0.93 0.012 45);
+  --ring: oklch(0.62 0.23 45 / 0.3);
+  /* Transparent orange glow */
+
+  /* Border Radius design system standard */
+  --radius: 0.875rem;
+  /* Generous, premium rounded feel */
+
+  /* Sidebar styles matching brand values */
+  --sidebar: oklch(0.99 0.003 40);
+  --sidebar-foreground: oklch(0.18 0.015 30);
+  --sidebar-primary: oklch(0.62 0.23 45);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.965 0.018 45);
+  --sidebar-accent-foreground: oklch(0.35 0.04 45);
+  --sidebar-border: oklch(0.93 0.012 45);
+  --sidebar-ring: oklch(0.62 0.23 45 / 0.2);
+}
+
+/* Admin Dashboard theme overrides (Indigo & Slate Gray base, 100% orange-free) */
+.admin-theme {
+  --primary: oklch(0.55 0.18 250);
+  --primary-foreground: oklch(1 0 0);
+  
+  --secondary: oklch(0.96 0.01 250);
+  --secondary-foreground: oklch(0.25 0.02 250);
+  
+  --muted: oklch(0.96 0.01 250);
+  --muted-foreground: oklch(0.65 0.01 250); /* Cool slate light gray */
+  
+  --accent: oklch(0.96 0.01 250);
+  --accent-foreground: oklch(0.25 0.02 250);
+  
+  --border: oklch(0.92 0.01 250);
+  --input: oklch(0.92 0.01 250);
+  --ring: oklch(0.55 0.18 250 / 0.2);
+}
+
+.dark {
+  /* Dark mode variables */
+  --background: oklch(0.16 0.01 30);
+  /* Dark warm charcoal */
+  --foreground: oklch(0.97 0.005 30);
+
+  --card: oklch(0.20 0.01 30);
+  --card-foreground: oklch(0.97 0.005 30);
+
+  --popover: oklch(0.16 0.01 30);
+  --popover-foreground: oklch(0.97 0.005 30);
+
+  --primary: oklch(0.65 0.23 45);
+  /* Vibrant orange for dark background */
+  --primary-foreground: oklch(0.12 0.01 30);
+  /* Dark text on orange */
+
+  --secondary: oklch(0.24 0.015 45);
+  /* Muted warm amber-slate */
+  --secondary-foreground: oklch(0.97 0.005 30);
+
+  --muted: oklch(0.24 0.015 45);
+  --muted-foreground: oklch(0.65 0.01 30);
+
+  --accent: oklch(0.24 0.015 45);
+  --accent-foreground: oklch(0.97 0.005 30);
+
+  --destructive: oklch(0.45 0.18 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+
+  --border: oklch(0.26 0.015 30);
+  --input: oklch(0.26 0.015 30);
+  --ring: oklch(0.65 0.23 45 / 0.4);
+
+  --sidebar: oklch(0.18 0.01 30);
+  --sidebar-foreground: oklch(0.97 0.005 30);
+  --sidebar-primary: oklch(0.65 0.23 45);
+  --sidebar-primary-foreground: oklch(0.12 0.01 30);
+  --sidebar-accent: oklch(0.24 0.015 45);
+  --sidebar-accent-foreground: oklch(0.97 0.005 30);
+  --sidebar-border: oklch(0.26 0.015 30);
+  --sidebar-ring: oklch(0.65 0.23 45 / 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Semantic tokens linked to tailwind base classes */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Reusable scale of orange colors for specific styles */
+  --color-brand-orange-50: oklch(0.97 0.015 45);
+  --color-brand-orange-100: oklch(0.93 0.035 45);
+  --color-brand-orange-200: oklch(0.85 0.08 45);
+  --color-brand-orange-300: oklch(0.75 0.14 45);
+  --color-brand-orange-400: oklch(0.68 0.18 45);
+  --color-brand-orange-500: oklch(0.62 0.23 45);
+  --color-brand-orange-600: oklch(0.57 0.22 45);
+  --color-brand-orange-700: oklch(0.50 0.19 45);
+  --color-brand-orange-800: oklch(0.42 0.16 45);
+  --color-brand-orange-900: oklch(0.32 0.12 45);
+  --color-brand-orange-950: oklch(0.22 0.08 45);
+
+  /* Radius sizing mapping */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    font-size: 106.25%;
+    /* Scales 16px to 17px, increasing all rem-based typography by 6.25% */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :root {
+    --chart-1: 19 95% 50%;
+    --chart-2: 38 90% 55%;
+    --chart-3: 200 40% 30%;
+    --chart-4: 45 80% 65%;
+    --chart-5: 28 85% 60%;
+  }
+
+  .dark {
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+/* Reusable Theme Utilities for the E-commerce Platform */
+@layer utilities {
+  .shadow-inner-right {
+    box-shadow: inset -9px 0 6px -1px rgb(0 0 0 / 0.02);
+  }
+
+  .shadow-inner-left {
+    box-shadow: inset 9px 0 6px -1px rgb(0 0 0 / 0.02);
+  }
+
+  /* Glassmorphism utility */
+  .glass-panel {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Scrollbar custom style */
+  .scrollbar-pretty {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-brand-orange-300) transparent;
+  }
+
+  .scrollbar-pretty::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .scrollbar-pretty::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-pretty::-webkit-scrollbar-thumb {
+    background-color: var(--color-brand-orange-300);
+    border-radius: 9999px;
+  }
+
+  .scrollbar-pretty::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-brand-orange-500);
+  }
+
+  /* Premium theme shadows */
+  .shadow-premium {
+    box-shadow: 0 10px 30px -10px rgba(255, 80, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Horizontal bobbing pointing hand animation */
+  @keyframes bounceHorizontal {
+
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+
+    50% {
+      transform: translateX(-4px);
+    }
+  }
+
+  .animate-bounce-horizontal {
+    animation: bounceHorizontal 0.8s infinite;
+  }
+}

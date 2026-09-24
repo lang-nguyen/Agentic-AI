@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Login')}"></head>
+<body style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); min-height: 100vh; display: flex; flex-direction: column;">
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<div class="login-wrapper" style="flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+    <div class="login-card" style="background: #ffffff; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); padding: 40px; width: 100%; max-width: 420px; text-align: center;">
+        
+        <div style="width: 64px; height: 64px; background: rgba(255,102,0,0.1); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 20px;">
+            🛒
+        </div>
+        
+        <h1 style="font-size: 1.8rem; font-weight: 800; color: #1f2937; margin-bottom: 8px;">Welcome back</h1>
+        <p style="color: #6b7280; margin-bottom: 30px; font-size: 0.95rem;">Log in to continue shopping at LKStore</p>
+
+        <div class="form-error" th:if="${param.error}" style="background: #fef2f2; border-left: 4px solid #ef4444; color: #b91c1c; padding: 12px; border-radius: 6px; text-align: left; margin-bottom: 24px; font-size: 0.9rem;">
+            Account not found with this email. Please try again.
+        </div>
+
+        <form th:action="@{/login}" method="post" style="text-align: left;">
+            <div class="form-group" style="margin-bottom: 24px;">
+                <label for="email" style="display: block; font-weight: 600; color: #374151; margin-bottom: 8px; font-size: 0.9rem;">Email Address</label>
+                <div style="position: relative;">
+                    <span style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: #9ca3af;">✉️</span>
+                    <input type="email" id="email" name="email" class="form-control"
+                           placeholder="Enter your email" required style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='#d1d5db'">
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 1.05rem; box-shadow: 0 4px 14px rgba(255,102,0,0.3); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+                Login now
+            </button>
+        </form>
+
+        <div style="display: flex; align-items: center; margin: 30px 0;">
+            <div style="flex: 1; height: 1px; background: #e5e7eb;"></div>
+            <div style="padding: 0 16px; color: #6b7280; font-size: 0.9rem; font-weight: 500;">Don't have an account?</div>
+            <div style="flex: 1; height: 1px; background: #e5e7eb;"></div>
+        </div>
+
+        <a th:href="@{/register}" class="btn btn-outline" style="width: 100%; justify-content: center; padding: 12px; border-radius: 8px; font-weight: 600; border: 2px solid #e5e7eb; color: #374151; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--primary)'; this.style.color='var(--primary)'" onmouseout="this.style.borderColor='#e5e7eb'; this.style.color='#374151'">
+            Create new account
+        </a>
+    </div>
+</div>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+</body>
+</html>

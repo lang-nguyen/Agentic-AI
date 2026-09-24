@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #92f3587c-1be6-4e55-94bf-7fa02c7f6b3e
+User Name: Daiki Sanchez
+ZIP Code: 46236
+Email: daikisanchez1479@example.com
+
+---
+
+__Content__
+
+Hi, I’m Daiki Sanchez and I just placed an order. My card only has $950 credit left but the order total is over $1100. Can you help split the payment with another card? If that’s not possible, can you tell me the most expensive item and its price, and whether I can cancel just that item? If that still doesn’t reduce the total to $950, can you switch all items to their cheapest options to bring the cost down to $950? If none of those options work, can you cancel the whole order so I can reorder? I’m a bit anxious and would appreciate a quick resolution. Thank you.

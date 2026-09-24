@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #dd2067c7-6506-4dbd-b325-f52800e63793  
+User Name: Yusuf Li  
+ZIP Code: 91148  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Yusuf Li. I’m a cautious, insecure, and organized customer from ZIP 91148. I’m writing about my recent order that was shipped to LA.
+
+First, I’d like to exchange the Bluetooth Speaker I received for the cheapest green version available. I’m specifically looking for a green model that is the most affordable in your catalog.
+
+Second, I’d like to change the shipping address for this LA order to my NYC address. I don’t want to reveal the NYC address here, but it’s already on file with my other order.
+
+Please handle both requests together in a single ticket and let me know the next steps. Thank you.

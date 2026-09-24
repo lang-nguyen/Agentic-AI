@@ -1,0 +1,89 @@
+{
+  "task_idx": 77,
+  "task": {
+    "user_id": "ivan_johnson_6036",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W1671835",
+          "item_ids": [
+            "5081446110"
+          ],
+          "new_item_ids": [
+            "3399869890"
+          ],
+          "payment_method_id": "paypal_6918118"
+        }
+      }
+    ],
+    "instruction": "You name is Ivan Johnson and your zip code is 94183. You ordered a perfume and you just tried a little bit and you like it extremely. You want to get the maximum size available for it. If the agent cannot help with placing a new order, exchange your current one to the largest size available.",
+    "outputs": [],
+    "prompt": "Hi, I’m Ivan Johnson from zip code 94183. I recently ordered a perfume, tried a little bit, and I absolutely love it. I’d like to upgrade to the largest size available. If you’re unable to place a new order for me, could you please exchange my current purchase for the largest size instead?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 4,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W1671835",
+          "item_ids": [
+            "5081446110"
+          ],
+          "new_item_ids": [
+            "3399869890"
+          ],
+          "payment_method_id": "paypal_6918118"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ivan",
+          "last_name": "Johnson",
+          "zip": "94183"
+        },
+        "id": "f2ff602e-229c-4f95-b313-33cfb7023256",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "ivan_johnson_6036"
+        },
+        "id": "138736fc-f792-46d3-80c6-f4bd52ea292b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1671835"
+        },
+        "id": "3c116754-d2de-4eec-855e-9c3004470461",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6858788497"
+        },
+        "id": "a2b022eb-0cd6-4ac9-adc8-b7a6bf488c36",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7005-05b3-7d71-a377-953f52c98621?poll=true"
+}

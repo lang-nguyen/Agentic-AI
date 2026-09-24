@@ -1,0 +1,22 @@
+#Ticket
+
+__metadata__
+Ticket ID: #0ac9a69a-0ab8-4168-9112-adc30a4d9d6e
+User Name: Lucas Brown  
+ZIP Code: unknown  
+Email: lucas.brown9344@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Lucas Brown. I’m busy, happy, outgoing, messy, and optimistic, and I want to cancel these two items that I received in different orders.  
+I received a bookshelf in one order and a jigsaw puzzle in another, and I’d like to return both of them.
+
+Next, I want to return the backpack that came with the vacuum cleaner I ordered.  
+
+Additionally, I have a pending order where I’d like to change the item color to red and update the shipping address to my default Chicago home (I’ll let you know the exact address is in my profile).
+
+Finally, could you please provide me with the tracking number for the cancelled order(s) I just mentioned?  
+
+Thank you!

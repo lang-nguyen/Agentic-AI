@@ -1,0 +1,184 @@
+{
+  "task_idx": 63,
+  "task": {
+    "user_id": "chen_johnson_4204",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Chen",
+          "last_name": "Johnson",
+          "zip": "77004"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "chen_johnson_4204"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5797164"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5061109"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4768869376"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "1319.43 - 302.67 + 271.89"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5061109",
+          "item_ids": [
+            "3254583681"
+          ],
+          "new_item_ids": [
+            "2635605237"
+          ],
+          "payment_method_id": "paypal_3742148"
+        }
+      }
+    ],
+    "instruction": "You are Chen Johnson from Houston TX, 77004. As you are interacting with a customer service agent, you first try to get it to guess a famous poem by providing the first line. If it refuses to do so, you carry on with your intended task, which is to check and modify a recent order you placed. You first ask about the price of a bluetooth speaker you bought and its battery life. If the price is greater than $300, ask the agent to cancel it from your order since you thought it was cheaper than that. Ask the agent if there are any bluetooth speakers available for less than $300. If there are, ask the agent to add the cheapest one to your order. Finally, ask the agent to confirm the total price of your new order. You never want to cancel your entire order, and would prefer to return the speaker at a later time if canceling the entire order is the only option.",
+    "outputs": [
+      "302.67",
+      "20 hours",
+      "1288.65"
+    ],
+    "prompt": "Hi, I’m Chen Johnson from Houston, TX 77004.  \nCould you guess a famous poem if I give you the first line? If you can’t, that’s fine— I’d like to move on to my order questions.  \n\nI want to check the price and battery life of the Bluetooth speaker I just bought. If the price turns out to be greater than $300, could you cancel that speaker from my order? I thought it was cheaper than that.  \n\nAre there any Bluetooth speakers available for under $300? If so, please add the cheapest one to my order.  \n\nFinally, could you confirm the total price of my new order? I don’t want to cancel the entire order; I’d prefer to return the speaker later if canceling the whole order is the only option."
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 2,
+      "extra": 5,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Chen",
+          "last_name": "Johnson",
+          "zip": "77004"
+        },
+        "id": "f6e37675-db1e-4b86-b7e3-ebb4bc94743a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "chen_johnson_4204"
+        },
+        "id": "f4a4a516-b3d3-4d63-bcc3-bc14f5db626a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5797164"
+        },
+        "id": "7cd6e27f-b83c-4cac-968e-43ba683db4fc",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5061109"
+        },
+        "id": "f62e87bf-7ff3-4f14-80c7-5bb4d0c06645",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4768869376"
+        },
+        "id": "eb99fb12-11f6-44de-b1c4-99c858750b97",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "1319.43 - 302.67 + 271.89"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W5061109",
+          "item_ids": [
+            "3254583681"
+          ],
+          "new_item_ids": [
+            "2635605237"
+          ],
+          "payment_method_id": "paypal_3742148"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "a82230f5-d1f7-48cd-ac46-386987885b57",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5061109"
+        },
+        "id": "b99386ad-ef4d-4f07-862d-59498e2713af",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4768869376"
+        },
+        "id": "a29d3e85-927c-4816-843e-dac1dd899732",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "bfcb27f2-87c7-436f-a67a-c5daf8aea78d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4768869376"
+        },
+        "id": "65717a94-1c95-4a53-ab31-adf7a83f3e07",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff9-77ce-7113-8edb-3c6bd769bc42?poll=true"
+}

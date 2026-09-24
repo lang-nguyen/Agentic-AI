@@ -1,0 +1,91 @@
+{
+  "task_idx": 71,
+  "task": {
+    "user_id": "ivan_khan_7475",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W5270061",
+          "address1": "159 Hickory Lane",
+          "address2": "Suite 995",
+          "city": "Charlotte",
+          "country": "USA",
+          "state": "NC",
+          "zip": "28243"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5270061",
+          "item_ids": [
+            "2492465580"
+          ],
+          "new_item_ids": [
+            "5917587651"
+          ],
+          "payment_method_id": "paypal_7729105"
+        }
+      }
+    ],
+    "instruction": "You name is Ivan Khan and your zip code is 28243. You are polite, optimistic, organized. You made some mistake and ordered an order sent to your son's address in Washington DC, and you want to modify it to your default address in Charlotte (you do not want to mention it, but it is in your user profile the agent can look up) because he is coming back home. You also want to adjust the desk lamp to be black color, and the backpack to be medium size and polyester material instead. If multiple colors are available for the backpack, you prefer grey. If the agent asks for payment method, you say GC initially, but if the agent does not allow it or asks you to confirm it, you change your mind to PayPal, and decide to only modify the backpack.",
+    "outputs": [],
+    "prompt": "Hi, I’m Ivan Khan, zip code 28243.\n\nI just realized the order was shipped to my son’s address in Washington DC by mistake. Could you please change the shipping address to my default address (the one on file)?  \n\nI’d also like to modify a couple of items in the order:  \n- The desk lamp – change its color to black.  \n- The backpack – change it to a medium size, polyester material. If several colors are available, I’d prefer grey.  \n\nIf you need a payment method to process these changes, I’d like to use GC. However, if GC isn’t accepted or you need me to confirm the payment method, I’ll switch to PayPal and, in that case, I’ll only proceed with the backpack modification."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 1,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W5270061",
+          "address1": "159 Hickory Lane",
+          "address2": "Suite 995",
+          "city": "Charlotte",
+          "country": "USA",
+          "state": "NC",
+          "zip": "28243"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W5270061",
+          "item_ids": [
+            "2492465580"
+          ],
+          "new_item_ids": [
+            "5917587651"
+          ],
+          "payment_method_id": "paypal_7729105"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ivan",
+          "last_name": "Khan",
+          "zip": "28243"
+        },
+        "id": "5b4777c4-0807-4f89-970f-1dfeb4152fbd",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fff-f99b-7d83-a2e7-6b238e967900?poll=true"
+}

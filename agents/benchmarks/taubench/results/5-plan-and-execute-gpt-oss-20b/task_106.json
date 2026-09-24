@@ -1,0 +1,117 @@
+{
+  "task_idx": 106,
+  "task": {
+    "user_id": "aarav_anderson_8794",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4316152",
+          "item_ids": [
+            "7292993796",
+            "7292993796"
+          ],
+          "new_item_ids": [
+            "3761330360",
+            "9647374798"
+          ],
+          "payment_method_id": "gift_card_7245904"
+        }
+      }
+    ],
+    "instruction": "You name is Aarav Anderson and your zip code is 19031. You are cautious, messy, rigid. For #W4316152, exchange Tea Kettle {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'material': 'ceramic', 'stovetop compatibility': 'gas'}; Tea Kettle {'material': 'glass', 'capacity': '2 liters', 'stovetop compatibility': 'induction'} to {'capacity': '1.5 liters', 'stovetop compatibility': 'gas'}; ",
+    "outputs": [],
+    "prompt": "Hi, I’m Aarav Anderson, zip code 19031, and I’m a cautious, messy, and rigid person. I’m referring to order #W4316152.\n\nI’d like to request an exchange for the tea kettle that came in the order. The original kettle is made of glass, holds 2 liters, and is induction‑compatible. I’d like to exchange it for a new kettle that is made of ceramic and is compatible with gas stoves.\n\nAdditionally, I’d also like to exchange a tea kettle (the same glass, 2‑liter induction model) for a kettle that holds 1.5 liters and is compatible with gas stoves.\n\nPlease let me know if both exchanges can be processed together or if I need to submit them separately."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 0,
+      "extra": 7,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "7292993796",
+            "7292993796"
+          ],
+          "new_item_ids": [
+            "3761330360",
+            "9647374798"
+          ],
+          "order_id": "#W4316152",
+          "payment_method_id": "gift_card_7245904"
+        },
+        "id": "003a473a-1d72-43c9-b74e-4a006adf8038",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Aarav",
+          "last_name": "Anderson",
+          "zip": "19031"
+        },
+        "id": "f73471d4-d418-4220-a16a-399801935286",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4316152"
+        },
+        "id": "4d7f1117-e573-4f15-be2b-ffcf8ee84739",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9832717871"
+        },
+        "id": "a7d8568c-6446-43dd-8cf5-6547d712e20d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4316152"
+        },
+        "id": "c925cc5e-2a05-4c1c-8150-7ae83e802ef0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4316152"
+        },
+        "id": "b6767f61-eccb-4870-bf61-1e540659aaa9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9832717871"
+        },
+        "id": "4e834bb8-2013-4666-8d42-436207a39c23",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4316152"
+        },
+        "id": "8a92cf05-f9f0-4e3a-a117-463d4e01aae4",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e702d-b873-7bf0-84c9-176d86650bc8?poll=true"
+}

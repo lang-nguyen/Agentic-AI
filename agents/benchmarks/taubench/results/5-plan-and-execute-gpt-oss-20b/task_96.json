@@ -1,0 +1,185 @@
+{
+  "task_idx": 96,
+  "task": {
+    "user_id": "lei_wilson_4541",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W2905754",
+          "item_ids": [
+            "3478699712"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4073673",
+          "item_ids": [
+            "2216662955"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        }
+      }
+    ],
+    "instruction": "You name is Lei Wilson and your zip code is 32255. You are confident, organized, creative, impatient. You received a laptop and you want to exchange it to i7 processor, 8GB, 1TB SSD. If the agent asks for which laptop, it is 15-inch, and it is actually two laptops that you want to exchange. You want to know how much you need to pay today in total.",
+    "outputs": [
+      "167.87",
+      "60.78",
+      "107.09"
+    ],
+    "prompt": "Hi, I’m Lei Wilson from zip code 32255. I’m a confident, organized, creative, and a bit impatient shopper. I recently received a laptop and would like to exchange it for a model with an i7 processor, 8 GB RAM, and a 1 TB SSD. The laptop is 15‑inch, and actually I have two of those 15‑inch laptops that I want to exchange to the same configuration. Could you let me know how much I’ll need to pay today in total for both exchanges?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 0,
+      "extra": 12,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W2905754",
+          "item_ids": [
+            "3478699712"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "credit_card_3677959"
+        },
+        "id": "09bc9c69-1736-47c0-be8b-77e4e7680de9",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "2216662955"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "order_id": "#W4073673",
+          "payment_method_id": "credit_card_3677959"
+        },
+        "id": "cb766f27-b479-4f2c-95b4-4dcfd34c31da",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Lei",
+          "last_name": "Wilson",
+          "zip": "32255"
+        },
+        "id": "1ecda616-0492-4fe8-94bb-2e32392a0859",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lei_wilson_4541"
+        },
+        "id": "35c668ea-c4ef-4e89-8742-5dd0f17cb0fa",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3826449"
+        },
+        "id": "248bd3e3-9db3-423c-9555-dd1c0a6f4764",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2905754"
+        },
+        "id": "23b09ec3-e881-4b5e-a079-8f03dd9c4fe7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4073673"
+        },
+        "id": "2c47f6f5-7ccb-4cd7-a328-6a496fd2ee4c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4760268021"
+        },
+        "id": "2cb1d2d2-ad25-4381-8a71-364bdde35a57",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2905754"
+        },
+        "id": "f482a423-3e01-4718-a4cf-74afb94582b1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4073673"
+        },
+        "id": "929a8408-751f-4206-8ea3-2657e31a74f7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4760268021"
+        },
+        "id": "78eed979-34af-4085-9ab8-855f43e66a4c",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "2291.87-2459.74"
+        },
+        "id": "c3515085-2394-4374-b3a9-e18018214e3a",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "2520.52-2459.74"
+        },
+        "id": "745ec44b-622f-41c4-9736-e41bbcb8b947",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "-167.87+60.78"
+        },
+        "id": "fc159a0c-ead3-49d0-8d20-c49f55e16435",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e701c-ab99-7653-ba6d-cd4cf67df72b?poll=true"
+}

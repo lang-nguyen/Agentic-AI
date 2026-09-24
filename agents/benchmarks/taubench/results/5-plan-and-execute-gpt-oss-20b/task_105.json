@@ -1,0 +1,215 @@
+{
+  "task_idx": 105,
+  "task": {
+    "user_id": "lucas_brown_6720",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W8660475",
+          "item_ids": [
+            "8479046075"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9218746",
+          "item_ids": [
+            "7824298782"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W4860251",
+          "address1": "921 Park Avenue",
+          "address2": "Suite 892",
+          "city": "Chicago",
+          "country": "USA",
+          "state": "IL",
+          "zip": "60612"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4860251",
+          "item_ids": [
+            "5209958006"
+          ],
+          "new_item_ids": [
+            "8964750292"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        }
+      }
+    ],
+    "instruction": "You name is Lucas Brown and your email is lucas.brown9344@example.com. You are busy, happy, outgoing, messy, optimistic. You want to return the bookshelf and jigsaw you received in different orders. Make sure you mention at the beginning that you want to cancel these two things, and they are from different orders. You also want to return the backpack you received with the vacuum cleaner. You also want to change your pending order item to red, and address to your default Chicago home (you won't reveal it for private reasons but it's in your profile). You want to get the tracking number of your cancelled order. You like to say one thing at a time.",
+    "outputs": [
+      "286422338955"
+    ],
+    "prompt": "Hi, I’m Lucas Brown, email lucas.brown9344@example.com. I’m a busy, happy, outgoing, messy, and optimistic person. I want to cancel the bookshelf I received in one order and the jigsaw I received in another order. I also want to return the backpack that came with the vacuum cleaner. I want to change the color of my pending order item to red. I want to change my shipping address to my default Chicago home. Finally, could you give me the tracking number for the order I just cancelled?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 0,
+      "extra": 9,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W9218746",
+          "item_ids": [
+            "7824298782"
+          ],
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "d885dd9b-af14-4e06-87be-a8009ebfaa50",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "921 Park Avenue",
+          "address2": "Suite 892",
+          "city": "Chicago",
+          "country": "USA",
+          "state": "IL",
+          "zip": "60612",
+          "order_id": "#W4860251"
+        },
+        "id": "5199b9ad-e76b-4807-b542-c744a61e7e53",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "5209958006"
+          ],
+          "new_item_ids": [
+            "8964750292"
+          ],
+          "order_id": "#W4860251",
+          "payment_method_id": "credit_card_2112420"
+        },
+        "id": "6bce70c8-a76c-429d-9b1c-0a7be4dc3323",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "lucas.brown9344@example.com"
+        },
+        "id": "0dd2a944-240c-408f-b21e-5a2cc0c8e7c7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lucas_brown_6720"
+        },
+        "id": "00f9059d-55d5-4680-a7e6-8ca29837a92f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6239298"
+        },
+        "id": "b6ebb051-0c09-4a30-9dac-5982388167ee",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8660475"
+        },
+        "id": "e5f0c831-4868-44c4-8445-fb31c46041f6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1154986"
+        },
+        "id": "05ff1483-1c9c-44b4-b7bd-640acc78f22d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4860251"
+        },
+        "id": "6425f39f-665c-4cfe-8e5b-163a5ce272bf",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "5426915165"
+        },
+        "id": "bd42573c-0c50-446b-873c-7d014bfda1ec",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lucas_brown_6720"
+        },
+        "id": "04c697df-0980-4e06-96a8-54eef70e0f05",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9218746"
+        },
+        "id": "78057a6d-5e34-4424-9d51-bccdd710c452",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W9218746",
+            "item_ids": [
+              "7824298782"
+            ],
+            "payment_method_id": "credit_card_2112420"
+          },
+          "id": "d885dd9b-af14-4e06-87be-a8009ebfaa50",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W8660475",
+            "item_ids": [
+              "8479046075"
+            ],
+            "payment_method_id": "credit_card_2112420"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e702b-5514-7040-87d8-64a32541cb1c?poll=true",
+  "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://docs.langchain.com/oss/python/langgraph/errors/GRAPH_RECURSION_LIMIT"
+}

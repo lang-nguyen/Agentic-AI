@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout :: head('Product Detail')}"></head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full" th:if="${product != null}">
+    <!-- Breadcrumb -->
+    <nav class="flex text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+                <a th:href="@{/}" class="hover:text-primary transition-colors">Home</a>
+            </li>
+            <li>
+                <div class="flex items-center">
+                    <span class="mx-2 text-gray-400">/</span>
+                    <span class="text-gray-900 font-medium" th:text="${product.name}">Product</span>
+                </div>
+            </li>
+        </ol>
+    </nav>
+
+    <div class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+        <div class="flex flex-col lg:flex-row">
+
+            <!-- Gallery Section -->
+            <div class="w-full lg:w-1/2 p-8 lg:p-12 lg:border-r border-gray-100 bg-gray-50/50 flex flex-col justify-center">
+                <div class="relative w-full aspect-square bg-white rounded-2xl shadow-sm flex items-center justify-center p-8 mb-6 overflow-hidden group">
+                    <img th:src="${product.image}"
+                         th:alt="${product.name}"
+                         id="mainImage"
+                         class="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x800/f3f4f6/9ca3af?text=No+Image';">
+                </div>
+
+                <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide justify-center"
+                     th:if="${product.variants != null}">
+                    <th:block th:each="variant : ${product.variants.values()}">
+                        <th:block th:if="${variant.images != null}" th:each="img, stat : ${variant.images}">
+                            <button th:if="${stat.index < 6}"
+                                    class="thumbnail-btn flex-shrink-0 w-20 h-20 rounded-xl border-2 border-transparent bg-white shadow-sm overflow-hidden p-2 hover:border-primary/50 focus:outline-none transition-all"
+                                    onclick="document.getElementById('mainImage').src = this.querySelector('img').src;
+                                             document.querySelectorAll('.thumbnail-btn').forEach(btn => {
+                                                 btn.classList.remove('border-primary', 'ring-2', 'ring-primary/20');
+                                                 btn.classList.add('border-transparent');
+                                             });
+                                             this.classList.remove('border-transparent');
+                                             this.classList.add('border-primary', 'ring-2', 'ring-primary/20');">
+                                <img th:src="${img}"
+                                     th:alt="${product.name}"
+                                     class="w-full h-full object-contain mix-blend-multiply"
+                                     onerror="this.parentElement.style.display='none'">
+                            </button>
+                        </th:block>
+                    </th:block>
+                </div>
+            </div>
+
+            <!-- Product Info Section -->
+            <div class="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col">
+                <div class="mb-2">
+                    <span class="text-xs font-bold tracking-widest text-primary uppercase">LKStore</span>
+                </div>
+
+                <h1 class="text-3xl lg:text-4xl font-black text-gray-900 mb-4 leading-tight"
+                    th:text="${product.displayName}">Product Name</h1>
+
+                <div class="flex items-center gap-4 mb-8 text-sm">
+                    <div class="flex items-center text-yellow-400">
+                        <span>⭐⭐⭐⭐⭐</span> <span class="text-gray-500 ml-2">(4.9/5)</span>
+                    </div>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span class="text-gray-500">Product ID: <strong class="text-gray-700 font-mono"
+                                                               th:text="${product.productId}">ID</strong></span>
+                    <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span id="displayStatus"
+                          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                        Loading...
+                    </span>
+                </div>
+
+                <div class="mb-8 p-6 bg-gradient-to-r from-gray-50 to-white border border-gray-100 rounded-2xl">
+                    <div class="text-sm text-gray-500 mb-1">Price</div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-4xl font-black text-primary" id="displayPrice"
+                              th:text="'$' + ${#numbers.formatDecimal(product.minPrice, 1, 2)}">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- Dynamic Variant Selectors -->
+                <div class="flex-1" th:if="${product.variants != null && !product.variants.isEmpty()}">
+                    <div id="variantSelectors" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8"></div>
+
+                    <div th:if="${message}"
+                         class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
+                         role="alert">
+                        <span class="block sm:inline" th:text="${message}"></span>
+                    </div>
+
+                    <!-- Add to cart form -->
+                    <form th:action="@{/cart/add}" method="post" id="addToCartForm"
+                          class="mt-auto pt-8 border-t border-gray-100">
+                        <input type="hidden" name="productId" th:value="${product.productId}">
+                        <input type="hidden" name="variantId" id="formVariantId">
+
+                        <div class="flex gap-4">
+                            <button type="submit" id="addToCartBtn"
+                                    class="flex-1 bg-primary hover:bg-primary-dark text-white text-lg font-bold py-4 px-8 rounded-2xl shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3">
+                                <span>🛒</span> Add to cart
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+        document.addEventListener("DOMContentLoaded", function() {
+            var variants = /*[[${product.variants}]]*/ {};
+
+            if (!variants || Object.keys(variants).length === 0) {
+                var statusEl = document.getElementById("displayStatus");
+                statusEl.textContent = "In stock";
+                statusEl.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800";
+                return;
+            }
+
+            // Extract all available option types (e.g. Color, Size) and their unique values
+            var optionTypes = {};
+            for (var variantId in variants) {
+                var options = variants[variantId].options;
+                for (var key in options) {
+                    if (!optionTypes[key]) {
+                        optionTypes[key] = new Set();
+                    }
+                    optionTypes[key].add(options[key]);
+                }
+            }
+
+            var selectorsContainer = document.getElementById("variantSelectors");
+            var selects = {}; // Keep track of select elements
+
+            // Generate dropdown for each option type
+            for (var key in optionTypes) {
+                var wrapper = document.createElement("div");
+
+                var label = document.createElement("label");
+                label.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                label.className = "block text-sm font-semibold text-gray-700 mb-2";
+
+                var selectWrap = document.createElement("div");
+                selectWrap.className = "relative";
+
+                var select = document.createElement("select");
+                select.className = "block w-full pl-4 pr-10 py-3 text-base border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary sm:text-sm rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors appearance-none font-medium cursor-pointer";
+                select.dataset.key = key;
+
+                optionTypes[key].forEach(function(val) {
+                    var option = document.createElement("option");
+                    option.value = val;
+                    option.textContent = val;
+                    select.appendChild(option);
+                });
+
+                var icon = document.createElement("div");
+                icon.className = "pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500";
+                icon.innerHTML = '▼';
+                icon.style.fontSize = '10px';
+
+                // Listen for change
+                select.addEventListener("change", updateVariantDetails);
+
+                selects[key] = select;
+
+                selectWrap.appendChild(select);
+                selectWrap.appendChild(icon);
+
+                wrapper.appendChild(label);
+                wrapper.appendChild(selectWrap);
+                selectorsContainer.appendChild(wrapper);
+            }
+
+            // Initialize state
+            updateVariantDetails();
+
+            function updateVariantDetails() {
+                // Get current selected combination
+                var currentSelection = {};
+                for (var key in selects) {
+                    currentSelection[key] = selects[key].value;
+                }
+
+                // Find matching variant
+                var matchedVariant = null;
+                for (var variantId in variants) {
+                    var variant = variants[variantId];
+                    var match = true;
+                    for (var key in currentSelection) {
+                        if (variant.options[key] !== currentSelection[key]) {
+                            match = false;
+                            break;
+                        }
+                    }
+                    if (match) {
+                        matchedVariant = variant;
+                        break;
+                    }
+                }
+
+                var priceEl = document.getElementById("displayPrice");
+                var statusEl = document.getElementById("displayStatus");
+                var btn = document.getElementById("addToCartBtn");
+
+                if (matchedVariant) {
+                    priceEl.textContent = "$" + matchedVariant.price.toFixed(2);
+                    if (matchedVariant.available) {
+                        statusEl.textContent = "In stock";
+                        statusEl.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800";
+                        btn.disabled = false;
+                        btn.innerHTML = '<span>🛒</span> Add to cart';
+                        btn.className = "flex-1 bg-primary hover:bg-primary-dark text-white text-lg font-bold py-4 px-8 rounded-2xl shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1 active:translate-y-0 flex items-center justify-center gap-3";
+
+                        document.getElementById('formVariantId').value = matchedVariant.itemId;
+                    } else {
+                        statusEl.textContent = "Out of stock";
+                        statusEl.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-800";
+                        btn.disabled = true;
+                        btn.innerHTML = "Out of stock";
+                        btn.className = "flex-1 bg-gray-300 text-gray-500 text-lg font-bold py-4 px-8 rounded-2xl cursor-not-allowed flex items-center justify-center";
+                    }
+
+                    // Cập nhật ảnh nếu variant có ảnh riêng
+                    if (matchedVariant.images && matchedVariant.images.length > 0) {
+                        document.getElementById('mainImage').src = matchedVariant.images[0];
+                    }
+                } else {
+                    priceEl.textContent = "---";
+                    statusEl.textContent = "Out of stock";
+                    statusEl.className = "inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-red-800";
+                    btn.disabled = true;
+                    btn.innerHTML = "Out of stock";
+                    btn.className = "flex-1 bg-gray-300 text-gray-500 text-lg font-bold py-4 px-8 rounded-2xl cursor-not-allowed flex items-center justify-center";
+                    btn.onclick = null;
+                }
+            }
+
+            // Select first thumbnail by default
+            var firstThumb = document.querySelector('.thumbnail-btn');
+            if(firstThumb) {
+                firstThumb.classList.remove('border-transparent');
+                firstThumb.classList.add('border-primary', 'ring-2', 'ring-primary/20');
+            }
+        });
+    /*]]>*/
+</script>
+
+<div class="max-w-3xl mx-auto px-4 py-24 text-center" th:if="${product == null}">
+    <div class="text-6xl mb-6">🔍</div>
+    <h3 class="text-2xl font-bold text-gray-900 mb-4">Product not found</h3>
+    <p class="text-gray-500 mb-8">The product you are looking for does not exist or has been removed.</p>
+    <a th:href="@{/}"
+       class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-xl shadow-sm text-white bg-primary hover:bg-primary-dark transition-colors">
+        Back to home
+    </a>
+</div>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<div th:replace="~{fragments/layout :: chatbot}"></div>
+</body>
+</html>

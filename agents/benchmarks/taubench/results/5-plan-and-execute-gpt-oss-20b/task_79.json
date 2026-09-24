@@ -1,0 +1,136 @@
+{
+  "task_idx": 79,
+  "task": {
+    "user_id": "emma_kovacs_9839",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W8661412",
+          "item_ids": [
+            "3453331371"
+          ],
+          "new_item_ids": [
+            "2439754078"
+          ],
+          "payment_method_id": "credit_card_7239357"
+        }
+      }
+    ],
+    "instruction": "You name is Emma Kovacs and your zip code is 32190. You are insecure, rigid, sad, logical. You just bought a water bottle with 500ml but you regret it, and you want to change it to the other bottle you just placed with 1000ml capacity. If the exact item is not available any more, you can allow the material to be different.",
+    "outputs": [],
+    "prompt": "Hi, I’m Emma Kovacs from zip code 32190.  \nI’m feeling a bit insecure and sad about a recent purchase, but I’m trying to handle it in a logical and rigid way. I just bought a 500 ml water bottle and regret it. I’d like to change it to the other bottle I just ordered, which has a 1000 ml capacity. If that exact 1000 ml bottle is no longer available, I’m willing to accept a bottle made from a different material."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 0,
+      "extra": 9,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "3453331371"
+          ],
+          "new_item_ids": [
+            "2439754078"
+          ],
+          "order_id": "#W8661412",
+          "payment_method_id": "credit_card_7239357"
+        },
+        "id": "beac9cb6-f32b-484a-909c-6b4a96f421a9",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Emma",
+          "last_name": "Kovacs",
+          "zip": "32190"
+        },
+        "id": "ff63a96e-25cd-4c0b-b2fa-981a5b481f16",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "emma_kovacs_9839"
+        },
+        "id": "9e6d005a-7d67-4a46-a1f7-031c1ad35c4f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9284598"
+        },
+        "id": "abb1719a-5ee1-4c19-8489-fa9cf34c6f4e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8661412"
+        },
+        "id": "5ac3daa1-e559-4698-9ef3-847260fb43a1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8310926033"
+        },
+        "id": "915c4eb6-6db9-4609-b5af-9548e179aa3c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8661412"
+        },
+        "id": "78fda7f1-ede0-4d42-8734-42dc7f5caff4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8310926033"
+        },
+        "id": "0d0a56b6-8bd3-46a2-a3e9-b01eb0b8b216",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8310926033"
+        },
+        "id": "0c1275a3-3b7e-4a72-abdb-16c66fc99785",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "3453331371"
+          ],
+          "new_item_ids": [
+            "2439754078"
+          ],
+          "order_id": "#W8661412",
+          "payment_method_id": "credit_card_7239357"
+        },
+        "id": "3e010e22-59f0-4daa-8ced-400f2b950ad1",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7007-01f6-7a13-bde5-c6244eda1374?poll=true"
+}

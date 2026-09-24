@@ -1,0 +1,17 @@
+#Ticket
+
+__metadata__
+Ticket ID: #7127893d-5ea2-4884-86ea-64bbed530485
+User Name: Fatima Wilson  
+ZIP Code: unknown  
+Email: fatima.wilson5721@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Fatima Wilson and I’m writing about my recent purchase.
+
+I would like to return every item I bought **except** the coffee machine. Please let me know the next steps to process this return.
+
+Thank you for your help!

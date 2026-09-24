@@ -1,0 +1,78 @@
+[project]
+name = "agentic_ai"
+version = "0.0.1"
+description = "."
+authors = [
+    { name = "bqtankiet", email = "bqtankiet@gmail.com" },
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "langchain>=1.2.17",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.0.0",
+    "motor>=3.7.1",
+    "pymongo>=4.17.0",
+    "python-dotenv>=1.0.1",
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["agentic_ai"]
+
+[tool.setuptools.package-dir]
+"agentic_ai" = "src/agentic_ai"
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle (PEP8 style errors)
+    "F",    # pyflakes (logical errors, undefined names)
+    "I",    # isort (import sorting)
+    "D",    # pydocstyle (docstring rules)
+    "D401", # first line must be imperative mood (docstring style rule)
+    "T201", # print statement detection
+    "UP",   # pyupgrade (modern Python syntax suggestions)
+]
+
+lint.ignore = [
+    "UP006", # ignore upgrade suggestion: typing.List -> list, etc.
+    "UP007", # ignore Optional/Union simplifications
+    # We actually do want to import from typing_extensions
+    "UP035", # ignore deprecated typing imports warning
+    # Relax the convention by not requiring documentation for every function parameter.
+    "D417",  # missing argument description in docstrings
+    "E501",  # line too long
+    "D100",  # missing module docstring
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "UP"]
+"app.py" = ["D", "T201"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "anyio>=4.7.0",
+    "codespell>=2.4.2",
+    "langgraph-cli[inmem]>=0.4.14",
+    "mypy>=1.13.0",
+    "pytest>=8.3.5",
+    "ruff>=0.8.2",
+]

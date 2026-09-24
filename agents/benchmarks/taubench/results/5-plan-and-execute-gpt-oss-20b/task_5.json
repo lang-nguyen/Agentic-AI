@@ -1,0 +1,167 @@
+{
+  "task_idx": 5,
+  "task": {
+    "user_id": "mei_kovacs_8020",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Mei",
+          "last_name": "Kovacs",
+          "zip": "28236"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mei_kovacs_8020"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6390527"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6817146515"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W6390527",
+          "item_ids": [
+            "8538875209"
+          ],
+          "payment_method_id": "paypal_7644869"
+        }
+      }
+    ],
+    "instruction": "You are mei_kovacs_8020 (zip code 28236) and you want to exchange the water bottle and the desk lamp. You want to exchange the water bottle to a bigger one, and the desk lamp to a less bright one (prefer battery > USB > AC). If the agent asks for confirmation, only exchange the desk lamp. If the agent asks for confirmation again, do not exchange anything, and return the water bottle instead.",
+    "outputs": [],
+    "prompt": "Hi, I’m mei_kovacs_8020, zip code 28236.  \n\nI’d like to exchange two items from my recent order: the water bottle and the desk lamp. For the water bottle, I want a larger size. For the desk lamp, I’d like a less bright model, preferably one that runs on battery, then USB, then AC.  \n\nIf you need confirmation, I’d only like to proceed with the desk‑lamp exchange. If you ask for confirmation again, I’d cancel any exchanges and instead just return the water bottle."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 2,
+      "extra": 4,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mei_kovacs_8020"
+        },
+        "id": "628e7c40-a64d-4aad-8fdd-4e8f59407cf5",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6817146515"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W6390527",
+          "item_ids": [
+            "8538875209"
+          ],
+          "payment_method_id": "paypal_7644869"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "mei",
+          "last_name": "kovacs",
+          "zip": "28236"
+        },
+        "id": "1c688c5c-107e-4ec0-b4df-0298c97f5773",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8065207"
+        },
+        "id": "95138d68-c639-46f6-be3f-24ee86615d3e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8065207"
+        },
+        "id": "d4f6df8f-f4b4-40cd-8589-853bdbe30b30",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8065207"
+        },
+        "id": "2ef23275-38f4-4d23-b9a5-a3e377565ab1",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "mei",
+            "last_name": "kovacs",
+            "zip": "28236"
+          },
+          "id": "1c688c5c-107e-4ec0-b4df-0298c97f5773",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Mei",
+            "last_name": "Kovacs",
+            "zip": "28236"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W8065207"
+          },
+          "id": "95138d68-c639-46f6-be3f-24ee86615d3e",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W6390527"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fbc-e631-7e30-8ca9-21dd4ae8d05c?poll=true"
+}

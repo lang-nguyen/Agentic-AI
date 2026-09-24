@@ -1,0 +1,123 @@
+{
+  "task_idx": 66,
+  "task": {
+    "user_id": "aarav_lee_1982",
+    "annotator": "3",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Aarav",
+          "last_name": "Lee",
+          "zip": "85025"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "aarav_lee_1982"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3361211"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3586556"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W3361211",
+          "reason": "no longer needed"
+        }
+      }
+    ],
+    "instruction": "You are Aarav Lee. You want to change the luggage set in your order for a coat. You live in Phoenix, AZ 85025. Your goal is to change the order. If there is no way to do that, return the item specifically. If there are any issues, cancel the entire order.",
+    "outputs": [],
+    "prompt": "Hi, I’m Aarav Lee from Phoenix, AZ 85025. I’d like to replace the luggage set in my recent order with a coat instead. If it isn’t possible to make that change, I’d like the luggage set returned. If there are any complications with either the exchange or return, please cancel my entire order. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 1,
+      "extra": 1,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Aarav",
+          "last_name": "Lee",
+          "zip": "85025"
+        },
+        "id": "5c4637b1-dc15-49c1-bafb-32d609dc2a00",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "aarav_lee_1982"
+        },
+        "id": "9e294802-7ebd-4c14-a07f-8f3586b870b6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3586556"
+        },
+        "id": "f3c84a32-b994-4739-bc5b-b180c05f3577",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W3361211",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3361211"
+        },
+        "id": "fce46c66-80c2-4998-8c0f-1f4cafb96200",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W3586556"
+          },
+          "id": "f3c84a32-b994-4739-bc5b-b180c05f3577",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W3361211"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ffc-77d7-7b11-bbeb-07d800fd8164?poll=true"
+}

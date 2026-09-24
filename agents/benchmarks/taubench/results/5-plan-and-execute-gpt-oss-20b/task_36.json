@@ -1,0 +1,232 @@
+{
+  "task_idx": 36,
+  "task": {
+    "user_id": "daiki_sanchez_3253",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "daikisanchez1479@example.com"
+        }
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Daiki",
+          "last_name": "Sanchez",
+          "zip": "46236"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "daiki_sanchez_3253"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9348897"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "3377618313"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9743693396"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6817146515"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "2524789262"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9348897",
+          "item_ids": [
+            "6117189161",
+            "7453605304",
+            "3799046073"
+          ],
+          "new_item_ids": [
+            "6700049080",
+            "5320792178",
+            "3234800602"
+          ],
+          "payment_method_id": "credit_card_8853416"
+        }
+      }
+    ],
+    "instruction": "Your name is Daiki Sanchez, and you live in 46236, your email is daikisanchez1479@example.com. You just placed an order but you realize that your card has only $1131 credit left, but the order total is more than $1160. You wonder if the agent can help split the payment with another card. If not, you wonder what the most expensive item and its price, and if you can just cancel that item. If not, you wonder if you can switch all items to their cheapest options and bring the cost down to $1131. If so, do it. If not, you wonder if the agent can just cancel the order so that you can order again. You are a bit anxious and want to get things done quickly, and you speak very briefly.",
+    "outputs": [
+      "camera",
+      "481.5"
+    ],
+    "prompt": "Hi, I’m Daiki Sanchez from 46236, email daikisanchez1479@example.com. I just placed an order, but my card only has $1131 credit left while the total is over $1160. Can you help me split the payment with another card? If that’s not possible, can you tell me the most expensive item and its price, and whether I can cancel just that item? If that’s not an option, can you switch all items to their cheapest alternatives to bring the total down to $1131? If that works, please do it. If not, can you cancel the order so I can reorder? I’m a bit anxious and would like this resolved quickly."
+  },
+  "scores": {
+    "scores": {
+      "correct": 8,
+      "missing": 1,
+      "extra": 3,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "daikisanchez1479@example.com"
+        },
+        "id": "0a62a3c9-9d7c-4d79-bf4b-b066d2bd1684",
+        "type": "tool_call"
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Daiki",
+          "last_name": "Sanchez",
+          "zip": "46236"
+        },
+        "id": "27a6f76a-fb20-4383-a5be-1f54b9c8b029",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "daiki_sanchez_3253"
+        },
+        "id": "2d2381f7-6480-4457-89db-6c488d79abfb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9348897"
+        },
+        "id": "760036e3-660e-42ce-aa5c-d38b901f9fdc",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "3377618313"
+        },
+        "id": "b65c795d-d395-4d28-9d61-5b2c686ccb06",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9743693396"
+        },
+        "id": "c41ed6fa-3d42-4e9e-ab52-4c9074f1bd01",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6817146515"
+        },
+        "id": "4d3e1c36-47a7-4d77-b2bf-ebd004a96aef",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "71395b84-1087-4e54-be2a-94c62c0340e8",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W9348897",
+          "item_ids": [
+            "6117189161",
+            "7453605304",
+            "3799046073"
+          ],
+          "new_item_ids": [
+            "6700049080",
+            "5320792178",
+            "3234800602"
+          ],
+          "payment_method_id": "credit_card_8853416"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9348897"
+        },
+        "id": "5ffbd01e-f25d-4dd3-8b16-643d582f3e8d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9348897"
+        },
+        "id": "0225b961-8e1b-4b8b-9163-a599c14f4aeb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "2524789262"
+        },
+        "id": "3643295c-172a-467a-baee-750dc13bba39",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "9523456873"
+          },
+          "id": "71395b84-1087-4e54-be2a-94c62c0340e8",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "2524789262"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fdf-2737-7c90-8abb-fbd87f72cb74?poll=true"
+}

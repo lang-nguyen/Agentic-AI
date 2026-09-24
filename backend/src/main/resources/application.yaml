@@ -1,0 +1,40 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  application:
+    name: kltn-web
+
+  # MongoDB Config (H2 in-memory doesn't work for MongoDB, but Spring Boot will connect to localhost:27017 by default)
+  mongodb:
+    uri: mongodb://localhost:27017/kltn_ecommerce
+  data:
+    mongodb:
+      auto-index-creation: true
+
+  # Thymeleaf Config
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+
+  profiles:
+    active: local
+
+# Server Config
+server:
+  port: 8080
+
+# MongoDB Config (H2 in-memory doesn't work for MongoDB, but Spring Boot will connect to localhost:27017 by default)
+# Thymeleaf Config
+# Logging
+logging:
+  level:
+    org.springframework.data.mongodb: DEBUG
+
+# Tắt tự động nạp lại dữ liệu (xóa db và seed lại) mỗi khi khởi động
+app:
+  seeder:
+    enabled: true

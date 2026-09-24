@@ -1,0 +1,15 @@
+#Ticket
+
+__metadata__
+Ticket ID: #ffeacf54-858e-4d6d-a93b-3aab8ba6a3f5
+User Name: daiki_johnson_9523  
+ZIP Code: 80273  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m daiki_johnson_9523 from Denver, USA, 80273. I need to return two items from my recent order: an air purifier and a vacuum cleaner (the canister model). The order ID is 9502126. If you need me to double‑check, let me know, and I’ll correct it to 9502127. If that still doesn’t work, I realized I forgot the leading “W” in the order number. I’m in a hurry and would like a refund processed within 3 days, and I’d appreciate if you could tell me the exact refund amount I should expect. Once the return is complete, please let me know the total amount I paid for the remaining items in the same order.
+
+Thanks in advance, I’m quite impatient and would like this resolved quickly.

@@ -1,0 +1,247 @@
+{
+  "task_idx": 110,
+  "task": {
+    "user_id": "sophia_martin_8570",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W1603792",
+          "address1": "592 Elm Avenue",
+          "address2": "Suite 978",
+          "city": "Houston",
+          "country": "USA",
+          "state": "TX",
+          "zip": "77242"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "sophia_martin_8570",
+          "address1": "592 Elm Avenue",
+          "address2": "Suite 978",
+          "city": "Houston",
+          "country": "USA",
+          "state": "TX",
+          "zip": "77242"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W1603792",
+          "item_ids": [
+            "6501071631"
+          ],
+          "new_item_ids": [
+            "2106335193"
+          ],
+          "payment_method_id": "credit_card_5694100"
+        }
+      }
+    ],
+    "instruction": "You name is Sophia Martin and your email is sophia.martin4832@example.com. You are organized and outgoing. You live on Elm Avenue in Houston, and recently you moved to a new house on the same street and bought a luggage set sent to there. But you realize you have another order sent to the old address, and you want to change your wrong order address to the new home, and also your user default address to the new home. You do not want to reveal your address but the agent should be able to look it up in orders You do not want to reveal your address and insist the agent should be able to look it up in orders. You also want to exchange your tablet to the cheapest one due to moving costs. Make sure to mention the two address changes then the exchange.",
+    "outputs": [],
+    "prompt": "Hi, I’m Sophia Martin and my email is sophia.martin4832@example.com.\n\nI’m organized and outgoing, and I recently moved to a new house on Elm Avenue in Houston. I bought a luggage set that was sent to my new address, but another order was mistakenly shipped to my old address. I’d like to change that order’s shipping address to my new home and also update my account’s default address to the new address. I’m not comfortable sharing the full address here, but I trust the agent can look it up in my orders and account details.\n\nAdditionally, I would like to exchange my tablet for the cheapest available model, as moving costs have made a more budget-friendly option preferable."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 11,
+      "mismatch": 2
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W1603792",
+          "item_ids": [
+            "6501071631"
+          ],
+          "new_item_ids": [
+            "2106335193"
+          ],
+          "payment_method_id": "credit_card_5694100"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "sophia.martin4832@example.com"
+        },
+        "id": "1bac2d33-b6a3-4d28-9938-668f37045d15",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sophia_martin_8570"
+        },
+        "id": "3844bb34-9f04-40bc-9692-9e9efa6a0ff0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1603792"
+        },
+        "id": "63c01360-2fa4-4812-935d-3f186536f9c2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1092119"
+        },
+        "id": "96e723d1-d4a9-4aa6-81c0-08e0d6ba8d3a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8024098596"
+        },
+        "id": "bfc4494f-e5db-47d1-a226-bf00b429c41a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sophia_martin_8570"
+        },
+        "id": "553218ae-3c18-4307-b422-5268e91c9a6f",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W1092119",
+          "address1": "760 Elm Avenue",
+          "address2": "Suite 564",
+          "city": "Houston",
+          "state": "TX",
+          "zip": "77034",
+          "country": "USA"
+        },
+        "id": "9acaa93f-85fa-4c2d-8e5d-b2d54d913716",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "address1": "760 Elm Avenue",
+          "address2": "Suite 564",
+          "city": "Houston",
+          "country": "USA",
+          "state": "TX",
+          "user_id": "sophia_martin_8570",
+          "zip": "77034"
+        },
+        "id": "628eb42d-61be-4246-8850-0b2b9ce4f6cd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1603792"
+        },
+        "id": "4a4fff90-bacf-46ba-aa1b-70cc254905c8",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8024098596"
+        },
+        "id": "56e0ff7e-ed94-4506-92cf-554f6a68458d",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "6501071631"
+          ],
+          "new_item_ids": [
+            "2106335193"
+          ],
+          "order_id": "#W1603792",
+          "payment_method_id": "credit_card_5694100"
+        },
+        "id": "8e8bd5dd-0da9-4c6a-9751-c2e034672e76",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W1092119",
+            "address1": "760 Elm Avenue",
+            "address2": "Suite 564",
+            "city": "Houston",
+            "state": "TX",
+            "zip": "77034",
+            "country": "USA"
+          },
+          "id": "9acaa93f-85fa-4c2d-8e5d-b2d54d913716",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W1603792",
+            "address1": "592 Elm Avenue",
+            "address2": "Suite 978",
+            "city": "Houston",
+            "country": "USA",
+            "state": "TX",
+            "zip": "77242"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_user_address",
+          "args": {
+            "address1": "760 Elm Avenue",
+            "address2": "Suite 564",
+            "city": "Houston",
+            "country": "USA",
+            "state": "TX",
+            "user_id": "sophia_martin_8570",
+            "zip": "77034"
+          },
+          "id": "628eb42d-61be-4246-8850-0b2b9ce4f6cd",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_user_address",
+          "args": {
+            "user_id": "sophia_martin_8570",
+            "address1": "592 Elm Avenue",
+            "address2": "Suite 978",
+            "city": "Houston",
+            "country": "USA",
+            "state": "TX",
+            "zip": "77242"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7032-2275-7b51-985d-f24acafffc46?poll=true"
+}

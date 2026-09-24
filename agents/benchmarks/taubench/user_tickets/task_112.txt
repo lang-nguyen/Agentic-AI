@@ -1,0 +1,24 @@
+#Ticket
+
+__metadata__
+Ticket ID: #734c1d3e-894a-4541-8ce8-58eaa2527f1e
+User Name: Yara Silva  
+ZIP Code: 77159  
+Email: unknown  
+
+---
+
+__Content__
+
+Hello, I’m Yara Silva from zip 77159. I’m feeling a bit sad and cautious about making changes to my order, but I would like to update a few things at once.
+
+First, I’d like to modify the laptop order to ship to the NYC address that’s already saved in my profile. I don’t want to reveal the full address here, but please use the address on file.
+
+Second, for that same laptop I want the following specs:  
+- Processor: i5  
+- Storage: 256 GB SSD  
+- Color: space grey
+
+Finally, I’d like to exchange my watch for a model that has a black dial while keeping the leather strap.
+
+Please handle all of these requests together and let me know if anything else is needed. Thank you.

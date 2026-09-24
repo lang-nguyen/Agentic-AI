@@ -1,0 +1,123 @@
+{
+  "task_idx": 97,
+  "task": {
+    "user_id": "yusuf_li_7255",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W6750959",
+          "address1": "476 Maple Drive",
+          "address2": "Suite 432",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10093"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W6750959",
+          "item_ids": [
+            "3254583681"
+          ],
+          "new_item_ids": [
+            "9440686670"
+          ],
+          "payment_method_id": "paypal_8080730"
+        }
+      }
+    ],
+    "instruction": "You name is Yusuf Li and your zip code is 91148. You are cautious, insecure, organized. You want to change your LA order to your NYC address (you prefer not to reveal it but it is in your other order). You also want to exchange Bluetooth Speaker to be the cheapest green type.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yusuf Li, zip code 91148. I’m cautious, insecure, and organized. I’d like to change the shipping address for my LA order to the NYC address that I’m using on another order, but I’d prefer not to disclose that address here. Also, I want to exchange the Bluetooth Speaker in this order for the cheapest green model available."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 5,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W6750959",
+          "address1": "476 Maple Drive",
+          "address2": "Suite 432",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10093"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W6750959",
+          "item_ids": [
+            "3254583681"
+          ],
+          "new_item_ids": [
+            "9440686670"
+          ],
+          "payment_method_id": "paypal_8080730"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Li",
+          "zip": "91148"
+        },
+        "id": "1a61fc53-0687-43c1-bdb6-f83ec0ffa030",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_li_7255"
+        },
+        "id": "c6ead198-ec12-4545-982c-346ec0817a02",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6750959"
+        },
+        "id": "9a982f80-cdd4-49ae-a02b-5f2ff836fdee",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4768869376"
+        },
+        "id": "2c6137c7-facf-4e0b-8abd-f0a5cdf72a01",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6750959"
+        },
+        "id": "336c9991-a72a-43a0-9b31-6fa2af2bdcde",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e701f-0431-7c41-86a1-7d8a78b612f2?poll=true"
+}

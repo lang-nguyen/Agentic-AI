@@ -1,0 +1,20 @@
+#Ticket
+
+__metadata__
+Ticket ID: #640cb7c8-47cc-4c75-b14f-0d6509dadabb
+User Name: Daiki Sanchez  
+ZIP Code: 46236  
+Email: daikisanchez1479@example.com  
+
+---
+
+__Content__
+
+Hi, I'm Daiki Sanchez. I just placed an order, but my card has only $1,131 credit left, and the order total is over $1,160. I need help fast.
+
+1. Can the agent split the payment with another card?  
+2. If not, what is the most expensive item and its price, and can I cancel that item?  
+3. If that’s still not possible, can all items be switched to the cheapest options so the cost drops to $1,131? If yes, please do it.  
+4. If none of the above works, can the order be canceled so I can reorder?
+
+I’m anxious and want a quick resolution. Thanks.

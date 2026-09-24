@@ -1,0 +1,124 @@
+{
+  "task_idx": 1,
+  "task": {
+    "user_id": "yusuf_rossi_9620",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2378156"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "1656367028"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4896585277"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W2378156",
+          "item_ids": [
+            "4983901480"
+          ],
+          "new_item_ids": [
+            "7747408585"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        }
+      }
+    ],
+    "instruction": "You are Yusuf Rossi in 19122. You received your order #W2378156 and wish to exchange the mechanical keyboard for a similar one but with clicky switches and the smart thermostat for one compatible with Google Home instead of Apple HomeKit. If there is no keyboard that is clicky, RGB backlight, full size, you'd rather only exchange the thermostat. You are detail-oriented and want to make sure everything is addressed in one go.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yusuf Rossi in 19122 and I recently received my order #W2378156.\n\nI’d like to request an exchange for a couple of items in this order. I want to exchange the mechanical keyboard for a similar model with clicky switches. I also want to exchange the smart thermostat for one that works with Google Home instead of Apple HomeKit.\n\nIf there isn’t a keyboard available that has clicky switches, RGB backlighting, and is full size, then I would prefer to only proceed with exchanging the thermostat instead.\n\nI want to make sure everything is handled properly in one request."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 1,
+      "extra": 1,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        },
+        "id": "f10eff71-6f82-44ee-a02c-2e0c22e90a13",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2378156"
+        },
+        "id": "bf5f416f-09a6-4d18-a2cf-d4616d085b9f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1656367028"
+        },
+        "id": "c6ebe513-c0ca-4559-8690-674291ec1039",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4896585277"
+        },
+        "id": "2abfc27c-2865-4e34-b6aa-df2671297349",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W2378156",
+          "item_ids": [
+            "4983901480"
+          ],
+          "new_item_ids": [
+            "7747408585"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "transfer_to_human_agents",
+        "args": {
+          "summary": "User wants to proceed with exchanging the thermostat only."
+        },
+        "id": "9f05a95f-80ed-40c6-9aec-2a618cfdbcdd",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fb6-525e-7ac0-ae07-f5f1f36f40cd?poll=true"
+}

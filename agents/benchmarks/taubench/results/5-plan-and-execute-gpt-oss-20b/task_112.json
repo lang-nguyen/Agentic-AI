@@ -1,0 +1,199 @@
+{
+  "task_idx": 112,
+  "task": {
+    "user_id": "yara_silva_7567",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9810810",
+          "item_ids": [
+            "1355937109"
+          ],
+          "new_item_ids": [
+            "9949163720"
+          ],
+          "payment_method_id": "gift_card_7252880"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W3730488",
+          "address1": "555 Highland Drive",
+          "address2": "Suite 872",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10116"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W3730488",
+          "item_ids": [
+            "2913673670"
+          ],
+          "new_item_ids": [
+            "2216662955"
+          ],
+          "payment_method_id": "gift_card_7252880"
+        }
+      }
+    ],
+    "instruction": "You name is Yara Silva and your zip code is 77159. You are sad and cautious. You want to modify the laptop order to your NYC address (you don't want to reveal it but should be in your orders profile). You also like to modify the laptop to be {'processor': 'i5', 'storage': '256GB SSD', 'color': 'space grey'};  You also want to exchange your watch to be black dial color but keep the leather strap. You like to say things together.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yara Silva from zip code 77159.\n\nI’d like to make a couple of changes to my current order. First, please update my shipping address in the order profile to my NYC address— I don’t want to share the exact address here, but it should already be listed in my account. Then, for the laptop, I’d like to change the configuration to an i5 processor, 256 GB SSD storage, and space grey color.\n\nAdditionally, I want to exchange the watch I ordered. Please change the dial to black but keep the leather strap the same. \n\nCould you handle all of these modifications in one go? Thanks!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 1,
+      "extra": 8,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "1355937109"
+          ],
+          "new_item_ids": [
+            "9949163720"
+          ],
+          "order_id": "#W9810810",
+          "payment_method_id": "gift_card_7252880"
+        },
+        "id": "30abb201-5386-4f33-9ac5-606353e5f058",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W3730488",
+          "item_ids": [
+            "2913673670"
+          ],
+          "new_item_ids": [
+            "2216662955"
+          ],
+          "payment_method_id": "gift_card_7252880"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yara",
+          "last_name": "Silva",
+          "zip": "77159"
+        },
+        "id": "eb72c575-714e-4990-92a5-ca77031acf97",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_silva_7567"
+        },
+        "id": "fb2999f4-775e-46a1-b786-c3dd958c9a94",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9810810"
+        },
+        "id": "bf2dadc2-1fb9-47bb-baf5-6c463ca476e4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6066914160"
+        },
+        "id": "89db08c3-8018-4261-8fa2-99c4d9f6e93e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_silva_7567"
+        },
+        "id": "7a27e7f1-9286-48bf-b3f9-a88fc82a776a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9810810"
+        },
+        "id": "ee285561-d5a8-4ed3-b189-87308e5e5726",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9810810"
+        },
+        "id": "839c4b16-2697-4726-a4a1-74ef8924eae1",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "116 Laurel Lane",
+          "address2": "Suite 319",
+          "city": "Houston",
+          "country": "USA",
+          "state": "TX",
+          "zip": "77159",
+          "order_id": "#W9810810"
+        },
+        "id": "796d195d-593c-4015-a0b2-a0174a717f89",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "address1": "116 Laurel Lane",
+            "address2": "Suite 319",
+            "city": "Houston",
+            "country": "USA",
+            "state": "TX",
+            "zip": "77159",
+            "order_id": "#W9810810"
+          },
+          "id": "796d195d-593c-4015-a0b2-a0174a717f89",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W3730488",
+            "address1": "555 Highland Drive",
+            "address2": "Suite 872",
+            "city": "New York",
+            "country": "USA",
+            "state": "NY",
+            "zip": "10116"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7035-8cfc-7953-b1c0-a41cc9a10125?poll=true"
+}

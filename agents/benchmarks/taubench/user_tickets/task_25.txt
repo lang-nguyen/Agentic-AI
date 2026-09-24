@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #772f26b5-0f34-4e9f-9d02-8f5219793592
+User Name: Isabella Johansson
+ZIP Code: 32286
+Email: unknown
+
+---
+
+__Content__
+
+Hi there,
+
+I’m Isabella Johansson, living in ZIP code 32286. I recently realized that my order was accidentally shipped to Texas instead of my actual address. I’m not sure of the order number, but I urgently need the tracking number for that shipment.
+
+Additionally, I would like to return all items in that order except for the pet bed. I’d like a full refund to be issued to my Amex credit card. If you’re unable to process this request, please transfer me to a human agent as soon as possible.
+
+Thank you for your prompt assistance.

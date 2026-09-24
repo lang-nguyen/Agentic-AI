@@ -1,0 +1,17 @@
+#Ticket
+
+__metadata__
+Ticket ID: #4c0fa732-842b-4de5-9158-4e0d4b4ff69f
+User Name: mia_garcia_4516  
+ZIP Code: unknown  
+Email: mia.garcia2723@example.com  
+
+---
+
+__Content__
+
+Hi, I’m mia_garcia_4516. I’ve just gotten into gaming, but I’ve realized how important it is to focus on studying, so I’d like to cancel or return everything in my order.
+
+I prefer a refund via PayPal, but if that isn’t possible, I’m fine with using my credit card instead.
+
+Thank you for your help!

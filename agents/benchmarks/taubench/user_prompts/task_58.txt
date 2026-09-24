@@ -1,0 +1,9 @@
+Hi, I’m Ivan Hernandez, ID ivan_hernandez_6923, living in San Diego, 92133.  
+
+I just received an order that includes a coffee machine and a laptop, and I’d like to modify them.  
+
+For the coffee machine, I want to keep the same capacity and type but lower the pressure to 8 bar. If 8 bar isn’t available, please set it to 9 bar; if that’s not possible, set it to 7 bar. If none of those pressures can be offered, I do not want an exchange for the coffee machine.  
+
+For the laptop, I want to exchange it for the cheapest model that has an i7 or higher processor, regardless of other specs. If a price difference is required, I’d prefer to pay with a gift card. If a gift card can’t be used, I’ll use my credit card.  
+
+Thank you for taking care of this.

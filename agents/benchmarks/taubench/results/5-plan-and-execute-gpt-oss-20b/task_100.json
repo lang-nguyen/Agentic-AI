@@ -1,0 +1,269 @@
+{
+  "task_idx": 100,
+  "task": {
+    "user_id": "sofia_li_9219",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4689314",
+          "item_ids": [
+            "5996159312"
+          ],
+          "new_item_ids": [
+            "8363011723"
+          ],
+          "payment_method_id": "credit_card_3951670"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3916020",
+          "item_ids": [
+            "7758198585",
+            "4068787148"
+          ],
+          "new_item_ids": [
+            "5606522780",
+            "5546244844"
+          ],
+          "payment_method_id": "credit_card_3951670"
+        }
+      }
+    ],
+    "instruction": "You name is Sofia Li and your zip code is 78260. You are outgoing, organized, cautious, pessimistic.  You want to exchange your Bicycle to a larger frame size for your kid. Jigsaw Puzzle in the same order also needs to be exchanged, you want the same difficulty, but 1000 more pieces, and you prefer art than animal theme if both are available. Make sure you mention these at the same time. You also want to exchange your camera to a slightly lower resolution, without changing the other options. For both orders, you'd prefer the visa card as payment or refund method. Lastly, you want to cancel the skateboard order. If you cannot cancel one single item, you are okay with cancelling the whole order, but you will do it yourself on the website and no need for the agent to help.",
+    "outputs": [],
+    "prompt": "Hi, I’m Sofia Li from zip code 78260. I’m outgoing, organized, cautious, and a bit pessimistic.\n\nI would like to request the following exchanges all at once:  \n1. Swap the bicycle in my order for a larger frame size suitable for my kid.  \n2. Exchange the jigsaw puzzle for another of the same difficulty but with 1,000 more pieces; if both art and animal themes are available, I’d prefer the art-themed one.  \n3. Swap my camera for a slightly lower resolution model, keeping all other options the same.\n\nFor both of these exchanges I’d like the payment or refund method to be Visa card.\n\nAdditionally, I’d like to cancel the skateboard order. If it’s not possible to cancel just that item, I’m fine with cancelling the entire order, but I’ll take care of that myself on the website—no assistance needed."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 16,
+      "mismatch": 2
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        },
+        "id": "51cce23d-e67c-4cd6-8c2b-1139a3e5e29d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_li_9219"
+        },
+        "id": "2da6651a-d73f-4707-8e79-f486749cb52b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4689314"
+        },
+        "id": "0a4ad8d4-90f3-4c2e-a9c4-aeb3f6770099",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8855135"
+        },
+        "id": "8a0e0325-a2ff-4d1f-a19b-d9a7789ebce3",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3916020"
+        },
+        "id": "79d8f95b-92f3-4161-97aa-29883e0f17d5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5416052"
+        },
+        "id": "b23b3978-f6be-46f3-8082-b75790ade721",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3916020"
+        },
+        "id": "c7ec355a-2d2f-40ea-b115-2d24d7522551",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4689314"
+        },
+        "id": "7a7d9b15-b5d6-4fce-a95e-eff7297bc5fb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8855135"
+        },
+        "id": "5a557ca5-917a-4df8-844f-3cdec51b45df",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "c18a0aba-4160-4774-ad83-d8b0dc8bd75b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9783735446"
+        },
+        "id": "b37d3ebe-f260-460b-8ea9-fa90711a5962",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1808611083"
+        },
+        "id": "dfe570de-f9cb-411e-8ca7-7e6b75da3a41",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8940227892"
+        },
+        "id": "d27e18c2-83c5-45b6-a54c-1e3c377c4a5e",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "7758198585",
+            "4068787148"
+          ],
+          "new_item_ids": [
+            "5606522780",
+            "3112842858"
+          ],
+          "order_id": "#W3916020",
+          "payment_method_id": "credit_card_3951670"
+        },
+        "id": "96367548-c310-437c-825e-eaa43681b63f",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "5996159312"
+          ],
+          "new_item_ids": [
+            "9644439410"
+          ],
+          "order_id": "#W4689314",
+          "payment_method_id": "credit_card_3951670"
+        },
+        "id": "5f20f7f0-e070-4379-ba2a-430d5bbeb846",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8855135"
+        },
+        "id": "112ec3d6-0932-4f8c-963a-7f8e599e255d",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "item_ids": [
+              "7758198585",
+              "4068787148"
+            ],
+            "new_item_ids": [
+              "5606522780",
+              "3112842858"
+            ],
+            "order_id": "#W3916020",
+            "payment_method_id": "credit_card_3951670"
+          },
+          "id": "96367548-c310-437c-825e-eaa43681b63f",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "order_id": "#W4689314",
+            "item_ids": [
+              "5996159312"
+            ],
+            "new_item_ids": [
+              "8363011723"
+            ],
+            "payment_method_id": "credit_card_3951670"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "item_ids": [
+              "7758198585",
+              "4068787148"
+            ],
+            "new_item_ids": [
+              "5606522780",
+              "3112842858"
+            ],
+            "order_id": "#W3916020",
+            "payment_method_id": "credit_card_3951670"
+          },
+          "id": "96367548-c310-437c-825e-eaa43681b63f",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "exchange_delivered_order_items",
+          "args": {
+            "order_id": "#W3916020",
+            "item_ids": [
+              "7758198585",
+              "4068787148"
+            ],
+            "new_item_ids": [
+              "5606522780",
+              "5546244844"
+            ],
+            "payment_method_id": "credit_card_3951670"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7023-612f-79b0-a724-1443c4c27425?poll=true"
+}

@@ -1,0 +1,140 @@
+{
+  "task_idx": 19,
+  "task": {
+    "user_id": "mei_davis_8935",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Mei",
+          "last_name": "Davis",
+          "zip": "80217"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mei_davis_8935"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2890441"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W1267569"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "2747247837"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "4794339885"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W2890441",
+          "item_ids": [
+            "2366567022"
+          ],
+          "payment_method_id": "credit_card_1061405"
+        }
+      }
+    ],
+    "instruction": "You are Mei Davis in 80217. You want to return the water bottle, and exchange the pet bed and office chair to the cheapest version. Mention the two things together. If you can only do one of the two things, you prefer to do whatever saves you most money, but you want to know the money you can save in both ways. You are in debt and sad today, but very brief.",
+    "outputs": [
+      "54.04",
+      "41.64"
+    ],
+    "prompt": "Hi, I’m Mei Davis in 80217. I’d like to return the water bottle and exchange the pet bed and office chair for the cheapest versions. If only one of those exchanges can be done, I’d pick the one that saves me the most money, and could you let me know the savings in each case? I’m a bit short on cash and could use the information quickly."
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 2,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Mei",
+          "last_name": "Davis",
+          "zip": "80217"
+        },
+        "id": "3e6f8566-1f79-4eda-99f8-5c161596c1fd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mei_davis_8935"
+        },
+        "id": "0becbde3-211e-4486-abc9-86f68dd3c860",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2890441"
+        },
+        "id": "d6681db1-356e-4d7a-a12f-896f656a8f7c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "2747247837"
+        },
+        "id": "f54cc4e1-e744-4ddd-9097-0b1decae77a4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "4794339885"
+        },
+        "id": "2db85a7f-43d9-4602-9d7a-2935fb53981c",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1267569"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W2890441",
+          "item_ids": [
+            "2366567022"
+          ],
+          "payment_method_id": "credit_card_1061405"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc8-6747-7173-9214-eca17b350787?poll=true"
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <title th:text="${title} + ' | LKStore Admin'">LKStore Admin</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <style>
+        .admin-container {
+            display: flex;
+            min-height: 100vh;
+            background: #f3f4f6;
+        }
+        .admin-sidebar {
+            width: 260px;
+            background: #111827;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .admin-sidebar-header {
+            padding: 24px 20px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            border-bottom: 1px solid #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .admin-sidebar-menu {
+            list-style: none;
+            padding: 20px 0;
+            margin: 0;
+            flex: 1;
+        }
+        .admin-sidebar-menu li {
+            margin-bottom: 4px;
+        }
+        .admin-sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            color: #9ca3af;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .admin-sidebar-menu a:hover, .admin-sidebar-menu a.active {
+            background: rgba(255,102,0,0.1);
+            color: var(--primary);
+            border-right: 4px solid var(--primary);
+        }
+        .admin-sidebar-menu a i {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+        .admin-content {
+            flex: 1;
+            margin-left: 260px;
+            display: flex;
+            flex-direction: column;
+        }
+        .admin-topbar {
+            background: #fff;
+            height: 70px;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .admin-main {
+            padding: 30px;
+            flex: 1;
+        }
+        .admin-page-header {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .admin-page-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .admin-table th, .admin-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .admin-table th {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #4b5563;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+        .admin-table tr:hover {
+            background: #f9fafb;
+        }
+        .badge {
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .badge-success { background: #dcfce7; color: #166534; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-danger { background: #fee2e2; color: #991b1b; }
+        .badge-info { background: #dbeafe; color: #1e40af; }
+    </style>
+</head>
+<body>
+
+<div th:fragment="sidebar(activeMenu)" class="admin-sidebar">
+    <a href="/admin/dashboard" class="admin-sidebar-header">
+        <span style="color: var(--primary);">🛒</span> LKStore Admin
+    </a>
+    <ul class="admin-sidebar-menu">
+        <li><a href="/admin/dashboard" th:classappend="${activeMenu == 'dashboard'} ? 'active' : ''"><i>📊</i> Exchange/Return Dashboard</a></li>
+        <li><a href="/admin/products" th:classappend="${activeMenu == 'products'} ? 'active' : ''"><i>📦</i> Products</a></li>
+        <li><a href="/admin/orders" th:classappend="${activeMenu == 'orders'} ? 'active' : ''"><i>🛍️</i> Orders</a></li>
+        <li><a href="/admin/users" th:classappend="${activeMenu == 'users'} ? 'active' : ''"><i>👥</i> Customers</a></li>
+    </ul>
+    <div style="padding: 20px; border-top: 1px solid #1f2937; margin-top: auto;">
+        <a href="/" target="_blank" style="color: #9ca3af; text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 8px;"><i style="font-style: normal;">🌐</i> View Website</a>
+    </div>
+</div>
+
+<div th:fragment="topbar" class="admin-topbar">
+    <div style="font-weight: 600; color: #374151;">Hello, Admin</div>
+    <div style="display: flex; gap: 16px; align-items: center;">
+        <a th:href="@{/logout}" class="btn btn-outline btn-sm">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+  "task_idx": 107,
+  "task": {
+    "user_id": "sofia_thomas_1518",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3388163",
+          "item_ids": [
+            "9354168549"
+          ],
+          "new_item_ids": [
+            "2060066974"
+          ],
+          "payment_method_id": "paypal_5334408"
+        }
+      }
+    ],
+    "instruction": "You name is Sofia Thomas and your email is sofia.thomas3019@example.com or sofia.thomas3069@example.com. You are dependent, pessimistic, direct. You want to exchange your T-Shirt because it is too big, one size smaller would be good. You like the cotton feeling. If multiple colors available, you prefer black.",
+    "outputs": [],
+    "prompt": "Hi, I’m Sofia Thomas and my email is sofia.thomas3019@example.com or sofia.thomas3069@example.com.\n\nI’d like to exchange the T‑shirt I ordered because it’s too big. I’d like one size smaller, and I want it in a cotton feel. If there are several colors available, I’d prefer black."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 7,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W3388163",
+          "item_ids": [
+            "9354168549"
+          ],
+          "new_item_ids": [
+            "2060066974"
+          ],
+          "payment_method_id": "paypal_5334408"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "sofia.thomas3019@example.com"
+        },
+        "id": "a907d3b1-12c8-48e9-a95c-64737d897562",
+        "type": "tool_call"
+      },
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "sofia.thomas3069@example.com"
+        },
+        "id": "db846c65-5fce-4914-912c-b66355e4aa30",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_thomas_1518"
+        },
+        "id": "dc2da0a7-6c53-49b3-82c0-b636f8217e53",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7619352"
+        },
+        "id": "f557e6b8-c459-4596-b30a-7f3e4192a361",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3388163"
+        },
+        "id": "ff0cd4b9-86c9-4631-87c5-eb3eb9421217",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2297866"
+        },
+        "id": "ec4201ab-6f26-4cb0-a359-44674da00168",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3388163"
+        },
+        "id": "2f531618-d9f5-4808-8fd3-640889c759f0",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e702f-43fb-7443-a353-9431c2475ef8?poll=true"
+}

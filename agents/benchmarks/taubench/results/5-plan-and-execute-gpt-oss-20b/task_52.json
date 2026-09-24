@@ -1,0 +1,115 @@
+{
+  "task_idx": 52,
+  "task": {
+    "user_id": "sofia_li_9219",
+    "annotator": "1",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "sofia_li_9219"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4689314"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "8940227892"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4689314",
+          "item_ids": [
+            "5996159312"
+          ],
+          "new_item_ids": [
+            "9228757377"
+          ],
+          "payment_method_id": "paypal_8194385"
+        }
+      }
+    ],
+    "instruction": "You are Sofia Li, residing in San Antonio, 78260. The digital camera you received doesn't zoom as far as you expected. You use the camera for bird-watching and want to exchange it for a camera that has the maximum zoom capacity. Price is not an issue, but ensure all the other specifications of the camera to be exchanged are the same, except for the zoom capacity which has to be maximized. You want the exchange to be completed as soon as possible. You want to use your PayPal account for any additional payment.",
+    "outputs": [],
+    "prompt": "Hi, I’m Sofia Li from San Antonio, 78260. I recently received a digital camera, but the zoom doesn’t reach the level I expected. I use it for bird‑watching, so I need a camera with maximum zoom capacity. I’d like to exchange it for a model that has the same specifications as the original, except the zoom should be maximized. Price isn’t an issue, but I’d appreciate the exchange being completed as soon as possible. I also want to use my PayPal account to cover any additional payment. Could you please guide me through this process?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 4,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        },
+        "id": "ce6ceb55-21d1-4763-a8fe-b30fb7f3d7ce",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_li_9219"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4689314"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8940227892"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W4689314",
+          "item_ids": [
+            "5996159312"
+          ],
+          "new_item_ids": [
+            "9228757377"
+          ],
+          "payment_method_id": "paypal_8194385"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff0-2d4e-7042-b6e9-5a4b9bea57fc?poll=true"
+}

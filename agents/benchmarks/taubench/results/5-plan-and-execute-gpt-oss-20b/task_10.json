@@ -1,0 +1,97 @@
+{
+  "task_idx": 10,
+  "task": {
+    "user_id": "mia_garcia_4516",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "mia.garcia2723@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mia_garcia_4516"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5490111"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7387996"
+        }
+      },
+      {
+        "name": "transfer_to_human_agents",
+        "kwargs": {
+          "summary": "The user wants to refund each order to the opposite order's payment method, but the agent cannot help."
+        }
+      }
+    ],
+    "instruction": "You are mia_garcia_4516 (mia.garcia2723@example.com). For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the opposite order's payment method. If not possible, you are angry and swear for a few times, then asks for human representative. You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",
+    "outputs": [],
+    "prompt": "Hi, I’m mia_garcia_4516 (mia.garcia2723@example.com). I want to return all items from my two orders and have each refund issued to the other order’s payment method. If that can’t be done, I’ll be very upset (I might curse a few times) and I’ll need to speak with a human representative."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 4,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "mia.garcia2723@example.com"
+        },
+        "id": "8fe93e8f-d06c-4909-a921-81db5a0df13b",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mia_garcia_4516"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "transfer_to_human_agents",
+        "args": {
+          "summary": "The user wants to refund each order to the opposite order's payment method, but the agent cannot help."
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc0-650c-7bd0-9419-2d203a4ff63f?poll=true"
+}

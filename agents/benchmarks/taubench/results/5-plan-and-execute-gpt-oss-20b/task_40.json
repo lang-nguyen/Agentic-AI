@@ -1,0 +1,113 @@
+{
+  "task_idx": 40,
+  "task": {
+    "user_id": "isabella_lopez_6490",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "isabella.lopez3271@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "isabella_lopez_6490"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4923227"
+        }
+      },
+      {
+        "name": "modify_pending_order_payment",
+        "kwargs": {
+          "order_id": "#W4923227",
+          "payment_method_id": "credit_card_8897086"
+        }
+      }
+    ],
+    "instruction": "You are Isabella Lopez, and your email address is isabella.lopez3271@example.com. You want to know how much balance does your gift card have. Also, for your recent order, whether you used your visa, mastercard, or amex credit card. You also wonder if you can apply the gift card balance to the order. If not, you want to change your payment method to visa, because the other two cards have a lot of balance. You are a yound college student under the pressure of final exams and student loans, so you are a bit anxious and want to get things done quickly.",
+    "outputs": [
+      "60",
+      "mastercard"
+    ],
+    "prompt": "Hi, I’m Isabella Lopez (email: isabella.lopez3271@example.com). I’m a college student currently juggling finals and student loans, so I’d like to get this sorted quickly.\n\nCould you let me know what balance I have on my gift card? Also, for my most recent order, could you tell me which card was used—Visa, MasterCard, or Amex? I’d like to see if I can apply the gift‑card balance to that order. If that isn’t possible, I’d like to change the payment method to Visa, since the other two cards still have a lot of available balance."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 1,
+      "extra": 3,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "isabella.lopez3271@example.com"
+        },
+        "id": "53d06727-3b0e-4e91-8a62-66b62ee68cc3",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_lopez_6490"
+        },
+        "id": "9399646c-c6b1-4937-a77c-f04facbd3038",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4923227"
+        },
+        "id": "494f3009-753d-4dca-bdf6-24fd907e1b18",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_payment",
+        "args": {
+          "order_id": "#W4923227",
+          "payment_method_id": "credit_card_8897086"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_lopez_6490"
+        },
+        "id": "65ebaa67-1437-4e34-8b2b-c81e6357da01",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4923227"
+        },
+        "id": "f66aecbe-193f-4dce-8421-a174b28084d4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_lopez_6490"
+        },
+        "id": "07b4b70d-e988-4c7e-9a1d-0c3cc2043795",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fe7-9bd5-7561-808d-ee22abc82452?poll=true"
+}

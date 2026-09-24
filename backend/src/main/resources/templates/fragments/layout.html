@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="LKStore - Your Premium Online Store">
+    <title th:text="${title} + ' | LKStore'">LKStore</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff6600',
+                        'primary-dark': '#e65c00',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Styles for overrides or specific elements -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Remove default styles if they conflict, we will rely on Tailwind -->
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md sticky top-0 z-50" th:fragment="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="/" class="flex-shrink-0 flex items-center text-2xl font-black text-primary tracking-tighter">
+                    <span class="mr-2 text-3xl">🛒</span> LKStore
+                </a>
+                <div class="hidden sm:ml-8 sm:flex sm:space-x-8">
+                    <a th:href="@{/}" th:classappend="${currentUri == '/' ? 'border-primary text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}" class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                        Home
+                    </a>
+                    <a th:if="${session.currentUser != null}" th:href="@{/orders}" th:classappend="${currentUri != null && currentUri.startsWith('/orders') ? 'border-primary text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}" class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                        Orders
+                    </a>
+                    <a th:if="${session.currentUser != null}" th:href="@{/profile}" th:classappend="${currentUri != null && currentUri.startsWith('/profile') ? 'border-primary text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'}" class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-colors">
+                        Profile
+                    </a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Cart Icon -->
+                <a th:href="@{/cart}" th:if="${session.currentUser != null}" class="relative p-2 text-gray-600 hover:text-primary transition-colors">
+                    <span class="text-2xl">🛒</span>
+                    <span th:if="${session.cartSize != null && session.cartSize > 0}"
+                          th:text="${session.cartSize}"
+                          class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-primary rounded-full">0</span>
+                </a>
+                
+                <div class="hidden sm:flex items-center gap-4" th:if="${session.currentUser != null}">
+                    <div class="text-sm">
+                        <span class="text-gray-500">Welcome,</span>
+                        <strong class="text-gray-900 font-semibold" th:text="${session.currentUser.name?.firstName + ' ' + session.currentUser.name?.lastName}">User</strong>
+                    </div>
+                    <a th:href="@{/admin/dashboard}" th:if="${session.isAdmin == true}" class="px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors">Admin Panel</a>
+                    <a th:href="@{/logout}" class="px-3 py-1.5 bg-gray-100 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-200 transition-colors">Logout</a>
+                </div>
+                <div class="flex items-center gap-3" th:unless="${session.currentUser != null}">
+                    <a th:href="@{/login}" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Login</a>
+                    <a th:href="@{/register}" class="px-4 py-2 bg-primary text-white text-sm font-bold rounded-lg shadow hover:bg-primary-dark transition-colors">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Global Toast Notification -->
+<div th:if="${message != null || success != null || error != null}" id="globalToast" 
+     class="fixed top-20 right-5 z-50 px-6 py-4 rounded-xl font-medium text-white shadow-xl transform transition-all duration-300 translate-x-0"
+     th:classappend="${error != null ? 'bg-red-500' : 'bg-green-500'}">
+    <div class="flex items-center gap-3">
+        <span th:if="${error != null}">⚠️</span>
+        <span th:unless="${error != null}">✅</span>
+        <span th:text="${message != null ? message : (success != null ? success : error)}">Message</span>
+    </div>
+</div>
+<script>
+    setTimeout(function() {
+        var toast = document.getElementById('globalToast');
+        if(toast) {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(100%)';
+            setTimeout(function(){ toast.remove(); }, 300);
+        }
+    }, 3000);
+</script>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-200 mt-auto" th:fragment="footer">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <p class="text-center text-sm text-gray-500">LKStore © 2026. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Chatbot Widget -->
+<div th:fragment="chatbot">
+    <button id="chatbotToggle" onclick="toggleChatbot()" title="Chat with AI" class="fixed bottom-6 right-6 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-primary-dark transition-all transform hover:scale-105 z-50 text-2xl">
+        💬
+    </button>
+
+    <div id="chatbotPanel" class="fixed bottom-24 right-6 w-80 md:w-96 bg-white rounded-2xl shadow-2xl border border-gray-100 flex flex-col z-50 transition-all duration-300 origin-bottom-right scale-0 opacity-0" style="height: 500px; max-height: 80vh;">
+        <div class="bg-primary text-white p-4 rounded-t-2xl flex justify-between items-center shadow-sm">
+            <h3 class="font-bold flex items-center gap-2">
+                <span class="w-2.5 h-2.5 bg-green-400 rounded-full animate-pulse"></span> 
+                LKStore AI
+            </h3>
+            <div class="flex gap-2">
+                <button onclick="newChatSession()" title="New session" class="hover:text-gray-200 transition-colors">🔄</button>
+                <button onclick="toggleChatbot()" title="Close" class="hover:text-gray-200 transition-colors text-xl">✕</button>
+            </div>
+        </div>
+        
+        <div id="chatMessages" class="flex-1 p-4 overflow-y-auto flex flex-col gap-3 bg-gray-50">
+            <div class="bg-white text-gray-800 p-3 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%] text-sm self-start whitespace-pre-wrap">Hello! 👋 I am LKStore's AI Assistant.
+I can help you with:
+• Searching products
+• Checking orders
+• Exchange/Return requests
+
+How can I help you today?</div>
+        </div>
+        
+        <div class="p-3 bg-white border-t rounded-b-2xl flex gap-2">
+            <input type="text" id="chatInput" placeholder="Type a message..." 
+                   class="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                   onkeypress="if(event.key==='Enter') sendMessage()">
+            <button onclick="sendMessage()" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary-dark transition-colors shrink-0">
+                ➤
+            </button>
+        </div>
+    </div>
+
+    <script th:inline="javascript">
+        function toggleChatbot() {
+            const panel = document.getElementById('chatbotPanel');
+            if (panel.classList.contains('scale-0')) {
+                panel.classList.remove('scale-0', 'opacity-0');
+                panel.classList.add('scale-100', 'opacity-100');
+                setTimeout(() => document.getElementById('chatInput').focus(), 300);
+            } else {
+                panel.classList.remove('scale-100', 'opacity-100');
+                panel.classList.add('scale-0', 'opacity-0');
+            }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const msg = input.value.trim();
+            if (!msg) return;
+            appendMessage(msg, 'user');
+            input.value = '';
+            showTyping();
+            try {
+                const res = await fetch('/api/chat/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: msg })
+                });
+                hideTyping();
+                if (res.ok) {
+                    const data = await res.json();
+                    appendMessage(data.response, 'ai');
+                } else if (res.status === 401) {
+                    appendMessage('Please login to use the chatbot.', 'ai');
+                } else {
+                    appendMessage('An error occurred. Please try again.', 'ai');
+                }
+            } catch (e) {
+                hideTyping();
+                appendMessage('Cannot connect to server.', 'ai');
+            }
+        }
+
+        function appendMessage(text, sender) {
+            const c = document.getElementById('chatMessages');
+            const d = document.createElement('div');
+            
+            if (sender === 'user') {
+                d.className = 'bg-primary text-white p-3 rounded-2xl rounded-tr-sm shadow-sm max-w-[85%] text-sm self-end';
+            } else {
+                d.className = 'bg-white text-gray-800 p-3 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%] text-sm self-start whitespace-pre-wrap';
+            }
+            d.textContent = text;
+            c.appendChild(d);
+            c.scrollTop = c.scrollHeight;
+        }
+
+        function showTyping() {
+            const c = document.getElementById('chatMessages');
+            const d = document.createElement('div');
+            d.id = 'typingIndicator';
+            d.className = 'bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm self-start flex gap-1 items-center h-10';
+            d.innerHTML = '<div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div><div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></div><div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>';
+            c.appendChild(d); c.scrollTop = c.scrollHeight;
+        }
+
+        function hideTyping() {
+            const el = document.getElementById('typingIndicator');
+            if (el) el.remove();
+        }
+
+        async function newChatSession() {
+            await fetch('/api/chat/new-session', { method: 'POST' });
+            document.getElementById('chatMessages').innerHTML = 
+                '<div class="bg-white text-gray-800 p-3 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%] text-sm self-start">New chat session. How can I help you?</div>';
+        }
+    </script>
+</div>
+
+</body>
+</html>

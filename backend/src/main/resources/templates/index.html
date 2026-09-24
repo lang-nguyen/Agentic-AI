@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{fragments/layout :: head('Home')}"></head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+<nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+<!-- Premium Hero Banner -->
+<section
+        class="relative bg-gradient-to-br from-primary via-primary to-orange-400 py-20 px-6 sm:px-12 text-center text-white overflow-hidden shadow-lg mb-12"
+        style="border-radius: 0 0 40px 40px;">
+    <!-- Abstract Background Shapes -->
+    <div class="absolute -top-12 -left-12 w-48 h-48 bg-white opacity-10 rounded-full blur-2xl"></div>
+    <div class="absolute -bottom-20 right-10 w-72 h-72 bg-white opacity-20 rounded-full blur-3xl"></div>
+    <div class="absolute top-10 right-1/4 w-32 h-32 bg-yellow-300 opacity-20 rounded-full blur-xl"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black mb-6 tracking-tight drop-shadow-md leading-tight">
+            Stay ahead of the trend with <span class="text-white drop-shadow-lg">LKStore</span>
+        </h1>
+        <p class="text-lg sm:text-xl font-medium mb-10 opacity-95 leading-relaxed">
+            Discover the ultimate technology & fashion collection. Smart shopping with a smooth experience, fast delivery.
+        </p>
+
+        <!-- Search Bar in Banner -->
+        <form id="form-search" th:action="@{/}" method="get"
+              class="bg-white p-2 rounded-full shadow-2xl flex flex-col sm:flex-row items-center max-w-2xl mx-auto gap-2">
+            <div class="flex-1 w-full relative">
+                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg">🔍</span>
+                <input type="text" name="keyword" th:value="${keyword}" placeholder="What are you looking for today?"
+                       class="w-full pl-12 pr-4 py-3 text-gray-700 bg-transparent rounded-full focus:outline-none text-base"/>
+            </div>
+            <button type="submit"
+                    class="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-full font-bold transition-colors shadow-md whitespace-nowrap">
+                Search
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Main Content Area -->
+<div class="max-w-7xl mx-32 px-4 sm:px-6 lg:px-8 mb-16 flex flex-col lg:flex-row gap-8">
+
+    <!-- Sidebar / Filters -->
+    <aside class="w-full lg:w-64 flex-shrink-0 hidden md:block">
+        <form th:action="@{/}" method="get" class="bg-white rounded-2xl shadow-sm p-6 sticky top-24">
+            <input type="hidden" name="keyword" th:value="${keyword}"/>
+
+            <div class="flex justify-between items-center mb-4 border-b pb-2">
+                <h3 class="font-bold text-lg text-gray-800">Filter</h3>
+                <a th:href="@{/}" class="text-xs text-primary hover:underline">Clear</a>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="font-medium text-gray-700 mb-3">Price range (USD)</h4>
+                <div class="space-y-2 text-sm text-gray-600">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-primary">
+                        <input type="radio" name="priceRange" value="0-50" th:checked="${priceRange == '0-50'}"
+                               class="text-primary focus:ring-primary" onchange="this.form.submit()"> Under $50
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-primary">
+                        <input type="radio" name="priceRange" value="50-200" th:checked="${priceRange == '50-200'}"
+                               class="text-primary focus:ring-primary" onchange="this.form.submit()"> $50 - $200
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-primary">
+                        <input type="radio" name="priceRange" value="200-500" th:checked="${priceRange == '200-500'}"
+                               class="text-primary focus:ring-primary" onchange="this.form.submit()"> $200 - $500
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-primary">
+                        <input type="radio" name="priceRange" value="500-" th:checked="${priceRange == '500-'}"
+                               class="text-primary focus:ring-primary" onchange="this.form.submit()"> Over $500
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 py-2 rounded-lg font-medium transition-colors text-sm">
+                Apply
+            </button>
+        </form>
+    </aside>
+
+    <!-- Product Grid -->
+    <main class="flex-1">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">
+                <span th:if="${!#strings.isEmpty(keyword)}" th:text="'Search results for: ' + ${keyword}"></span>
+                <span th:unless="${!#strings.isEmpty(keyword)}">All Products</span>
+            </h2>
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+                <span th:text="${products.totalElements} + ' products'"></span>
+            </div>
+        </div>
+
+        <div th:if="${#lists.isEmpty(products.content)}" class="bg-white rounded-2xl p-12 text-center shadow-sm">
+            <div class="text-5xl mb-4">🔍</div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">No products found!</h3>
+            <p class="text-gray-500 mb-6">Please try again with a different keyword or clear filters.</p>
+            <a th:href="@{/}"
+               class="inline-block bg-primary text-white px-6 py-2 rounded-full font-medium hover:bg-primary-dark transition">Clear filters</a>
+        </div>
+
+        <div th:unless="${#lists.isEmpty(products.content)}"
+             class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <a th:each="product : ${products.content}"
+               th:href="@{'/product/' + ${product.productId}}"
+               class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+
+                <!-- Badge -->
+                <div th:if="${product.minPrice > 0}"
+                     class="absolute top-3 right-3 bg-gradient-to-r from-primary to-orange-400 text-white px-3 py-1 rounded-full text-xs font-bold z-10 shadow-md">
+                    In stock
+                </div>
+
+                <!-- Image -->
+                <div class="w-full aspect-square bg-gray-50 flex items-center justify-center p-6 relative overflow-hidden">
+                    <img th:src="${product.image}"
+                         th:alt="${product.name}"
+                         loading="lazy"
+                         class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500 mix-blend-multiply"
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/f3f4f6/9ca3af?text=No+Image';">
+
+                    <!-- Hover Action -->
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white/90 text-gray-800 font-semibold px-4 py-2 rounded-full text-sm shadow-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">View details</span>
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="p-5 flex flex-col flex-1">
+                    <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold mb-1">LKStore</div>
+                    <h3 class="font-bold text-gray-800 text-base leading-snug mb-3 line-clamp-2 flex-1 group-hover:text-primary transition-colors"
+                        th:text="${product.displayName != null ? product.displayName : product.name}">Product</h3>
+
+                    <div th:if="${product.variants != null}"
+                         class="inline-block bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs font-medium mb-3 self-start"
+                         th:text="${product.variants.size() + ' options'}"></div>
+
+                    <div class="mt-auto flex flex-col">
+                        <span class="text-xs text-gray-500 line-through mb-0.5"></span>
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-primary font-bold text-lg">$<span
+                                    th:text="${#numbers.formatDecimal(product.minPrice, 1, 2)}">0.00</span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center" th:if="${products.totalPages > 1}">
+            <nav class="inline-flex rounded-md shadow-sm bg-white" aria-label="Pagination">
+                <a th:href="@{/(page=${products.number - 1}, keyword=${keyword}, priceRange=${priceRange})}"
+                   th:if="${products.hasPrevious()}"
+                   class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
+                    ‹ Prev
+                </a>
+
+                <th:block th:if="${products.totalPages > 0}"
+                          th:each="i : ${#numbers.sequence(0, products.totalPages - 1)}">
+                    <a th:href="@{/(page=${i}, keyword=${keyword}, priceRange=${priceRange})}"
+                       th:text="${i + 1}"
+                       th:classappend="${i == products.number ? 'z-10 bg-primary/10 border-primary text-primary font-bold' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'}"
+                       class="relative inline-flex items-center px-4 py-2 border text-sm font-medium transition-colors">1</a>
+                </th:block>
+
+                <a th:href="@{/(page=${products.number + 1}, keyword=${keyword}, priceRange=${priceRange})}"
+                   th:if="${products.hasNext()}"
+                   class="relative inline-flex items-center px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">
+                    Next ›
+                </a>
+            </nav>
+        </div>
+    </main>
+</div>
+
+<footer th:replace="~{fragments/layout :: footer}"></footer>
+<div th:replace="~{fragments/layout :: chatbot}"></div>
+
+<script>
+    const searchParams = new URLSearchParams(window.location.search);
+
+    if (searchParams.has('keyword')) {
+        document.getElementById("form-search").scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+{
+  "task_idx": 14,
+  "task": {
+    "user_id": "mia_garcia_4516",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "mia.garcia2723@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mia_garcia_4516"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5490111"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7387996"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "1421289881"
+          ],
+          "payment_method_id": "credit_card_3124723"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7387996",
+          "item_ids": [
+            "5796612084"
+          ],
+          "payment_method_id": "paypal_9497703"
+        }
+      }
+    ],
+    "instruction": "You are mia_garcia_4516 (mia.garcia2723@example.com). You just quit gaming and want to cancel or return everything associated with it. (It's just a keyboard and a mouse, but do not reveal it to the agent). Original payment is preferred. You are into gaming but realized the importance of studying hard.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mia Garcia (user ID mia_garcia_4516), email mia.garcia2723@example.com.\n\nI’ve recently decided to quit gaming and would like to cancel or return everything associated with my gaming gear. I’d prefer the refund to be credited back to my original payment method. Though I was really into gaming, I’ve realized how important it is to study hard, so I’m shifting my focus away from that right now."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 2,
+      "extra": 2,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "mia.garcia2723@example.com"
+        },
+        "id": "651a36fd-164d-4e43-b485-412b5db7560f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mia_garcia_4516"
+        },
+        "id": "99ceac6c-dc3b-4d19-8e73-4ebe7b82d8ed",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": "3721aaa4-bc7f-4092-afff-e0ee703ceac7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": "087b2710-f837-422d-be63-a1941f4947e4",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "1421289881"
+          ],
+          "payment_method_id": "credit_card_3124723"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W7387996",
+          "item_ids": [
+            "5796612084"
+          ],
+          "payment_method_id": "paypal_9497703"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": "19b46f7a-0b9d-4cac-a88e-06929ef21319",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": "462eb65c-a5c8-46bf-9851-0c728a19d014",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc3-a1ec-7582-ae6d-750c607acc08?poll=true"
+}

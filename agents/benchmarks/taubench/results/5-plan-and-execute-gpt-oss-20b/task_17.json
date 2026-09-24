@@ -1,0 +1,138 @@
+{
+  "task_idx": 17,
+  "task": {
+    "user_id": "fatima_johnson_7581",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Fatima",
+          "last_name": "Johnson",
+          "zip": "78712"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "fatima_johnson_7581"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5199551"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W8665881"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9389413"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W8665881",
+          "address1": "123 Elm Street",
+          "address2": "Suite 641",
+          "city": "Austin",
+          "state": "TX",
+          "country": "USA",
+          "zip": "78712"
+        }
+      }
+    ],
+    "instruction": "You are Fatima Johnson in 78712. You want to change #W8665881 to be delivered to Suite 641 instead. You are a private person that does not want to reveal much about yourself.",
+    "outputs": [],
+    "prompt": "Hi, I’m Fatima Johnson, 78712.\n\nI’d like to change the delivery address for my order #W8665881 to Suite 641 instead. Please keep my personal details private."
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 3,
+      "extra": 0,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Fatima",
+          "last_name": "Johnson",
+          "zip": "78712"
+        },
+        "id": "f4bff746-3e45-48d1-b71e-416958ee2bd0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8665881"
+        },
+        "id": "55f8878e-d195-46c3-b7f7-82a7a6d810c3",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "fatima_johnson_7581"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9389413"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W8665881",
+          "address1": "123 Elm Street",
+          "address2": "Suite 641",
+          "city": "Austin",
+          "state": "TX",
+          "country": "USA",
+          "zip": "78712"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W8665881"
+          },
+          "id": "55f8878e-d195-46c3-b7f7-82a7a6d810c3",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W5199551"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc7-7ba3-7132-890a-1cc2a294572c?poll=true"
+}

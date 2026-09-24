@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #f84a870e-5f43-42cd-8600-a308b9228dc0
+User Name: mia_garcia_4516  
+ZIP Code: unknown  
+Email: mia.garcia2723@example.com  
+
+---
+
+__Content__
+
+Hi, I’m mia_garcia_4516. I want to return everything I ordered. I have two payment methods and two orders, so please refund each order to the opposite order’s payment method. If that can’t be done, I’m angry—damn it, shit, fuck—and I need a human representative.

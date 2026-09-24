@@ -1,0 +1,236 @@
+{
+  "task_idx": 3,
+  "task": {
+    "user_id": "yusuf_rossi_9620",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "6086499569"
+        }
+      },
+      {
+        "name": "list_all_product_types",
+        "kwargs": {}
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yusuf_rossi_9620"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6247578"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9711842"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4776164"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6679257"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2378156"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "yusuf_rossi_9620"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4776164",
+          "item_ids": [
+            "8349118980"
+          ],
+          "new_item_ids": [
+            "9647292434"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        }
+      }
+    ],
+    "instruction": "You are Yusuf Rossi in 19122. You want to know how many tshirt options are available in the online store right now. You want to modify all your pending small tshirt to purple, same size, same v-neck, and prefer polyester. You are a private person that does not want to reveal much about yourself.",
+    "outputs": [
+      "10"
+    ],
+    "prompt": "Hi, I’m Yusuf Rossi in 19122.  \nCould you let me know how many t‑shirt options are available in the online store right now?  \nAlso, I’d like to change all of my pending small t‑shirts to purple, keeping the same size and v‑neck style, and I’d prefer them to be polyester.  \nThanks, and I’d appreciate it if you keep my personal details private."
+  },
+  "scores": {
+    "scores": {
+      "correct": 11,
+      "missing": 1,
+      "extra": 0,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yusuf",
+          "last_name": "Rossi",
+          "zip": "19122"
+        },
+        "id": "e55c3ea8-2a98-4c9c-8c40-4d21a16ca62d",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "e267092c-876a-4d43-b403-2f8b09518db1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "89a79093-3ff9-4c96-afab-781eaf095b1f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_rossi_9620"
+        },
+        "id": "8edcd773-737d-47f7-ba96-4966e2686451",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6247578"
+        },
+        "id": "438b78f6-940d-4168-8da9-6dd1de41d6e9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9711842"
+        },
+        "id": "e67b6dab-cb2c-4282-b764-43455b1dfc58",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4776164"
+        },
+        "id": "c93712d6-52e6-4a9e-ad3f-e68dae775bca",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6679257"
+        },
+        "id": "16f07045-7a22-4ce4-a393-4519ad672c65",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2378156"
+        },
+        "id": "31493d94-ef1f-4d6c-bfad-513b9901e46b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "e1eac12f-1962-4dec-b0f5-824bd6c3270e",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W4776164",
+          "item_ids": [
+            "8349118980"
+          ],
+          "new_item_ids": [
+            "9647292434"
+          ],
+          "payment_method_id": "credit_card_9513926"
+        },
+        "id": "3c475087-597f-4317-9f71-f7a32d3f6b09",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_rossi_9620"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "9523456873"
+          },
+          "id": "89a79093-3ff9-4c96-afab-781eaf095b1f",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_product_details",
+          "args": {
+            "product_id": "6086499569"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fba-29af-7521-9409-65a967515aed?poll=true"
+}

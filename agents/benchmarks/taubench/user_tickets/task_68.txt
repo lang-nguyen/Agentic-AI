@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #961a5b37-6ec1-45b0-ac67-40733d1dea5b
+User Name: noah_ito_3850  
+ZIP Code: 98187  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m noah_ito_3850 from Seattle, WA (ZIP 98187). I recently placed an order, but I’m not sure exactly when it was placed. Could you let me know the total amount I paid for my most recent order? Thank you.

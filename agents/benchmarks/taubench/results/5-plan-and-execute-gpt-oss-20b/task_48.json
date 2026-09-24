@@ -1,0 +1,146 @@
+{
+  "task_idx": 48,
+  "task": {
+    "user_id": "daiki_johnson_9523",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Daiki",
+          "last_name": "Johnson",
+          "zip": "80273"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "daiki_johnson_9523"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W1436802"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5282037"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9502127"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9502127",
+          "item_ids": [
+            "9534205511"
+          ],
+          "payment_method_id": "paypal_2433177"
+        }
+      }
+    ],
+    "instruction": "You are daiki_johnson_9523 living in Denver, USA, 80273. You want to return an air purifier that you received since it doesn't work well.  You want the refund on your original method of payment. Be polite and thank the agent for the help. Also, check at the end whether you are able to return the vacuum cleaner, but you are not sure yet so don't process anything.",
+    "outputs": [],
+    "prompt": "Hi, I’m daiki_johnson_9523 living in Denver, USA, 80273. I received an air purifier that isn’t working well, so I’d like to return it and request a refund to my original method of payment. Thank you for your help. Also, could you let me know if I’m able to return the vacuum cleaner as well, but I’m not ready to process that return yet."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 5,
+      "extra": 1,
+      "mismatch": 1
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "daiki_johnson_9523"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1436802"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5282037"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9502127"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W9502127",
+          "item_ids": [
+            "9534205511"
+          ],
+          "payment_method_id": "paypal_2433177"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "daiki_johnson_9523",
+          "last_name": "",
+          "zip": "80273"
+        },
+        "id": "ba365843-2f82-4966-9cac-b4837dafdb06",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "daiki_johnson_9523",
+            "last_name": "",
+            "zip": "80273"
+          },
+          "id": "ba365843-2f82-4966-9cac-b4837dafdb06",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Daiki",
+            "last_name": "Johnson",
+            "zip": "80273"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fee-63cf-7641-b141-0a64f71637bf?poll=true"
+}

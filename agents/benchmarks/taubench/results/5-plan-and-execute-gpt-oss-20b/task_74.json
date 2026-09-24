@@ -1,0 +1,121 @@
+{
+  "task_idx": 74,
+  "task": {
+    "user_id": "lei_li_6575",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W3189752",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5166363",
+          "item_ids": [
+            "3334537816"
+          ],
+          "new_item_ids": [
+            "3265035808"
+          ],
+          "payment_method_id": "credit_card_4466831"
+        }
+      }
+    ],
+    "instruction": "You name is Lei Li and your zip code is 85033. You are insecure, shy. You recently bought a laptop, but you want to exchange it to i9 CPU. If multiple storage options are available, you prefer 256GB SSD. If multiple colors are available, you prefer silver. You also have a pending order with five items (you don't remember order ID), and you want to cancel it because you no longer need them.",
+    "outputs": [],
+    "prompt": "Hi, I’m Lei Li from zip code 85033. I’m a bit shy, so I’ll keep this brief.\n\nI recently bought a laptop and would like to exchange it for one with an i9 CPU. If there are multiple storage options available, I’d prefer a 256 GB SSD. If there are multiple color options, I’d like the silver version.\n\nI also have a pending order that contains five items, but I don’t remember the order ID. I’d like to cancel that entire order because I no longer need those items."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 6,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W3189752",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W5166363",
+          "item_ids": [
+            "3334537816"
+          ],
+          "new_item_ids": [
+            "3265035808"
+          ],
+          "payment_method_id": "credit_card_4466831"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Lei",
+          "last_name": "Li",
+          "zip": "85033"
+        },
+        "id": "994703c3-a9f9-45b3-826d-adb96dfb6be2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "lei_li_6575"
+        },
+        "id": "b6a26ea7-6150-46a9-9857-684911bfe497",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5166363"
+        },
+        "id": "0a68b5d6-ba1b-40d4-88a9-78f1ec3d2ee9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3414433"
+        },
+        "id": "d58ac140-1234-47c3-8a06-eb86d9a2fd60",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6289770"
+        },
+        "id": "8a90c07f-ca71-4a99-abfd-a7ffd3066fcb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3189752"
+        },
+        "id": "e923f0ab-b77f-4a1c-99cf-8ec4482d782b",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7001-cfd8-7600-aa1e-64ad399a814f?poll=true"
+}

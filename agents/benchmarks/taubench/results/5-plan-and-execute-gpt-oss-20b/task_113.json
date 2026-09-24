@@ -1,0 +1,216 @@
+{
+  "task_idx": 113,
+  "task": {
+    "user_id": "yara_silva_7567",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W9810810",
+          "item_ids": [
+            "1355937109"
+          ],
+          "new_item_ids": [
+            "9949163720"
+          ],
+          "payment_method_id": "gift_card_7252880"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W3730488",
+          "address1": "555 Highland Drive",
+          "address2": "Suite 872",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10116"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W3730488",
+          "item_ids": [
+            "2913673670"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "payment_method_id": "gift_card_7252880"
+        }
+      }
+    ],
+    "instruction": "You name is Yara Silva and your zip code is 77159. You are sad and cautious. You want to modify the laptop order to your NYC address (you don't want to reveal it but should be in your orders profile). You also like to modify the laptop to be 9844888101. You also want to exchange your watch to be black dial color but keep the leather strap. You like to say things piecewise.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yara Silva from zip code 77159.\n\nI’m a bit sad and cautious about making changes, so I’ll break it down piece by piece.\n\n1. I’d like to update the shipping address for my laptop order to my NYC address that’s already in my profile—no need to share the details here.\n\n2. I also want to change the laptop to model number 9844888101.\n\n3. Lastly, I’d like to exchange my watch for one with a black dial but keep the leather strap."
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 0,
+      "extra": 10,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W3730488",
+          "address1": "555 Highland Drive",
+          "address2": "Suite 872",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10116",
+          "country": "USA"
+        },
+        "id": "919aa6d9-d6f2-4084-98ac-f2babfe6274c",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "2913673670"
+          ],
+          "new_item_ids": [
+            "9844888101"
+          ],
+          "order_id": "#W3730488",
+          "payment_method_id": "gift_card_7252880"
+        },
+        "id": "58d51824-cf81-4c5a-b808-c24623a7665c",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Yara",
+          "last_name": "Silva",
+          "zip": "77159"
+        },
+        "id": "6cb461a4-7d23-497d-ac3b-0a2acefa5ee2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_silva_7567"
+        },
+        "id": "02f1fc10-461b-4a9a-9f7e-83501fa9731c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9810810"
+        },
+        "id": "4fe42568-4bff-4993-bcfb-c8c0ddbb1e57",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9034102"
+        },
+        "id": "6eb4b00c-2613-4a53-8667-96ca27ff0ab9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3964602"
+        },
+        "id": "5f32b92d-9a87-4ca6-8e98-60b182b26596",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3730488"
+        },
+        "id": "8f184c5d-ff1f-4d2a-a9b4-928cb63b48e5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yara_silva_7567"
+        },
+        "id": "9bfaee1f-9597-4412-8821-dc29295462da",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3730488"
+        },
+        "id": "4e4208f6-c8f0-4f7e-9563-1e9afad95737",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9810810"
+        },
+        "id": "de507d5a-7e05-408c-a13b-276549b4f9ce",
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "1355937109"
+          ],
+          "new_item_ids": [
+            "1355937109"
+          ],
+          "order_id": "#W9810810",
+          "payment_method_id": "gift_card_7252880"
+        },
+        "id": "63ab94ad-22d8-42e6-9dce-dce8f610eb33",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "item_ids": [
+              "2913673670"
+            ],
+            "new_item_ids": [
+              "9844888101"
+            ],
+            "order_id": "#W3730488",
+            "payment_method_id": "gift_card_7252880"
+          },
+          "id": "58d51824-cf81-4c5a-b808-c24623a7665c",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W9810810",
+            "item_ids": [
+              "1355937109"
+            ],
+            "new_item_ids": [
+              "9949163720"
+            ],
+            "payment_method_id": "gift_card_7252880"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7037-2334-7351-8c01-116b2e1de756?poll=true"
+}

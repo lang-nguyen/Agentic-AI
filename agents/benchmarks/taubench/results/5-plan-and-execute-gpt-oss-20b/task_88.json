@@ -1,0 +1,59 @@
+{
+  "task_idx": 88,
+  "task": {
+    "user_id": "daiki_silva_2903",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W8835847",
+          "reason": "ordered by mistake"
+        }
+      }
+    ],
+    "instruction": "You name is Daiki Silva and your email is daiki.silva6295@example.com. You are insecure, creative, direct, relaxing. You want to change the book shelf to 4 foot but with the same material and color. If it is not available, cancel the whole order and you will buy again. If the agent asks for the cancellation reason, you say you ordered by mistake.",
+    "outputs": [],
+    "prompt": "Hi, I’m Daiki Silva (email: daiki.silva6295@example.com) and I’ve just ordered a book shelf.  \n\nI’d like to change the size to 4 ft but keep the same material and color. If that specific size isn’t available, I’d prefer to cancel the entire order and then place a new one later.  \n\nIf you ask why I’m cancelling, just let me know I ordered by mistake.  \n\nThanks for helping me sort this out!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 2,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W8835847",
+          "reason": "ordered by mistake"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "daiki.silva6295@example.com"
+        },
+        "id": "099c35eb-5344-4f76-b0d4-b27796d262f7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W0000000"
+        },
+        "id": "020dc11d-2579-4dad-b6e1-9e473f636750",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7011-f345-7b93-b4a4-7a3f8f7b0b30?poll=true"
+}

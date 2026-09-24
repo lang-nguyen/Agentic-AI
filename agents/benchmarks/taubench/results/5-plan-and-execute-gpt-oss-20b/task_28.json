@@ -1,0 +1,277 @@
+{
+  "task_idx": 28,
+  "task": {
+    "user_id": "isabella_johansson_2152",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "isabella_johansson_2152"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3792453"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7181492"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5565470"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2575533"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3792453",
+          "item_ids": [
+            "4293355847"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7181492",
+          "item_ids": [
+            "5753502325",
+            "9851293632"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5565470",
+          "item_ids": [
+            "9570044148",
+            "6857426243"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2575533"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "200.8 + 96.35 + 193.38 + 231.37 + 196.53"
+        }
+      }
+    ],
+    "instruction": "You are Isabella Johansson, and you live in 32286. You want to return the skateboard, garden hose, backpack, keyboard, bed, and also cancel the hose you just ordered (if cancelling one item is not possible, forget about it, you just want to cancel the hose and nothing else). You want to know how much you can get in total as refund. You are extremely brief but patient.",
+    "outputs": [
+      "918.43"
+    ],
+    "prompt": "Hi, I’m Isabella Johansson from 32286. I’d like to return the skateboard, garden hose, backpack, keyboard, and bed, and I also want to cancel the garden hose I just ordered. Could you let me know the total refund amount?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 6,
+      "missing": 3,
+      "extra": 5,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        },
+        "id": "9af9c19e-0bbf-4c32-8f69-4082c4ac5f31",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_johansson_2152"
+        },
+        "id": "b3efb575-caad-4f1f-a49d-8cce34072062",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3792453"
+        },
+        "id": "70d7e5b4-a3c8-4d0f-aaa7-ac31181f3754",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7181492"
+        },
+        "id": "f405e7f1-b56e-49c7-9029-35204d94c5ab",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "2f321d09-73ba-40ac-b765-4a9b719663ff",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2575533"
+        },
+        "id": "83f18aa9-daf7-47d3-b0cc-46b2fda6b1ef",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W3792453",
+          "item_ids": [
+            "4293355847"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W7181492",
+          "item_ids": [
+            "5753502325",
+            "9851293632"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5565470",
+          "item_ids": [
+            "9570044148",
+            "6857426243"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3792453"
+        },
+        "id": "f3b488c1-d5b7-4a61-abce-d95428fd8928",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7181492"
+        },
+        "id": "046e39ef-04cc-4bdd-942d-7b58521e075c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "c9603d50-4d0c-4df6-bc3c-1a3e9c8b9868",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2575533"
+        },
+        "id": "fde68691-78f5-4355-94bb-0ecebad49415",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "200.8 + 193.38 + 231.37 + 196.53"
+        },
+        "id": "3f8cf931-023d-4c75-a323-66b4cc01b647",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W3792453"
+          },
+          "id": "f3b488c1-d5b7-4a61-abce-d95428fd8928",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W2575533"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "calculate",
+          "args": {
+            "expression": "200.8 + 193.38 + 231.37 + 196.53"
+          },
+          "id": "3f8cf931-023d-4c75-a323-66b4cc01b647",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "calculate",
+          "args": {
+            "expression": "200.8 + 96.35 + 193.38 + 231.37 + 196.53"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fcf-45fb-7550-8558-96eaf7d88039?poll=true"
+}

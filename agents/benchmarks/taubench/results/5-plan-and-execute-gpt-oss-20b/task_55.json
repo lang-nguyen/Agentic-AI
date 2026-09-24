@@ -1,0 +1,235 @@
+{
+  "task_idx": 55,
+  "task": {
+    "user_id": "amelia_silva_7726",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "silva7872@example.com"
+        }
+      },
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "amelia.silva7872@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "amelia_silva_7726"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2586676"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5400801"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4597054"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4836353"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7773202"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7342738"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W4836353",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W7342738",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4597054",
+          "item_ids": [
+            "5669664287",
+            "4900990404",
+            "9862136885",
+            "6777246137"
+          ],
+          "payment_method_id": "gift_card_3491931"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7773202",
+          "item_ids": [
+            "8277474082"
+          ],
+          "payment_method_id": "gift_card_3491931"
+        }
+      }
+    ],
+    "instruction": "You are Amelia, and you have two emails: silva7872@example.com and amelia.silva7872@example.com. You live in Philadelphia, and you are a loyal customer. But you just faced a fincinal issue and want to cancel or return all possible orders. You are now emotional and a bit stress out. You like to talk a lot and explain your situation.",
+    "outputs": [],
+    "prompt": "Hi, I’m Amelia from Philadelphia, and my email addresses are silva7872@example.com and amelia.silva7872@example.com. I’ve been a loyal customer for years, but lately I’m in a tough financial spot and I’m feeling really stressed and overwhelmed. I need to cancel or return all of my orders that I can, but I’m not sure exactly which ones are eligible or how to go about it. Can you please help me figure out which orders I can cancel or return, and walk me through the process? I’d really appreciate any guidance you can give me right now. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 10,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "silva7872@example.com"
+        },
+        "id": "1c300537-211e-46eb-8058-e1b1358d3b02",
+        "type": "tool_call"
+      },
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "amelia.silva7872@example.com"
+        },
+        "id": "d15c99cb-0ccc-43f8-8e1c-856f24574f38",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "amelia_silva_7726"
+        },
+        "id": "7b1c8501-aeff-407b-b833-2e8f25ef1e16",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2586676"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5400801"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4597054"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4836353"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7773202"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7342738"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W4836353",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W7342738",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W4597054",
+          "item_ids": [
+            "5669664287",
+            "4900990404",
+            "9862136885",
+            "6777246137"
+          ],
+          "payment_method_id": "gift_card_3491931"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W7773202",
+          "item_ids": [
+            "8277474082"
+          ],
+          "payment_method_id": "gift_card_3491931"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff2-5955-7132-871c-15d13cc94d95?poll=true"
+}

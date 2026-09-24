@@ -1,0 +1,114 @@
+{
+  "task_idx": 25,
+  "task": {
+    "user_id": "isabella_johansson_2152",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "isabella_johansson_2152"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3792453"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7181492"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5565470"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2575533"
+        }
+      }
+    ],
+    "instruction": "You are Isabella Johansson, and you live in 32286. You have an order sent to Texas by accident, and you want to know the tracking number of the order, and return all items in it except the pet bed. You want the refund to your amex credit card, and if the agent cannot help, transfer to a human. You don't remember the order number. It is urgent.",
+    "outputs": [],
+    "prompt": "Hi, I’m Isabella Johansson and I live in 32286.  \n\nI just realized that my recent order was mistakenly sent to Texas instead of my address. I don’t remember the order number, but I need the tracking number for that shipment. Also, I’d like to return every item in the order except the pet bed. The refund should go back to my Amex credit card. If the agent can’t assist with this, please transfer me to a human representative. This is urgent, so I’d appreciate your help as soon as possible."
+  },
+  "scores": {
+    "scores": {
+      "correct": 6,
+      "missing": 0,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        },
+        "id": "a99aba77-998d-4dba-a3cc-91ea78459529",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_johansson_2152"
+        },
+        "id": "5272c176-37e8-4d06-8ea9-2adbb08459a0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3792453"
+        },
+        "id": "04341b8a-c276-4b26-8921-bef541a50344",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7181492"
+        },
+        "id": "a69c9937-8432-4031-8738-f51371ed895e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5565470"
+        },
+        "id": "0e1c0bfd-24e9-4b21-91f3-56e50be258c4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2575533"
+        },
+        "id": "308482c1-a291-4f38-bb06-765f5179bd4d",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fcc-ad17-72a1-9a35-c2c034933806?poll=true"
+}

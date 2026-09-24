@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #1e73ebb8-ef1c-4c5e-b103-ac7fa8581582
+User Name: Noah Patel
+ZIP Code: 10108
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Noah Patel from the Big Apple, and I need help with my recent order. I ordered three home‑office items and a few hiking supplies so I could work from home while staying at my parents’ place in Seattle. My company just announced I’ll be back to the office soon, so I’d like to cancel the home‑office items and keep the hiking gear.
+
+I don’t remember the exact items I ordered, but I’d like a refund for those home‑office products. Could you let me know the total amount I’ll get back and confirm that it will be credited to my original payment method? If the system can’t cancel just part of the order, I’ll just keep everything as is, but please change my default shipping address to my parents’ Seattle house (I’m not going to share the address here).
+
+I’ve been a bit anxious about this shift back to the office, so your quick help would be much appreciated.
+
+Thank you!

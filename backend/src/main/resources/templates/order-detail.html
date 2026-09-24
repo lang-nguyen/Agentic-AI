@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/layout :: head('Order Detail')}"></head>
+
+<body>
+    <nav th:replace="~{fragments/layout :: navbar}"></nav>
+
+    <div class="container" th:if="${order != null}">
+        <div class="page-header">
+            <div class="breadcrumb">
+                <a th:href="@{/orders}">Orders</a> › <span th:text="${order.orderId}">ID</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <h1 th:text="'Order ' + ${order.orderId}">Order</h1>
+                <span class="badge" th:classappend="${order.status == 'pending' ? 'badge-pending' :
+                                   order.status == 'processed' ? 'badge-processed' :
+                                   order.status == 'delivered' ? 'badge-delivered' : 'badge-cancelled'}"
+                    th:text="${order.status}">Status</span>
+            </div>
+        </div>
+
+        <div class="order-detail-grid">
+            <!-- Items -->
+            <div class="card">
+                <div class="card-header">Order Items</div>
+                <div class="card-body">
+                    <div th:each="item : ${order.items}" class="item-row" style="display: flex; gap: 16px;">
+                        <img th:src="${item.imageUrl != null ? item.imageUrl : '/images/no-image.png'}"
+                            th:alt="${item.name}"
+                            style="width: 80px; height: 80px; object-fit: cover; border-radius: 8px; border: 1px solid #eee;"
+                            onerror="this.onerror=null; this.src='https://placehold.co/80x80?text=No+Image';">
+                        <div style="flex: 1;">
+                            <div class="item-name" th:text="${item.name}">Name</div>
+                            <div class="item-meta">
+                                Product: <span th:text="${item.productId}">PID</span> ·
+                                Item: <span th:text="${item.itemId}">IID</span>
+                            </div>
+                            <div class="option-tags" th:if="${item.options != null}">
+                                <span th:each="opt : ${item.options.entrySet()}"
+                                    th:text="${opt.key + ': ' + opt.value}">opt</span>
+                            </div>
+                            <div style="margin-top: 8px; font-weight: 500;">
+                                Qty: <span th:text="${item.quantity > 0 ? item.quantity : 1}">1</span>
+                            </div>
+                        </div>
+                        <div class="item-price"
+                            th:text="'$' + ${#numbers.formatDecimal(item.price * (item.quantity > 0 ? item.quantity : 1), 1, 2)}">
+                            $0</div>
+                    </div>
+
+                    <div class="total-row">
+                        <span>Total</span>
+                        <span class="total-value"
+                            th:text="'$' + ${#numbers.formatDecimal(@orderService.getOrderTotal(order), 1, 2)}">$0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div>
+                <div class="card mb-16">
+                    <div class="card-header">Shipping Address</div>
+                    <div class="card-body">
+                        <div class="info-row">
+                            <span class="label">Address</span>
+                            <span class="value" th:text="${order.address?.address1}">Addr</span>
+                        </div>
+                        <div class="info-row" th:if="${!#strings.isEmpty(order.address?.address2)}">
+                            <span class="label">Address 2</span>
+                            <span class="value" th:text="${order.address?.address2}">Addr2</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">City</span>
+                            <span class="value"
+                                th:text="${order.address?.city + ', ' + order.address?.state + ' ' + order.address?.zip}">City</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-16" th:if="${!#lists.isEmpty(order.fulfillments)}">
+                    <div class="card-header">Shipping</div>
+                    <div class="card-body">
+                        <div th:each="f : ${order.fulfillments}">
+                            <div class="info-row" th:if="${!#lists.isEmpty(f.trackingId)}">
+                                <span class="label">Tracking</span>
+                                <span class="value" th:text="${#strings.listJoin(f.trackingId, ', ')}">ID</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" th:if="${!#lists.isEmpty(order.paymentHistory)}">
+                    <div class="card-header">Payment</div>
+                    <div class="card-body">
+                        <div th:each="p : ${order.paymentHistory}" class="info-row">
+                            <span class="label" th:text="${p.transactionType}">Type</span>
+                            <span class="value" th:text="'$' + ${#numbers.formatDecimal(p.amount, 1, 2)}">$0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container empty-state" th:if="${order == null}">
+        <div class="icon">🔍</div>
+        <h3>Order not found</h3>
+        <a th:href="@{/orders}" class="btn btn-primary">Go back</a>
+    </div>
+
+    <footer th:replace="~{fragments/layout :: footer}"></footer>
+    <div th:replace="~{fragments/layout :: chatbot}"></div>
+</body>
+
+</html>

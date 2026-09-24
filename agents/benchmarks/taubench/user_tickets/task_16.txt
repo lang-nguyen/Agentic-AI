@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #dd6d9e00-7b8d-4120-9143-bba0bbfc4802
+User Name: Fatima Johnson  
+ZIP Code: 78712  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi,
+
+I’m Fatima Johnson from ZIP 78712. I’d like to cancel all of my pending orders because they’re no longer needed. Additionally, I want to return the watch I received and would like to know the total amount I can get back from the refund. 
+
+Please let me know the steps I need to take and the refund amount.
+
+Thank you.

@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #38f4a0ea-c8d0-4185-923d-e46e5611fe79
+User Name: Yusuf Hernandez  
+ZIP Code: unknown  
+Email: yusuf.hernandez8836@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Yusuf Hernandez. I’m a bit shy and prefer things to be straightforward.
+
+I’d like to exchange the fleece jacket I ordered for a red color with a half‑zip design. Everything else is fine, just the color and zipper style.
+
+Additionally, I’d like to change my default shipping address to the Washington DC address that is already listed in one of my orders. I don’t want to reveal the exact address here, but please update it to that one.
+
+Thank you for handling these requests.

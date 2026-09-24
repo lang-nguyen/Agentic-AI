@@ -1,0 +1,123 @@
+{
+  "task_idx": 53,
+  "task": {
+    "user_id": "sofia_li_9219",
+    "annotator": "1",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "sofia_li_9219"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4689314"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W8855135"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3916020"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3916020",
+          "item_ids": [
+            "7758198585"
+          ],
+          "payment_method_id": "credit_card_8105988"
+        }
+      }
+    ],
+    "instruction": "You are Sofia Li, residing in San Antonio, 78260. The bicycle you received was damaged during delivery, and you want to get a refund. You're quite frustrated because the bike was very expensive and you'd like to receive the refund as soon as possible. You want the refund to be credited to your original credit card.",
+    "outputs": [],
+    "prompt": "Hi, I’m Sofia Li from San Antonio, 78260.  \n\nI received the bicycle I ordered, but it was damaged during delivery. It was a very expensive bike, so I’m quite frustrated, and I would like to receive a refund as soon as possible. Please credit the refund to the original credit card I used for the purchase."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 5,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Sofia",
+          "last_name": "Li",
+          "zip": "78260"
+        },
+        "id": "23297766-6c02-496e-acf3-9f00da9ffdee",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_li_9219"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4689314"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8855135"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3916020"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W3916020",
+          "item_ids": [
+            "7758198585"
+          ],
+          "payment_method_id": "credit_card_8105988"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff0-9c30-74c1-acb9-6a9f0ed04b78?poll=true"
+}

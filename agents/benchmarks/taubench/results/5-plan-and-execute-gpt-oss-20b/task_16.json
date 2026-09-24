@@ -1,0 +1,207 @@
+{
+  "task_idx": 16,
+  "task": {
+    "user_id": "fatima_johnson_7581",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Fatima",
+          "last_name": "Johnson",
+          "zip": "78712"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "fatima_johnson_7581"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5199551"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W8665881"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9389413"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "3131.1 + 4777.75 + 367.38"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W5199551",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W8665881",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9389413",
+          "item_ids": [
+            "2554056026"
+          ],
+          "payment_method_id": "paypal_5364164"
+        }
+      }
+    ],
+    "instruction": "You are Fatima Johnson in 78712. You want to cancel all pending orders (since they are no longer needed) and return the watch you have received (but nothing else), and you want to know the total amount you can get back. You are a private person that does not want to reveal much about yourself.",
+    "outputs": [
+      "8276.23"
+    ],
+    "prompt": "Hi, I’m Fatima Johnson from 78712.\n\nI’d like to cancel all pending orders that I currently have and return the watch I received—nothing else. Could you let me know the total amount I can expect back?"
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 3,
+      "extra": 3,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Fatima",
+          "last_name": "Johnson",
+          "zip": "78712"
+        },
+        "id": "b9e1f9e0-191d-4850-a7db-6493b5fd6484",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "fatima_johnson_7581"
+        },
+        "id": "2255d8ea-2f58-4deb-aac7-adb73066a553",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5199551"
+        },
+        "id": "6a510b5e-03cc-4bc6-aa42-8e226f263852",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8665881"
+        },
+        "id": "a0651807-f645-4990-979f-4dfab02464f5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9389413"
+        },
+        "id": "1a58e695-34e4-4feb-a6f7-7e89bfb1fb4a",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W5199551",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W8665881",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W9389413",
+          "item_ids": [
+            "2554056026"
+          ],
+          "payment_method_id": "paypal_5364164"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "fatima_johnson_7581"
+        },
+        "id": "c8c33279-55b8-4783-9469-b754daf39236",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9389413"
+        },
+        "id": "b8eee5a6-b9ac-4f8a-8974-aa496a49bde7",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "3131.10 + 4777.75"
+        },
+        "id": "4a82a9fb-490e-4742-8c0d-629f20bca247",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "calculate",
+          "args": {
+            "expression": "3131.10 + 4777.75"
+          },
+          "id": "4a82a9fb-490e-4742-8c0d-629f20bca247",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "calculate",
+          "args": {
+            "expression": "3131.1 + 4777.75 + 367.38"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc6-3ce3-7f73-b420-6806598ce485?poll=true"
+}

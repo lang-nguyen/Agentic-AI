@@ -1,0 +1,135 @@
+{
+  "task_idx": 61,
+  "task": {
+    "user_id": "chen_johnson_4204",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Chen",
+          "last_name": "Johnson",
+          "zip": "77004"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5061109"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9924732112"
+        }
+      },
+      {
+        "name": "calculate",
+        "kwargs": {
+          "expression": "256.67 - 226.49"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5061109",
+          "item_ids": [
+            "3694871183"
+          ],
+          "new_item_ids": [
+            "8555936349"
+          ],
+          "payment_method_id": "paypal_3742148"
+        }
+      }
+    ],
+    "instruction": "You are Chen Johnson from Houston TX, 77004. You want to change your wireless earbuds in order W5061109 to a blue colored one. Provide all details upfront and ask the agent to resolve as soon as possible. You want the price to be the same or lower.",
+    "outputs": [],
+    "prompt": "Hi, I’m Chen Johnson from Houston, TX 77004, and I’m referring to order W5061109.\n\nI’d like to change the wireless earbuds in that order to a blue‑colored version. Please let me know the new pricing – it should be the same or lower than what I originally paid. I would appreciate it if this could be resolved as soon as possible."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 3,
+      "extra": 1,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Chen",
+          "last_name": "Johnson",
+          "zip": "77004"
+        },
+        "id": "ff0933ce-98d9-4614-b8fe-05ff0ea5d682",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9924732112"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "256.67 - 226.49"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W5061109",
+          "item_ids": [
+            "3694871183"
+          ],
+          "new_item_ids": [
+            "8555936349"
+          ],
+          "payment_method_id": "paypal_3742148"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "W5061109"
+        },
+        "id": "2b4cbd09-8872-4481-bc3f-dc61c377931a",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "W5061109"
+          },
+          "id": "2b4cbd09-8872-4481-bc3f-dc61c377931a",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W5061109"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff7-03eb-7681-ab6e-3ff487f92ae3?poll=true"
+}

@@ -1,0 +1,155 @@
+{
+  "task_idx": 70,
+  "task": {
+    "user_id": "sofia_hernandez_5364",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3947049",
+          "item_ids": [
+            "3358616356"
+          ],
+          "new_item_ids": [
+            "9013366374"
+          ],
+          "payment_method_id": "credit_card_7901829"
+        }
+      }
+    ],
+    "instruction": "You name is Sofia Hernandez and your zip code is 98193. You are impatient, confident, direct, messy. You recently received a helmet but you are not happy with it and want to exchange. The size is too small and you want medium, plus you want high ventilation. If multiple colors are available, you prefer blue. You do not want the  You prefer original payment to pay for the price difference, and you want to know how much you need to pay today.",
+    "outputs": [
+      "22.55"
+    ],
+    "prompt": "Hi, I'm Sofia Hernandez, zip 98193.\n\nI just received a helmet, but it’s too small. I want to exchange it for a medium size with high ventilation. If multiple colors are available, I’d prefer blue. I do not want the. I prefer to use the original payment method to pay for the price difference, and I’d like to know how much I need to pay today."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 0,
+      "extra": 12,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "item_ids": [
+            "3358616356"
+          ],
+          "new_item_ids": [
+            "9013366374"
+          ],
+          "order_id": "#W3947049",
+          "payment_method_id": "credit_card_7901829"
+        },
+        "id": "2f917ad0-9819-4dd3-8ff1-4f1803ed306a",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Sofia",
+          "last_name": "Hernandez",
+          "zip": "98193"
+        },
+        "id": "6bdc92e0-dde4-482c-b0bb-6c88fe7d363a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_hernandez_5364"
+        },
+        "id": "699e028e-fae9-4fc9-81f7-f7937aef47fc",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9609649"
+        },
+        "id": "58281399-1b3e-4e04-83f8-d1afefd55ce1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3561391"
+        },
+        "id": "17d59576-d78b-4ad8-8441-0878c6dedba0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6876713"
+        },
+        "id": "638f2b9f-1928-404c-986b-63376e581891",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3947049"
+        },
+        "id": "ec36cfcf-875c-454e-898f-68508d5dc78a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "7765186836"
+        },
+        "id": "3000722e-7e13-4cf8-9ae8-3b103028b44d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6876713"
+        },
+        "id": "c025b118-9a58-43bc-aaa9-f588c806bcfb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3947049"
+        },
+        "id": "1cdd165e-7df4-479a-9bd3-1a0e0d02074d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3947049"
+        },
+        "id": "2b706e9b-3988-45f6-bf9b-c12781bd0faa",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "7765186836"
+        },
+        "id": "ff21813e-fd0b-44fa-96d1-5c24b62fa1b5",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "219.88-197.33"
+        },
+        "id": "eb7a4305-5242-4ab5-8405-2ecc17ecd936",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ffe-5163-71e2-8435-3b561eb4a1b5?poll=true"
+}

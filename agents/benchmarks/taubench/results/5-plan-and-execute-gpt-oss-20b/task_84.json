@@ -1,0 +1,115 @@
+{
+  "task_idx": 84,
+  "task": {
+    "user_id": "chen_silva_7485",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W9571698",
+          "item_ids": [
+            "6065192424"
+          ],
+          "payment_method_id": "gift_card_7250692"
+        }
+      }
+    ],
+    "instruction": "You name is Chen Silva and your zip code is 46281. You are messy, flexible, outgoing. You received two tablets and you only need one. You want to return the less expensive one and refund to credit card. But if the agent asks for confirmation, you change your mind and return the more expensive one and refund to GC.",
+    "outputs": [],
+    "prompt": "Hi, I’m Chen Silva, zip code 46281, and I’m a bit messy, flexible, and outgoing. I recently received two tablets but I only need one. I’d like to return the cheaper tablet and have the refund issued to my credit card. However, if the agent asks for confirmation, I would change my mind and instead return the more expensive tablet and receive the refund on my gift card."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 8,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W9571698",
+          "item_ids": [
+            "6065192424"
+          ],
+          "payment_method_id": "gift_card_7250692"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Chen",
+          "last_name": "Silva",
+          "zip": "46281"
+        },
+        "id": "bc9d835a-fa09-467b-966e-fb7a50e16f01",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "chen_silva_7485"
+        },
+        "id": "cda557ff-a8fc-411a-a69f-2bcfdeccb041",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3069600"
+        },
+        "id": "5d58fbb8-d37c-4bac-bde1-50b7c098b250",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2598834"
+        },
+        "id": "307e1407-0929-4642-ba91-7ab0d966e2ce",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8171054"
+        },
+        "id": "f1abec2b-5571-4ac2-84f8-8a4298b9f436",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9571698"
+        },
+        "id": "42c428da-2016-426d-a29c-da23adf6b822",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8024098596"
+        },
+        "id": "2bd48dec-0394-4199-873e-24ff34cbc560",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "938.92 < 989.70"
+        },
+        "id": "dd06d551-80ec-4bdf-8ea7-d3dca69bc818",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e700b-fa29-7540-9020-1eea406039bc?poll=true"
+}

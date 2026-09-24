@@ -1,0 +1,15 @@
+#Ticket
+
+__metadata__
+Ticket ID: #c39eca1d-73aa-4c14-b964-a5584891874a
+User Name: James Kim
+ZIP Code: unknown
+Email: james.kim1995@example.com
+
+---
+
+__Content__
+
+Hi, I’m James Kim and I’m writing to cancel my order. I’m feeling sad about this, but I’m independent and politely asking for help. Due to some life changes, I no longer need the hiking boots, watch, keyboard, charger, jacket, and running shoes that were in the order. If it isn’t possible to cancel just these items, I don’t care about a partial cancellation—please cancel the entire order.
+
+Thank you for your assistance.

@@ -1,0 +1,110 @@
+[
+    {
+        "intent": "ORDER_cancel_order",
+        "description": "The customer wants to cancel an existing order. The AI should understand this is a request to stop processing the order and possibly initiate a refund or cancellation."
+    },
+    {
+        "intent": "ORDER_change_order",
+        "description": "The customer wants to modify details of an existing order, such as quantity, product, or delivery information."
+    },
+    {
+        "intent": "SHIPPING_change_shipping_address",
+        "description": "The customer wants to update the shipping address of an order before it is shipped."
+    },
+    {
+        "intent": "CANCEL_check_cancellation_fee",
+        "description": "The customer wants to know the cancellation fee for an order. This is an informational request, not an actual cancellation."
+    },
+    {
+        "intent": "INVOICE_check_invoice",
+        "description": "The customer wants to view or verify the invoice of an order. The AI should recognize this as an invoice or billing inquiry."
+    },
+    {
+        "intent": "PAYMENT_check_payment_methods",
+        "description": "The customer wants to know what payment methods are accepted. This is an informational request, not a transaction."
+    },
+    {
+        "intent": "REFUND_check_refund_policy",
+        "description": "The customer wants to understand the refund policy, including conditions and limits."
+    },
+    {
+        "intent": "FEEDBACK_complaint",
+        "description": "The customer wants to submit a complaint about a product, service, or shopping experience. This is negative feedback that may require attention."
+    },
+    {
+        "intent": "CONTACT_contact_customer_service",
+        "description": "The customer wants to reach customer service for general inquiries or assistance."
+    },
+    {
+        "intent": "CONTACT_contact_human_agent",
+        "description": "The customer wants to connect directly with a human agent instead of interacting with a bot or automated system."
+    },
+    {
+        "intent": "ACCOUNT_create_account",
+        "description": "The customer wants to create a new account on the platform, including providing personal information."
+    },
+    {
+        "intent": "ACCOUNT_delete_account",
+        "description": "The customer wants to delete their existing account, requiring removal of their data and access."
+    },
+    {
+        "intent": "DELIVERY_delivery_options",
+        "description": "The customer wants to know available delivery options, such as standard, express, or store pickup."
+    },
+    {
+        "intent": "DELIVERY_delivery_period",
+        "description": "The customer wants to know the estimated delivery time for an order."
+    },
+    {
+        "intent": "ACCOUNT_edit_account",
+        "description": "The customer wants to update their account information, such as name, email, phone number, or password."
+    },
+    {
+        "intent": "INVOICE_get_invoice",
+        "description": "The customer requests to receive or generate an invoice for a completed or paid order."
+    },
+    {
+        "intent": "REFUND_get_refund",
+        "description": "The customer wants to receive a refund for a canceled order or returned product."
+    },
+    {
+        "intent": "SUBSCRIPTION_newsletter_subscription",
+        "description": "The customer wants to subscribe or unsubscribe from newsletters, promotional emails, or notifications."
+    },
+    {
+        "intent": "PAYMENT_payment_issue",
+        "description": "The customer is experiencing a problem with payment, such as a failed transaction, card decline, or payment discrepancy."
+    },
+    {
+        "intent": "ORDER_place_order",
+        "description": "The customer wants to place a new order, including selecting products, quantity, and payment method."
+    },
+    {
+        "intent": "ACCOUNT_recover_password",
+        "description": "The customer has forgotten their password and wants to recover account access using email or OTP verification."
+    },
+    {
+        "intent": "ACCOUNT_registration_problems",
+        "description": "The customer encounters issues while creating an account, such as duplicate email or system errors."
+    },
+    {
+        "intent": "FEEDBACK_review",
+        "description": "The customer wants to provide a review or rating for a product or service they have used."
+    },
+    {
+        "intent": "SHIPPING_set_up_shipping_address",
+        "description": "The customer wants to add or set up a new shipping address for orders or account delivery preferences."
+    },
+    {
+        "intent": "ACCOUNT_switch_account",
+        "description": "The customer wants to switch from one account to another, such as logging out and logging into a different account."
+    },
+    {
+        "intent": "ORDER_track_order",
+        "description": "The customer wants to track the current status of an order from processing to delivery."
+    },
+    {
+        "intent": "REFUND_track_refund",
+        "description": "The customer wants to track the progress of a refund, including processing status and expected completion."
+    }
+]

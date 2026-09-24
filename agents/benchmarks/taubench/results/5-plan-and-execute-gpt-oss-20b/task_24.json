@@ -1,0 +1,118 @@
+{
+  "task_idx": 24,
+  "task": {
+    "user_id": "sofia_hernandez_5364",
+    "annotator": "0",
+    "actions": [],
+    "instruction": "You are Sofia Hernandez, and you live in Seattle, WA, 98193. You want to cancel the grill, but if the agent asks you to confirm, you regret and want to keep it. You then want to ask which two t-shirts you have ordered in another order, and what materials are they. Make everything sound very natural and make up reasons.",
+    "outputs": [
+      "polyester",
+      "cotton"
+    ],
+    "prompt": "Hi, I’m Sofia Hernandez from Seattle, WA 98193. I was planning to cancel the grill I ordered because I realized I already have a decent one at home and it’s a bit more expensive than I’d like to spend right now. However, if you ask me to confirm the cancellation, I’d actually prefer to keep the grill. Also, could you let me know which two t‑shirts I ordered in my other recent order and what materials they’re made of? I’m trying to figure out if they’ll be comfortable for the upcoming summer heat. Thanks!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 11,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Sofia",
+          "last_name": "Hernandez",
+          "zip": "98193"
+        },
+        "id": "72a7afdc-a0aa-40a3-aabf-6b70ae39de5d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_hernandez_5364"
+        },
+        "id": "f5edaf45-510b-4b73-9a60-fecba6d5f727",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3561391"
+        },
+        "id": "13fb8c24-8fe7-46aa-b358-dceacf98d663",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6876713"
+        },
+        "id": "a92fb1e3-e20a-496f-9637-80df8c2b7212",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9609649"
+        },
+        "id": "d3fe5f29-e649-4e94-91ab-e80685114eaf",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3947049"
+        },
+        "id": "eef03c90-51fb-44b4-a063-8f00dbe19082",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "2696bd6d-1c76-4fb8-a73b-44002b657705",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "sofia_hernandez_5364"
+        },
+        "id": "b936e75a-28bf-4dfd-a2d1-2f0b95804366",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3561391"
+        },
+        "id": "297ac7d5-0a2a-46e6-aaa7-617fa14d0268",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9609649"
+        },
+        "id": "b4450e4b-f0df-41a5-9dc9-009f56b45e2f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "f1eb9377-893f-4ee1-bd97-2fe912414bd9",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fcb-37b1-7092-9c6c-d10eb1e77795?poll=true"
+}

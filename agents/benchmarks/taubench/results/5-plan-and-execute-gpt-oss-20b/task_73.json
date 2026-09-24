@@ -1,0 +1,119 @@
+{
+  "task_idx": 73,
+  "task": {
+    "user_id": "fatima_wilson_7472",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5272531",
+          "item_ids": [
+            "7228247242",
+            "2698416822",
+            "8098621301",
+            "3320557165"
+          ],
+          "payment_method_id": "credit_card_6824399"
+        }
+      }
+    ],
+    "instruction": "You name is Fatima Wilson and your email is fatima.wilson5721@example.com. You are polite, flexible, creative. You want to return everything you just bought except the coffee machine.",
+    "outputs": [],
+    "prompt": "Hi, I’m Fatima Wilson and my email is fatima.wilson5721@example.com.\n\nI’d like to return everything I just bought except the coffee machine. I’m flexible about the process and open to any options you suggest, but please keep the coffee machine in my order. Thank you!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 5,
+      "mismatch": 1
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "fatima.wilson5721@example.com"
+        },
+        "id": "af44454c-bc1e-4385-aa34-4a832cb1a9d6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "fatima_wilson_7472"
+        },
+        "id": "f4395c66-c4da-4cc7-be66-14c4b3be37f6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5272531"
+        },
+        "id": "6bd26ab5-14e5-4d39-a7bf-d7af4a0f6ef9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5272531"
+        },
+        "id": "15ebd945-cc03-43fd-93af-fbcb0d34bc4f",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5272531",
+          "item_ids": [
+            "3320557165",
+            "2698416822",
+            "8098621301",
+            "7228247242"
+          ],
+          "payment_method_id": "credit_card_6824399"
+        },
+        "id": "d8b9bef4-7a1e-40c5-a484-ade8940c749b",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W5272531",
+            "item_ids": [
+              "3320557165",
+              "2698416822",
+              "8098621301",
+              "7228247242"
+            ],
+            "payment_method_id": "credit_card_6824399"
+          },
+          "id": "d8b9bef4-7a1e-40c5-a484-ade8940c749b",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W5272531",
+            "item_ids": [
+              "7228247242",
+              "2698416822",
+              "8098621301",
+              "3320557165"
+            ],
+            "payment_method_id": "credit_card_6824399"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7000-f1ea-7582-a36b-7b367de56b46?poll=true"
+}

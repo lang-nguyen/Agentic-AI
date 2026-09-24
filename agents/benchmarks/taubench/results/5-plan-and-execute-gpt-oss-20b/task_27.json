@@ -1,0 +1,129 @@
+{
+  "task_idx": 27,
+  "task": {
+    "user_id": "isabella_johansson_2152",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "isabella_johansson_2152"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W3792453"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7181492"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "7363354090"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7181492",
+          "item_ids": [
+            "8118291112"
+          ],
+          "new_item_ids": [
+            "8277474082"
+          ],
+          "payment_method_id": "paypal_3024827"
+        }
+      }
+    ],
+    "instruction": "You are Isabella Johansson, and you live in 32286. You want to return the hose, backpack, and exchange the hiking boots to the exact same item except that it is waterproof. Make sure you mention the two requests at the same time, and if the agent can only do one, you prefer the exchange. You are a bit anxious and want to get things done quickly.",
+    "outputs": [],
+    "prompt": "Hi, I’m Isabella Johansson from 32286.\n\nI’d like to request two things with my recent order: first, I want to return the hose and the backpack. Second, I’d like to exchange the hiking boots for the exact same model but in a waterproof version. I’m hoping to get both handled together, but if the system can only process one request at a time, I’d prefer to keep the exchange as my priority. I’m a bit anxious about this and would appreciate a quick resolution."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 5,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Isabella",
+          "last_name": "Johansson",
+          "zip": "32286"
+        },
+        "id": "7b94864e-3ee4-427a-bff1-b38039b18670",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "isabella_johansson_2152"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3792453"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7181492"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "7363354090"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W7181492",
+          "item_ids": [
+            "8118291112"
+          ],
+          "new_item_ids": [
+            "8277474082"
+          ],
+          "payment_method_id": "paypal_3024827"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fce-d07c-7583-b176-bebf57d9041e?poll=true"
+}

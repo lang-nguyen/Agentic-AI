@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #def1f652-19c8-4061-9152-3a9f6207e89a
+User Name: ivan_hernandez_6923  
+ZIP Code: 92133  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m ivan_hernandez_6923 from San Diego, 92133. I just received an order and would like to modify two items.
+
+For the coffee machine, I want to keep the same capacity and type but change the pressure to 8 bar. If 8 bar isn’t possible, I’d accept 9 bar. If 9 bar isn’t available, I’ll take 7 bar. If none of those pressures can be provided, I prefer not to exchange the coffee machine at all.
+
+For the laptop, I’d like to exchange it for the cheapest available model that has an i7 processor or higher. Other specifications are irrelevant to me. If a price difference is required, I would be upset but would prefer to pay with a gift card. If that option isn’t available, I’ll use my credit card instead.
+
+Please let me know if these requests can be processed. Thanks.

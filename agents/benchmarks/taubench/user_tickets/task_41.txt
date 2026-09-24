@@ -1,0 +1,18 @@
+#Ticket
+
+__metadata__
+Ticket ID: #8bb25cb8-494d-47e9-bac0-aa9a5ca8b037
+User Name: Mei Patel  
+ZIP Code: 76165  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Mei Patel, user ID mei_patel_7272, and I just placed an order. I have a couple of concerns:
+
+1. The 1000‑piece intermediate jigsaw in my order might be too hard for my little kid. I’d like to swap it for the easiest version with the fewest pieces instead.
+2. I think I may have typed my address incorrectly. Could you double‑check it for me and, if needed, correct both the order shipping address and my user profile address to 445 Maple Drive, Suite 394, Fort Worth, Texas, 76165?
+
+I’m short on memory so I’d appreciate your help with both issues at once. Thank you!

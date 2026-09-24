@@ -1,0 +1,17 @@
+#Ticket
+
+__metadata__
+Ticket ID: #84256a42-46cb-4ae0-82d4-683fd85accdf
+User Name: Daiki Silva  
+ZIP Code: unknown  
+Email: daiki.silva6295@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Daiki Silva.
+
+I’d like to change the bookshelf I ordered to a 4‑foot version, but I want it to be made of the same material and in the same color. If a 4‑foot model isn’t available, please cancel the entire order and I’ll place a new one. If you ask why I’m canceling, just let me know that I ordered by mistake.
+
+Please let me know what can be done. Thank you.

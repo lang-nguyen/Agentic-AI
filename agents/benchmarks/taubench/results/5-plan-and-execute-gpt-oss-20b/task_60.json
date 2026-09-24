@@ -1,0 +1,131 @@
+{
+  "task_idx": 60,
+  "task": {
+    "user_id": "chen_johnson_4204",
+    "annotator": "2",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Chen",
+          "last_name": "Johnson",
+          "zip": "77004"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5061109"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9924732112"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W5061109",
+          "item_ids": [
+            "3694871183"
+          ],
+          "new_item_ids": [
+            "6077640618"
+          ],
+          "payment_method_id": "paypal_3742148"
+        }
+      }
+    ],
+    "instruction": "You are Chen Johnson from Houston TX, 77004. You want to change your wireless earbuds in order W5061109 to a blue colored one. Provide all details upfront in your very first message and ask the agent to resolve as soon as possible. You want the price to be the same or lower, which you want the agent to verify explicitly. If and only if the agent provides several options, you want the option without water resistance.",
+    "outputs": [
+      "242.92"
+    ],
+    "prompt": "Hi, I’m Chen Johnson from Houston, TX 77004, and I’m reaching out about order W5061109. I’d like to change my wireless earbuds to a blue‑colored model. Please resolve this as soon as possible. I want the price to be the same or lower, and I’d appreciate it if you could confirm that explicitly. If you have several options available, I would prefer the one that is not water‑resistant."
+  },
+  "scores": {
+    "scores": {
+      "correct": 2,
+      "missing": 1,
+      "extra": 2,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Chen",
+          "last_name": "Johnson",
+          "zip": "77004"
+        },
+        "id": "db22ec4c-5107-46b4-b976-163a0b2323a2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9924732112"
+        },
+        "id": "288a8ec2-ac59-4c15-bf97-d17ef5210802",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "order_id": "#W5061109",
+          "item_ids": [
+            "3694871183"
+          ],
+          "new_item_ids": [
+            "6077640618"
+          ],
+          "payment_method_id": "paypal_3742148"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "W5061109"
+        },
+        "id": "ac2ad60f-6f1d-43aa-a49c-71899b1a3d43",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5061109"
+        },
+        "id": "4663b3ba-4421-469f-b82d-6ed37d3c3be6",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "W5061109"
+          },
+          "id": "ac2ad60f-6f1d-43aa-a49c-71899b1a3d43",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W5061109"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff6-975e-7b30-97b7-6eb99b3f0ddc?poll=true"
+}

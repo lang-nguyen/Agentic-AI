@@ -1,0 +1,234 @@
+{
+  "task_idx": 103,
+  "task": {
+    "user_id": "noah_ito_3850",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W4219264",
+          "address1": "144 Lakeview Drive",
+          "address2": "Suite 925",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10228"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4219264",
+          "item_ids": [
+            "8886009523"
+          ],
+          "new_item_ids": [
+            "2407258246"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        }
+      },
+      {
+        "name": "exchange_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W3445693",
+          "item_ids": [
+            "6341716129"
+          ],
+          "new_item_ids": [
+            "8302289002"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        }
+      }
+    ],
+    "instruction": "You name is Noah Ito and your zip code is 98187. You are logical, impatient. You just placed an order with two watches, you wan to change its address to your New York address (you don't want to reveal it but it's in your other order). You also want to modify the silicone watch to a metal one. If multiple colors available, you prefer white. For the air purifier you received along with sneakers, you want to exchange the purifier to large size and night mode, but still with HEPA filter. You like to say things in pieces.",
+    "outputs": [],
+    "prompt": "Hi, I’m Noah Ito from zip code 98187.  \nI just placed an order that includes two watches and an air purifier that came with sneakers.  \n\nI want to change the shipping address to my New York address—it's the same address that’s listed on one of my other orders, but I don’t want to share it here.  \n\nI also need to modify the silicone watch to a metal one. If there are several color options available, I’d prefer the white version.  \n\nFor the air purifier, I’d like to exchange it for the large size with night‑mode, but it still needs to have a HEPA filter.  \n\nPlease let me know if all of these changes can be processed together."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 9,
+      "mismatch": 2
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "exchange_delivered_order_items",
+        "args": {
+          "order_id": "#W3445693",
+          "item_ids": [
+            "6341716129"
+          ],
+          "new_item_ids": [
+            "8302289002"
+          ],
+          "payment_method_id": "credit_card_1620755"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Noah",
+          "last_name": "Ito",
+          "zip": "98187"
+        },
+        "id": "92f92ee2-aca5-4092-8bad-54ae183ef373",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "noah_ito_3850"
+        },
+        "id": "d63cbaff-060c-42ad-b833-08068c076b74",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6729841"
+        },
+        "id": "b11cb0f2-3ee7-4446-be74-80b1426156d6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W3445693"
+        },
+        "id": "0d358a53-3348-48e5-9812-b6119bfbd67e",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4219264"
+        },
+        "id": "829d44f2-8d25-4819-b23f-7622fa681843",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "6066914160"
+        },
+        "id": "5fd30030-fceb-4028-b854-0f22acd9151f",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "3821016478"
+        },
+        "id": "d011eb98-a30a-46e1-812e-9a68e9f8cf68",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "144 Lakeview Drive",
+          "address2": "Suite 925",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10228",
+          "order_id": "#W6729841"
+        },
+        "id": "dac0ce93-e996-42d4-858f-bf8d772231a1",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "8886009523",
+            "3076708684"
+          ],
+          "new_item_ids": [
+            "2407258246",
+            "8302289002"
+          ],
+          "order_id": "#W6729841",
+          "payment_method_id": "credit_card_1620755"
+        },
+        "id": "6b1dcb5a-faf2-44d9-a0c0-71529f8a112a",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "address1": "144 Lakeview Drive",
+            "address2": "Suite 925",
+            "city": "New York",
+            "country": "USA",
+            "state": "NY",
+            "zip": "10228",
+            "order_id": "#W6729841"
+          },
+          "id": "dac0ce93-e996-42d4-858f-bf8d772231a1",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W4219264",
+            "address1": "144 Lakeview Drive",
+            "address2": "Suite 925",
+            "city": "New York",
+            "country": "USA",
+            "state": "NY",
+            "zip": "10228"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "item_ids": [
+              "8886009523",
+              "3076708684"
+            ],
+            "new_item_ids": [
+              "2407258246",
+              "8302289002"
+            ],
+            "order_id": "#W6729841",
+            "payment_method_id": "credit_card_1620755"
+          },
+          "id": "6b1dcb5a-faf2-44d9-a0c0-71529f8a112a",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W4219264",
+            "item_ids": [
+              "8886009523"
+            ],
+            "new_item_ids": [
+              "2407258246"
+            ],
+            "payment_method_id": "credit_card_1620755"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7027-55cb-73f3-9e41-a62a74f5a8e5?poll=true"
+}

@@ -1,0 +1,139 @@
+{
+  "task_idx": 90,
+  "task": {
+    "user_id": "emma_kovacs_9839",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W9284598",
+          "reason": "ordered by mistake"
+        }
+      }
+    ],
+    "instruction": "You name is Emma Kovacs and your email is emma.kovacs2974@example.com. You are polite, curious, flexible, relaxing, impatient. You want to know if the digital camera you just bought is 10x zoom. If not, modify the item to 10x zoom without changing the other options. If 10x zoom is not available, cancel the order with the reason of no longer needed. If it is available but the price is more than 3000, cancel the order with the reason of ordered by mistake.",
+    "outputs": [],
+    "prompt": "Hi, I’m Emma Kovacs (emma.kovacs2974@example.com).  \nI just bought a digital camera and I’d like to confirm whether it has a 10× zoom.  \n\n- If it does not have 10× zoom, please change the item to a 10× zoom model without altering any of the other options I selected.  \n- If a 10× zoom version is not available, I’d like to cancel the order because I no longer need it.  \n- If the 10× zoom option is available but its price is more than 3000, please cancel the order and note that I ordered by mistake.  \n\nThank you!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 0,
+      "extra": 12,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W9284598",
+          "reason": "ordered by mistake"
+        },
+        "id": "0bed88fb-0642-468b-818b-18ee7c17997b",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "emma.kovacs2974@example.com"
+        },
+        "id": "449a5b4e-a61d-4b82-b8c1-550e629629d5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "emma_kovacs_9839"
+        },
+        "id": "56f92c93-056b-4035-b107-bd12032bffde",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8661412"
+        },
+        "id": "b000156d-085a-4873-b1f8-dc2e16bff38c",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2273457"
+        },
+        "id": "3d19f374-7881-4247-969d-41eff4f6abaa",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9284598"
+        },
+        "id": "a4f72169-c8a2-4ac0-8a21-1316bb9011ab",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8940227892"
+        },
+        "id": "b3799aaf-25dd-4447-a60d-55388fd93c4d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8661412"
+        },
+        "id": "8fa50750-4a59-4aeb-8457-9b7dc6758392",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2273457"
+        },
+        "id": "e97ea26f-1895-41bf-85f9-66a9b91c8325",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9284598"
+        },
+        "id": "ba1edbff-7e6e-4ff1-9594-39c8fc59d1d9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9284598"
+        },
+        "id": "dc1e00ff-7147-4345-ae9e-6eeded35cb6b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9284598"
+        },
+        "id": "26968f58-c022-409d-bad4-7ae61ba4c479",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "8940227892"
+        },
+        "id": "1adae270-9052-4764-9098-919ebe28c4b2",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7013-5f74-7022-b18e-7b0ef55c6307?poll=true"
+}

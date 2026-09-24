@@ -1,0 +1,59 @@
+{
+  "task_idx": 57,
+  "task": {
+    "user_id": "ivan_hernandez_6923",
+    "annotator": "0",
+    "actions": [],
+    "instruction": "You are ivan_hernandez_6923 living in San Diego, 92133. You wonder when is your order W4284542 is arriving. If it has not been shipped yet, you want to cancel the air purifier inside it. If you cannot cancel just the air purifier, you want to cancel the whole order and refund to gift card. If you cannot refund to the gift card, no cancellation at all. You are polite but brief and firm.",
+    "outputs": [],
+    "prompt": "Hi, I’m Ivan Hernandez, account ivan_hernandez_6923, living in San Diego 92133. I’m checking the arrival status of my order W4284542. If it hasn’t shipped yet, I’d like to cancel the air purifier in that order. If cancelling just the air purifier isn’t possible, please cancel the entire order and refund me to my gift card. If a gift‑card refund can’t be issued, I prefer no cancellation at all. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 4,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ivan",
+          "last_name": "Hernandez",
+          "zip": "92133"
+        },
+        "id": "226ed8c8-a4fd-41ba-9e05-1d9ede29f6e0",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "W4284542"
+        },
+        "id": "2094c402-261e-40ed-bd04-3a6d60c4dcee",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4284542"
+        },
+        "id": "e3da133f-01d2-4049-979e-190aaf9256a1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "ivan_hernandez_6923"
+        },
+        "id": "0fcc0b23-367c-43d3-bb21-6c0f17f89218",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ff3-d180-7e50-8967-1d3c2d4b4547?poll=true"
+}

@@ -1,0 +1,23 @@
+#Ticket
+
+__metadata__
+Ticket ID: #d5be4bf3-e4d2-439d-9f9c-df2115bf3bc9
+User Name: Yusuf Rossi  
+ZIP Code: 19122  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Yusuf Rossi and I received my order #W2378156.  
+
+I’d like to exchange two items from that order:
+
+- **Mechanical keyboard** – I need a similar model that has clicky switches. Ideally it would also feature RGB backlighting and be full‑size. If no keyboard meets all three of those criteria, I’m willing to accept a version that has clicky switches but without RGB backlighting.
+
+- **Smart thermostat** – I want a model that is compatible with Google Home instead of Apple HomeKit.
+
+Please let me know if you can process both exchanges in one go, and confirm the new items, shipping details, and any additional steps I need to take.  
+
+Thank you!

@@ -1,0 +1,191 @@
+{
+  "task_idx": 34,
+  "task": {
+    "user_id": "noah_patel_6952",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Noah",
+          "last_name": "Patel",
+          "zip": "10108"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "noah_patel_6952"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6111398"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7043598"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W1845024"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W1845024",
+          "address1": "224 Elm Street",
+          "address2": "Suite 491",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10108"
+        }
+      }
+    ],
+    "instruction": "You are an interesting guy called Noah Patel, living in the Big Apple in 10108. You had a work-from-home situation and ordered three home office items along with some hiking items, so that you can go back to your parent's place at Seattle to remote work and enjoy outdoor life. But your company just announced that you will be back to the office soon. If cancelling partial items is possible with the agent, you want to return the office items (your forgot what) and keep the hiking items. You want to know the total amount you will get back, and you want to get the refund on your original payment method. If cancelling partial items is not possible, just change the address to your NYC place and you will return the items later. You are a funny guy but recently the WFH situation made you a bit anxious.",
+    "outputs": [
+      "1093.34"
+    ],
+    "prompt": "Hi, I’m Noah Patel, living in the Big Apple (10108). I recently ordered three home‑office items and some hiking gear so I could head back to my parents’ place in Seattle to work from home and enjoy the outdoors.  \n\nNow my company has announced that I’ll be back in the office soon, so I’d like to cancel the office items and keep the hiking items. Could you tell me how much I’ll get refunded and confirm that the refund will go back to my original payment method?  \n\nIf it’s not possible to cancel only part of the order, could you instead change the shipping address to my NYC address so I can return the items later?  \n\nThanks—normally I’m pretty funny, but this sudden shift from WFH has left me a bit anxious."
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 1,
+      "extra": 5,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Noah",
+          "last_name": "Patel",
+          "zip": "10108"
+        },
+        "id": "dd12091b-07e0-4102-8d5b-4e639d6e0c91",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "noah_patel_6952"
+        },
+        "id": "a219bcff-c9bf-42ed-80ef-96d111606323",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1845024"
+        },
+        "id": "7bae9777-96ef-4b17-9cf7-be41900eef88",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W1845024",
+          "address1": "224 Elm Street",
+          "address2": "Suite 491",
+          "city": "New York",
+          "country": "USA",
+          "state": "NY",
+          "zip": "10108"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7043598"
+        },
+        "id": "7d7b3acc-b3ee-41d2-844e-d8e63ca3b5fd",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6111398"
+        },
+        "id": "caf75cca-3c70-437e-b40d-9279d0648631",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1845024"
+        },
+        "id": "eeae760f-863e-43df-b2a8-8a3b66cfa763",
+        "type": "tool_call"
+      },
+      {
+        "name": "transfer_to_human_agents",
+        "args": {
+          "summary": "User wants to cancel part of an order. The system does not support partial cancellation. The user is asking for confirmation to proceed with address change. The assistant should not transfer to human agent."
+        },
+        "id": "8bdbaeab-3dd6-458a-94ca-6f8c56e542db",
+        "type": "tool_call"
+      },
+      {
+        "name": "calculate",
+        "args": {
+          "expression": "1527.24"
+        },
+        "id": "59990851-8ff5-48a6-93ab-fbaa1f086b20",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W1845024"
+          },
+          "id": "7bae9777-96ef-4b17-9cf7-be41900eef88",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W6111398"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W1845024"
+          },
+          "id": "7bae9777-96ef-4b17-9cf7-be41900eef88",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W7043598"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fdd-6bde-7433-af00-c5c454c248e6?poll=true"
+}

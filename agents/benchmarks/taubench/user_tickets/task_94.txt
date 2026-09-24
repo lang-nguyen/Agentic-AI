@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #4e70af2e-cfb4-464b-b786-8fb10bf8218a
+User Name: Lei Wilson  
+ZIP Code: 32255  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Lei Wilson from zip code 32255. I recently received a laptop and would like to exchange it for a different configuration. Specifically, I want the new laptop to have an i7 processor, 8 GB of RAM, and a 1 TB SSD. If you need to confirm which laptop I'm referring to, it is the 15‑inch model that originally came with 16 GB of RAM. Thank you!

@@ -1,0 +1,283 @@
+{
+  "task_idx": 41,
+  "task": {
+    "user_id": "mei_patel_7272",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Mei",
+          "last_name": "Patel",
+          "zip": "76165"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mei_patel_7272"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9583042"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4082615"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W9583042",
+          "address1": "445 Maple Drive",
+          "address2": "Suite 394",
+          "city": "Fort Worth",
+          "state": "TX",
+          "country": "USA",
+          "zip": "76165"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W4082615",
+          "address1": "445 Maple Drive",
+          "address2": "Suite 394",
+          "city": "Fort Worth",
+          "state": "TX",
+          "country": "USA",
+          "zip": "76165"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "mei_patel_7272",
+          "address1": "445 Maple Drive",
+          "address2": "Suite 394",
+          "city": "Fort Worth",
+          "state": "TX",
+          "country": "USA",
+          "zip": "76165"
+        }
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "1808611083"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4082615"
+        }
+      },
+      {
+        "name": "modify_pending_order_items",
+        "kwargs": {
+          "order_id": "#W4082615",
+          "item_ids": [
+            "9779102705"
+          ],
+          "new_item_ids": [
+            "1096508426"
+          ],
+          "payment_method_id": "paypal_4768213"
+        }
+      }
+    ],
+    "instruction": "Your name is Mei Patel, and you live in 445 Maple Drive, Suite 394, Fort Worth, Texas, 76165. You just created your user id mei_patel_7272 and ordered some things, but you have two problems: first, the 1000-piece intermediate jigsaw might be too hard for your little kid, you wonder if you can change it to the easiest one with fewest pieces; second, you might have typed your address wrong. You want to check it, and potentially correct all order addresses and your user address. Make sure you mention these two problems at the same time in the same order. You are brief and your memory is not too good sometimes, but you are polite.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mei Patel, user id mei_patel_7272, and I live at 445 Maple Drive, Suite 394, Fort Worth, Texas 76165.\n\nI just placed an order that includes a 1000‑piece intermediate jigsaw, but I think it’s too hard for my little kid and would like to change it to the easiest one with the fewest pieces. Also, I’m not sure I entered my address correctly; could you please verify the address on my order and on my account, and update it to the one above if it’s wrong? Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 5,
+      "missing": 2,
+      "extra": 2,
+      "mismatch": 3
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Mei",
+          "last_name": "Patel",
+          "zip": "76165"
+        },
+        "id": "94b1da3f-3339-4d29-bdac-2163ade369be",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mei_patel_7272"
+        },
+        "id": "6f762eaf-c531-430d-aa15-b07b19a58f3a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9583042"
+        },
+        "id": "67b31a5e-029b-4390-bca7-f5ff2a86b68d",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "445 Maple Drive",
+          "address2": "Suite 394",
+          "city": "Fort Worth",
+          "country": "USA",
+          "order_id": "#W9583042",
+          "state": "TX",
+          "zip": "76165"
+        },
+        "id": "06d9396e-3b9a-4aaf-b531-dee8493ddbdc",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "address1": "445 Maple Drive",
+          "address2": "Suite 394",
+          "city": "Fort Worth",
+          "country": "USA",
+          "state": "TX",
+          "user_id": "mei_patel_7272",
+          "zip": "76165"
+        },
+        "id": "eeb59f88-8e0d-4f69-9765-f03e7334235a",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W4082615",
+          "address1": "445 Maple Drive",
+          "address2": "Suite 394",
+          "city": "Fort Worth",
+          "state": "TX",
+          "country": "USA",
+          "zip": "76165"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1808611083"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9583042"
+        },
+        "id": "fcc80082-c41f-444e-a398-561fd9a98794",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_items",
+        "args": {
+          "item_ids": [
+            "1008292230"
+          ],
+          "new_item_ids": [
+            "1008292231"
+          ],
+          "order_id": "#W9583042",
+          "payment_method_id": "credit_card_9503061"
+        },
+        "id": "30691690-bf48-4be9-8bda-208cbeb605b8",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9583042"
+          },
+          "id": "fcc80082-c41f-444e-a398-561fd9a98794",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W4082615"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9583042"
+          },
+          "id": "fcc80082-c41f-444e-a398-561fd9a98794",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W4082615"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "item_ids": [
+              "1008292230"
+            ],
+            "new_item_ids": [
+              "1008292231"
+            ],
+            "order_id": "#W9583042",
+            "payment_method_id": "credit_card_9503061"
+          },
+          "id": "30691690-bf48-4be9-8bda-208cbeb605b8",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_items",
+          "args": {
+            "order_id": "#W4082615",
+            "item_ids": [
+              "9779102705"
+            ],
+            "new_item_ids": [
+              "1096508426"
+            ],
+            "payment_method_id": "paypal_4768213"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fe8-8ad6-7452-8a8e-8cce848b2f6a?poll=true"
+}

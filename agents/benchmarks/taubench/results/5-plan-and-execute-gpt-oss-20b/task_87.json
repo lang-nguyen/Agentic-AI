@@ -1,0 +1,359 @@
+{
+  "task_idx": 87,
+  "task": {
+    "user_id": "yusuf_hernandez_6785",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W2166301",
+          "address1": "565 Maple Drive",
+          "address2": "Suite 501",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "zip": "20307"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W2466703",
+          "address1": "565 Maple Drive",
+          "address2": "Suite 501",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "zip": "20307"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W6832752",
+          "address1": "565 Maple Drive",
+          "address2": "Suite 501",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "zip": "20307"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "yusuf_hernandez_6785",
+          "address1": "565 Maple Drive",
+          "address2": "Suite 501",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "zip": "20307"
+        }
+      }
+    ],
+    "instruction": "You name is Yusuf Hernandez and your email is yusuf.hernandez8836@example.com. You are shy, rigid. You want to modify all your pending order address to the Washington DC address (which you do not want to reveal but is in one of the orders), along with your user default address.",
+    "outputs": [],
+    "prompt": "Hi, I’m Yusuf Hernandez, and my email is yusuf.hernandez8836@example.com. I’m a bit shy and rigid, so I’ll keep this brief.\n\nI’d like to update the shipping address for all of my pending orders to my Washington DC address (which I prefer not to disclose here, but it’s already listed on one of the orders). In addition, please set this Washington DC address as my new default address for future orders. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 0,
+      "extra": 16,
+      "mismatch": 4
+    },
+    "correct": [],
+    "missing": [],
+    "extra": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "yusuf.hernandez8836@example.com"
+        },
+        "id": "9a20557e-9d41-4c36-a284-a5c7d4e8db67",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "yusuf_hernandez_6785"
+        },
+        "id": "1a1134d8-ec3f-4b32-9b1d-a42d02d680a7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2166301"
+        },
+        "id": "728e875a-646a-4d79-aaad-95a3a147ad46",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "686c9480-f647-417b-b700-bb03180b020a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6832752"
+        },
+        "id": "faedd436-43ef-4c05-bab4-32583b9fca03",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7739115"
+        },
+        "id": "d704fe55-e0e3-4f6e-9c12-e22d2d9527e7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1994898"
+        },
+        "id": "258328e1-b436-4ffc-98a6-9ee7df71ebbb",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "address1": "123 Washington Ave",
+          "address2": "Apt 4B",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "user_id": "yusuf_hernandez_6785",
+          "zip": "20001"
+        },
+        "id": "a3d2f8a8-dde4-4fc7-93d8-8be316d0ff80",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "123 Washington Ave",
+          "address2": "Apt 4B",
+          "city": "Washington",
+          "country": "USA",
+          "state": "DC",
+          "order_id": "#W2166301",
+          "zip": "20001"
+        },
+        "id": "b92594b9-ae79-4332-9433-6bb1a1b78575",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "123 Washington Ave",
+          "address2": "Apt 4B",
+          "city": "Washington",
+          "country": "USA",
+          "order_id": "#W2466703",
+          "state": "DC",
+          "zip": "20001"
+        },
+        "id": "fd97b442-3960-4d6b-9330-96493e5c4f8a",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "123 Washington Ave",
+          "address2": "Apt 4B",
+          "city": "Washington",
+          "country": "USA",
+          "order_id": "#W6832752",
+          "state": "DC",
+          "zip": "20001"
+        },
+        "id": "5246b7a8-06db-47d2-bfea-4626368ec9dc",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "123 Washington Ave",
+          "address2": "Apt 4B",
+          "city": "Washington",
+          "country": "USA",
+          "order_id": "#W7739115",
+          "state": "DC",
+          "zip": "20001"
+        },
+        "id": "e572e250-ac3d-4221-ba11-45314443b47f",
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "address1": "123 Washington Ave",
+          "address2": "Apt 4B",
+          "city": "Washington",
+          "country": "USA",
+          "order_id": "#W1994898",
+          "state": "DC",
+          "zip": "20001"
+        },
+        "id": "509467e4-cb28-408d-adcc-628e41937126",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2166301"
+        },
+        "id": "479d6c97-703d-45aa-b79e-1f32a22ac85d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2466703"
+        },
+        "id": "d41443b4-d7ea-48a4-a9a1-0935bec447e5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6832752"
+        },
+        "id": "71c2fade-2c28-4970-af28-9078c446dbba",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "address1": "123 Washington Ave",
+            "address2": "Apt 4B",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "order_id": "#W2166301",
+            "zip": "20001"
+          },
+          "id": "b92594b9-ae79-4332-9433-6bb1a1b78575",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W2166301",
+            "address1": "565 Maple Drive",
+            "address2": "Suite 501",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "zip": "20307"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "address1": "123 Washington Ave",
+            "address2": "Apt 4B",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "order_id": "#W2166301",
+            "zip": "20001"
+          },
+          "id": "b92594b9-ae79-4332-9433-6bb1a1b78575",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W2466703",
+            "address1": "565 Maple Drive",
+            "address2": "Suite 501",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "zip": "20307"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "address1": "123 Washington Ave",
+            "address2": "Apt 4B",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "order_id": "#W2166301",
+            "zip": "20001"
+          },
+          "id": "b92594b9-ae79-4332-9433-6bb1a1b78575",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_pending_order_address",
+          "args": {
+            "order_id": "#W6832752",
+            "address1": "565 Maple Drive",
+            "address2": "Suite 501",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "zip": "20307"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "modify_user_address",
+          "args": {
+            "address1": "123 Washington Ave",
+            "address2": "Apt 4B",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "user_id": "yusuf_hernandez_6785",
+            "zip": "20001"
+          },
+          "id": "a3d2f8a8-dde4-4fc7-93d8-8be316d0ff80",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "modify_user_address",
+          "args": {
+            "user_id": "yusuf_hernandez_6785",
+            "address1": "565 Maple Drive",
+            "address2": "Suite 501",
+            "city": "Washington",
+            "country": "USA",
+            "state": "DC",
+            "zip": "20307"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7010-f41c-7a52-ab16-91b4879fc122?poll=true"
+}

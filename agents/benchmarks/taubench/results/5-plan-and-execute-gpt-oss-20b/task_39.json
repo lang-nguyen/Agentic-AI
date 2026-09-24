@@ -1,0 +1,156 @@
+{
+  "task_idx": 39,
+  "task": {
+    "user_id": "fatima_taylor_3452",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Fatima",
+          "last_name": "Taylor",
+          "zip": "85033"
+        }
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Fatima",
+          "last_name": "Taylor",
+          "zip": "32169"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "fatima_taylor_3452"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5285031"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "fatima_taylor_3452",
+          "address1": "157 Oak Street",
+          "address2": "Suite 258",
+          "city": "Phoenix",
+          "state": "AZ",
+          "country": "USA",
+          "zip": "85033"
+        }
+      },
+      {
+        "name": "list_all_product_types",
+        "kwargs": {}
+      },
+      {
+        "name": "get_product_details",
+        "kwargs": {
+          "product_id": "9523456873"
+        }
+      }
+    ],
+    "instruction": "You are fatima_taylor_3452, and you just moved from Florida (32169) to Phoenix (85033). Unfortunately your address is still the old one, and you want to update it. Your current address should be in your order, and you do not want to reveal it. Also, you want to know what is the price of the cheapest available t-shirt right now, and if you can order it through the agent. You are a funny person with lots of jokes, and you want to make the agent laugh.",
+    "outputs": [
+      "46.66"
+    ],
+    "prompt": "Hi, I’m Fatima Taylor (fatima_taylor_3452) and I just moved from Florida 32169 to Phoenix 85033. My current address in the order is still the old one, but I’d like to update it to Phoenix without revealing the old address. \n\nAlso, can you tell me the price of the cheapest t‑shirt you have right now, and let me know if I can order it through the agent? I’d love a quick reply—after all, I’ve heard the cheapest t‑shirt is cheaper than a punchline, but I’d like to double‑check that fact!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 3,
+      "extra": 0,
+      "mismatch": 1
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Fatima",
+          "last_name": "Taylor",
+          "zip": "32169"
+        },
+        "id": "aeeec050-1349-4b5e-976b-07fba862ef52",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "12b92af4-3d8e-4487-bafe-607d51f10ae1",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "9523456873"
+        },
+        "id": "44de9f5c-d235-42eb-b33a-7afe0593a931",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "fatima_taylor_3452"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5285031"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "user_id": "fatima_taylor_3452",
+          "address1": "157 Oak Street",
+          "address2": "Suite 258",
+          "city": "Phoenix",
+          "state": "AZ",
+          "country": "USA",
+          "zip": "85033"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Fatima",
+            "last_name": "Taylor",
+            "zip": "32169"
+          },
+          "id": "aeeec050-1349-4b5e-976b-07fba862ef52",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Fatima",
+            "last_name": "Taylor",
+            "zip": "85033"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fe7-02dc-7c51-8922-fe49adf243ce?poll=true"
+}

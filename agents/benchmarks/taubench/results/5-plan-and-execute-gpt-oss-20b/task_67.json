@@ -1,0 +1,168 @@
+{
+  "task_idx": 67,
+  "task": {
+    "user_id": "noah_ito_3850",
+    "annotator": "3",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Noah",
+          "last_name": "Ito",
+          "zip": "98178"
+        }
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Noah",
+          "last_name": "Ito",
+          "zip": "98186"
+        }
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Noah",
+          "last_name": "Ito",
+          "zip": "98187"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "noah_ito_3850"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W6729841"
+        }
+      }
+    ],
+    "instruction": "You are user noah_ito_3850 living in Seattle WA 98187. Your name is Noah but you go by NoNo. If asked for your zip code, say that it is 98178 first (common mistake), then correct yourself and say 98186 if an error is found. If that fails, then say 98187. You want to check how much you paid for the order that you most recently placed. You are not sure how long ago the order was placed.",
+    "outputs": [
+      "829.43"
+    ],
+    "prompt": "Hi, I’m NoNo, Noah, account noah_ito_3850 from Seattle, WA. My zip code is 98178, but that’s a mistake—it's actually 98186. If that still doesn’t work, it’s 98187. I’d like to check how much I paid for the most recent order I placed, but I’m not sure how long ago it was placed."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 2,
+      "mismatch": 3
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "noah_ito_3850"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6729841"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "NoNo",
+          "last_name": "Noah",
+          "zip": "98186"
+        },
+        "id": "0943f69f-1744-4de7-aebd-886aacb293a9",
+        "type": "tool_call"
+      },
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "NoNo",
+          "last_name": "Noah",
+          "zip": "98187"
+        },
+        "id": "67a3189c-caa0-4cc3-87b3-2263e8d3bcaf",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "NoNo",
+            "last_name": "Noah",
+            "zip": "98186"
+          },
+          "id": "0943f69f-1744-4de7-aebd-886aacb293a9",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Noah",
+            "last_name": "Ito",
+            "zip": "98178"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "NoNo",
+            "last_name": "Noah",
+            "zip": "98186"
+          },
+          "id": "0943f69f-1744-4de7-aebd-886aacb293a9",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Noah",
+            "last_name": "Ito",
+            "zip": "98186"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "NoNo",
+            "last_name": "Noah",
+            "zip": "98186"
+          },
+          "id": "0943f69f-1744-4de7-aebd-886aacb293a9",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "find_user_id_by_name_zip",
+          "args": {
+            "first_name": "Noah",
+            "last_name": "Ito",
+            "zip": "98187"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ffd-588a-7a22-bbae-71632e15e367?poll=true"
+}

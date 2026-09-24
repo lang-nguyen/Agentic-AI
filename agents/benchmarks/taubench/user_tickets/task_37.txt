@@ -1,0 +1,21 @@
+#Ticket
+
+__metadata__
+Ticket ID: #f30c27e2-ed2e-4e89-a87e-ce4c0935c25c
+User Name: Daiki Sanchez  
+ZIP Code: 46236  
+Email: daikisanchez1479@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Daiki Sanchez and I just placed an order. My card only has $1,150 left, but the order total is more than $1,160. Could you help me split the payment with another card?  
+
+If that’s not possible, could you tell me which item is the most expensive, its price, and whether I can cancel just that item?  
+
+If cancelling the expensive item still leaves the order above $1,150, can we switch all items to their cheapest available options to bring the total down to $1,150? If that works, please do it.  
+
+If none of those options work, can you cancel the entire order so I can place a new one?  
+
+I’m a bit anxious and would like this resolved quickly. Thanks.

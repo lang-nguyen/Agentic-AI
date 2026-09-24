@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #9c056d1e-939d-45d9-914d-82e20fe34227
+User Name: Amelia Silva  
+ZIP Code: unknown  
+Email: silva7872@example.com, amelia.silva7872@example.com  
+
+---
+
+__Content__
+
+Hi, I’m Amelia. I live in Philadelphia and am a loyal customer, but I’m facing a financial issue right now. I want to cancel or return all orders I’ve placed except for the boots I really, really love. For the boots, I’m willing to exchange them for another pair of the exact same size and material **only if the new pair is cheaper than what I paid**, so I can get the maximum money back. I’m feeling emotional and a bit stressed, so please keep this short. At the end of the day, I’d like to know how much money I can get back today.

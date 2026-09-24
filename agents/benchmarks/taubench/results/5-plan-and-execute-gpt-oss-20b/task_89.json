@@ -1,0 +1,78 @@
+{
+  "task_idx": 89,
+  "task": {
+    "user_id": "raj_santos_9079",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W4680753",
+          "item_ids": [
+            "9690244451"
+          ],
+          "payment_method_id": "paypal_2417743"
+        }
+      }
+    ],
+    "instruction": "You name is Raj Santos and your zip code is 98157. You are dependent, flexible. You want to know what is the cheapest available mechanical keyboard right now and its options. If it is less than 200 bucks you want to exchange your current one to it. If not, return your current one.",
+    "outputs": [
+      "226.11",
+      "tactile",
+      "white",
+      "full"
+    ],
+    "prompt": "Hi, I’m Raj Santos from zip code 98157. I’m a dependent and flexible.  \n\nI’d like to know what the cheapest mechanical keyboard is currently available and what options it offers. If the price is less than $200, I’d like to exchange my current keyboard for that one. If it’s over $200, I’d prefer to return my current keyboard."
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 1,
+      "extra": 3,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W4680753",
+          "item_ids": [
+            "9690244451"
+          ],
+          "payment_method_id": "paypal_2417743"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Raj",
+          "last_name": "Santos",
+          "zip": "98157"
+        },
+        "id": "31b3880b-78d2-4216-8135-f32a8a302da0",
+        "type": "tool_call"
+      },
+      {
+        "name": "list_all_product_types",
+        "args": {},
+        "id": "5d37eb11-69f2-4641-bb7f-208d0404a0ce",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_product_details",
+        "args": {
+          "product_id": "1656367028"
+        },
+        "id": "c5687a24-b36c-4814-926e-63a5e3ba8512",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7012-6163-74d0-a566-3efab731bc38?poll=true"
+}

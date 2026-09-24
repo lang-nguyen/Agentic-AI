@@ -1,0 +1,89 @@
+{
+  "task_idx": 69,
+  "task": {
+    "user_id": "emma_smith_8564",
+    "annotator": "3",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Emma",
+          "last_name": "Smith",
+          "zip": "10192"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "emma_smith_8564"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2417020"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W2417020",
+          "reason": "no longer needed"
+        }
+      }
+    ],
+    "instruction": "You are emma_smith_8564 living in New York, New York, 10192. You want to return an item you just received: a laptop. You think that you ordered it around April 2023 but are not sure. You want to return it because you found a better deal elsewhere. You want to return it for a full refund. If it cannot be returned, see if it can be canceled. You are polite and friendly.",
+    "outputs": [],
+    "prompt": "Hi, I’m Emma Smith, user ID emma_smith_8564, living in New York, NY 10192. I just received a laptop that I think I ordered around April 2023, but I'm not exactly sure. I’d like to return it for a full refund because I found a better deal elsewhere. If a return isn’t possible, could you let me know if the order can be canceled instead? Thank you!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 3,
+      "missing": 1,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Emma",
+          "last_name": "Smith",
+          "zip": "10192"
+        },
+        "id": "f7093c11-8a16-4fbe-8ece-cdb0324253fa",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "emma_smith_8564"
+        },
+        "id": "f51aabeb-f0d3-4310-a0fc-49167eba0c07",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2417020"
+        },
+        "id": "78bacf3f-7c19-42e3-a666-8ba7a2e33c9e",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W2417020",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6ffe-08cc-77c3-8099-730eb55c7908?poll=true"
+}

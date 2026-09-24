@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #41d12185-1160-4902-87a0-ba635c42b44e
+User Name: James Kovacs  
+ZIP Code: 95190  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m James Kovacs from San Jose, CA. I’m writing about my most recent order. I’d like to exchange the bookshelf I received for a camera instead. The camera should be the closest match in terms of price but not exceed the cost of the bookshelf. Please let me know if this can be processed and what steps I need to follow. Thank you!

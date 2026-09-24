@@ -1,0 +1,165 @@
+{
+  "task_idx": 22,
+  "task": {
+    "user_id": "ethan_garcia_1261",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Ethan",
+          "last_name": "Garcia",
+          "zip": "80280"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "ethan_garcia_1261",
+          "address1": "101 Highway",
+          "address2": "",
+          "city": "New York",
+          "state": "NY",
+          "country": "USA",
+          "zip": "10001"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W4967593"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9911714"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5733668"
+        }
+      },
+      {
+        "name": "modify_pending_order_address",
+        "kwargs": {
+          "order_id": "#W9911714",
+          "address1": "101 Highway",
+          "address2": "",
+          "city": "New York",
+          "state": "NY",
+          "country": "USA",
+          "zip": "10001"
+        }
+      },
+      {
+        "name": "modify_user_address",
+        "kwargs": {
+          "user_id": "ethan_garcia_1261",
+          "address1": "667 Highland Drive",
+          "address2": "Suite 865",
+          "city": "Denver",
+          "state": "CO",
+          "country": "USA",
+          "zip": "80280"
+        }
+      }
+    ],
+    "instruction": "You are Ethan Garcia, and you live in Denver, 80280. You want to change your user address and all possible order addresses to be 101 Highway, New York, 10001. Then you regret and want to change the user address back to the original address. You are a mysterious person and do not want to reveal much about yourself.",
+    "outputs": [],
+    "prompt": "Hi, I’m Ethan Garcia from Denver, 80280.  \n\nI’d like to update my user address and all order addresses to 101 Highway, New York, 10001. After reviewing, I’ve decided to revert to my original address. I’d appreciate it if you could make those changes without needing any additional personal details."
+  },
+  "scores": {
+    "scores": {
+      "correct": 1,
+      "missing": 6,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ethan",
+          "last_name": "Garcia",
+          "zip": "80280"
+        },
+        "id": "f79e01de-ad20-4a2d-ab7c-58d87b7ce40b",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "modify_user_address",
+        "args": {
+          "user_id": "ethan_garcia_1261",
+          "address1": "101 Highway",
+          "address2": "",
+          "city": "New York",
+          "state": "NY",
+          "country": "USA",
+          "zip": "10001"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W4967593"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9911714"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5733668"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_pending_order_address",
+        "args": {
+          "order_id": "#W9911714",
+          "address1": "101 Highway",
+          "address2": "",
+          "city": "New York",
+          "state": "NY",
+          "country": "USA",
+          "zip": "10001"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "modify_user_address",
+        "args": {
+          "user_id": "ethan_garcia_1261",
+          "address1": "667 Highland Drive",
+          "address2": "Suite 865",
+          "city": "Denver",
+          "state": "CO",
+          "country": "USA",
+          "zip": "80280"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc9-f515-7a71-94ac-ef74c08fd869?poll=true"
+}

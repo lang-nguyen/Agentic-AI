@@ -1,0 +1,23 @@
+#Ticket
+
+__metadata__
+Ticket ID: #bcf06727-208e-47e7-a80b-ead8cea6e5fe
+User Name: Chen Johnson  
+ZIP Code: 77004  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Chen Johnson from Houston, TX. I’d like to work on my recent order.  
+
+First, could you tell me the price and battery life of the Bluetooth speaker I purchased?  
+
+If the price turns out to be greater than $300, I’d like that speaker removed from my order because I thought it was cheaper.  
+
+Next, are there any Bluetooth speakers available for less than $100? If so, please add the cheapest one to my order.  
+
+After making those changes, could you confirm the total price of my updated order?  
+
+Please note that I do not want to cancel my entire order. If canceling the whole order is the only way to remove the expensive speaker, I would prefer to simply return it at a later time instead. Thank you!

@@ -1,0 +1,19 @@
+#Ticket
+
+__metadata__
+Ticket ID: #bcb9e60e-fd7e-467c-8116-2ad2296e1140
+User Name: Sophia Martin
+ZIP Code: unknown
+Email: sophia.martin4832@example.com
+
+---
+
+__Content__
+
+Hi, I’m Sophia Martin and I’m reaching out about a couple of updates that need to happen for my orders.
+
+First, I recently moved to a new house on Elm Avenue in Houston. One of my orders was still shipped to my old address. I’d like to change that order’s shipping address to my new home address. Also, please update my default address on the account to the new address. I’m not comfortable sharing the exact address here, but I trust you can find it in my order history.
+
+Second, I would like to exchange the tablet I ordered for the cheapest available model. I’m moving and want to keep costs down, so a budget option would be great.
+
+Please handle the two address changes first, then process the tablet exchange. Thanks for your help!

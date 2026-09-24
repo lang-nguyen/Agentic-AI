@@ -1,0 +1,8 @@
+Hi, I’m Emma Kovacs (emma.kovacs2974@example.com).  
+I just bought a digital camera and I’d like to confirm whether it has a 10× zoom.  
+
+- If it does not have 10× zoom, please change the item to a 10× zoom model without altering any of the other options I selected.  
+- If a 10× zoom version is not available, I’d like to cancel the order because I no longer need it.  
+- If the 10× zoom option is available but its price is more than 3000, please cancel the order and note that I ordered by mistake.  
+
+Thank you!

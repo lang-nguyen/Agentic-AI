@@ -1,0 +1,159 @@
+{
+  "task_idx": 76,
+  "task": {
+    "user_id": "ava_nguyen_6646",
+    "annotator": "4",
+    "actions": [
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W8367380",
+          "reason": "ordered by mistake"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W1242543",
+          "reason": "no longer needed"
+        }
+      }
+    ],
+    "instruction": "You name is Ava Nguyen and your zip code is 94128. You are polite, optimistic, busy. You ordered a fleece jacket by mistake and want to remove it from your pending order. If removing one item is not possible, cancel the whole order. You also want to modify the skateboard to maple material, 34 inch, graphic. If not available, cancel the order so that you can order again. You also want to know the total prices for the grills you have paid for.",
+    "outputs": [
+      "1939.05"
+    ],
+    "prompt": "Hi, I’m Ava Nguyen, zip code 94128.\n\nI’m writing because I accidentally ordered a fleece jacket and would like to remove it from my pending order. If it’s not possible to remove just that item, I’d like to cancel the entire order instead.\n\nAlso, I’d like to change my skateboard to a maple model, 34 inches, with a graphic design. If that specific configuration isn’t available, please cancel the order so I can place a new one that meets my needs.\n\nLastly, could you let me know the total amount I’ve paid for the grills I’ve already purchased? Thank you so much for your help!"
+  },
+  "scores": {
+    "scores": {
+      "correct": 0,
+      "missing": 2,
+      "extra": 12,
+      "mismatch": 0
+    },
+    "correct": [],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W8367380",
+          "reason": "ordered by mistake"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W1242543",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Ava",
+          "last_name": "Nguyen",
+          "zip": "94128"
+        },
+        "id": "887979ec-fc1b-4a8e-b79e-365c317c1b3b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "ava_nguyen_6646"
+        },
+        "id": "148848f7-345b-4e0f-af00-11416d2ccc5d",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8367380"
+        },
+        "id": "102d1d7f-90dd-4176-8dc6-eb9c7bbe03c9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "ava_nguyen_6646"
+        },
+        "id": "41009e9f-c7af-4f83-be58-7221f42b9e8a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8367380"
+        },
+        "id": "0326b8e3-80fd-4a95-b016-7255afa69e87",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8668939"
+        },
+        "id": "c6209a82-91ee-431b-87ea-4cdfd552c8ef",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8668939"
+        },
+        "id": "adca2238-3345-4af3-a74d-cf6cc0fb19c6",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9892465"
+        },
+        "id": "78b7fb5e-47e9-45db-bca6-1b170fb9814a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W1242543"
+        },
+        "id": "3e6a0dfa-c969-4f11-85d4-08775321084a",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W6272294"
+        },
+        "id": "be834882-3b81-4387-b1f6-201e61a715b9",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9232383"
+        },
+        "id": "35e4e05b-00f5-49b9-b1c1-0c2f29196e57",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W8367380"
+        },
+        "id": "91cb279d-7ace-46c4-ba03-42e37f84b9cc",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e7003-87e5-7cf0-b19d-39696a9ad28e?poll=true"
+}

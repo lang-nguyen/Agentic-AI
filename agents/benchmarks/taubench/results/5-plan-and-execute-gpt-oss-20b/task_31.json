@@ -1,0 +1,211 @@
+{
+  "task_idx": 31,
+  "task": {
+    "user_id": "olivia_lopez_3865",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Olivia",
+          "last_name": "Lopez",
+          "zip": "76171"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "olivia_lopez_3865"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9319364"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9373487"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2692684"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5481803"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7449508"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9373487"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W9373487",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5481803"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7449508"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7449508",
+          "item_ids": [
+            "6477915553"
+          ],
+          "payment_method_id": "gift_card_7711863"
+        }
+      }
+    ],
+    "instruction": "You are Olivia Lopez, and you live in Texas in 76171. You just lost your tablet you just received and are in a bad mood. You want to know the tracking number of the order, and if the agent can help you refund or reorder the tablet. (You know it's a long shot, but you want to try). If not, cancel the charger you just bought, because it goes with the tablet... Also cancel the boot and keep the kettle (if not possible, do not do anything on that order), and return the sneaker. You like to do one thing at a time, and reveal minimal information about yourself.",
+    "outputs": [
+      "746342064230"
+    ],
+    "prompt": "Hi, I’m Olivia Lopez from Texas, 76171.\n\nI just received a tablet that I’ve lost and I’m feeling pretty frustrated. Could you give me the tracking number for that order? Also, is it possible to either refund or reorder the tablet? If that can’t be done, I’d like to cancel the charger I just bought since it’s meant for the tablet. In addition, please cancel the boot but keep the kettle—if that can’t be processed, just leave that order as is. Finally, I’d like to return the sneaker."
+  },
+  "scores": {
+    "scores": {
+      "correct": 7,
+      "missing": 5,
+      "extra": 0,
+      "mismatch": 0
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Olivia",
+          "last_name": "Lopez",
+          "zip": "76171"
+        },
+        "id": "f8efc80b-5497-486e-9897-6960707a28e2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "olivia_lopez_3865"
+        },
+        "id": "b7898553-5e6d-4b6d-a2a1-474c4662fe03",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9319364"
+        },
+        "id": "70761d45-1140-4e95-873b-9ce0424f6829",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9373487"
+        },
+        "id": "bc693ffa-e107-4dd9-815f-b751bca3c380",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2692684"
+        },
+        "id": "2a6dde04-8e34-43d3-a661-2108b57431bb",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5481803"
+        },
+        "id": "19f787f6-6bcc-4238-ab3e-fdecc21f70c2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7449508"
+        },
+        "id": "5b822aa0-be8b-4b36-90ce-dedadad7ef31",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9373487"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W9373487",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5481803"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7449508"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W7449508",
+          "item_ids": [
+            "6477915553"
+          ],
+          "payment_method_id": "gift_card_7711863"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [],
+    "mismatch": []
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fda-830d-79c2-97f0-35e621642780?poll=true"
+}

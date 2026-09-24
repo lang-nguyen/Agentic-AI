@@ -1,0 +1,29 @@
+#Ticket
+
+__metadata__
+Ticket ID: #3e7c999c-5258-4963-8a33-97d07891fa4f
+User Name: Yara Muller
+ZIP Code: unknown
+Email: yara.muller9246@example.com
+
+---
+
+__Content__
+
+Hi, I’m Yara Muller—quite organized, usually pessimistic, and feeling a bit sad about this— and I need help with a few order issues.
+
+1. For order **#W5056519** I’d like to change the shipping address to the same address used for order **#W8277957**.
+
+2. I also want to exchange the Makeup Kit in order **#W5056519**.  
+   Current kit:  
+   - Skin tone: light  
+   - Kit size: professional  
+   - Brand: Brand B  
+   Desired kit:  
+   - Skin tone: dark  
+   - Brand: Brand A  
+   (kit size can remain professional)
+
+3. Finally, please cancel order **#W5995614** because it was ordered by mistake.
+
+Let me know if you need any additional details or confirmation. Thanks for your help!

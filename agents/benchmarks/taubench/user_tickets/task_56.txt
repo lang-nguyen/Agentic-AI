@@ -1,0 +1,17 @@
+#Ticket
+
+__metadata__
+Ticket ID: #41e67b14-fb13-4e41-882a-932044224f16
+User Name: ivan_hernandez_6923  
+ZIP Code: 92133  
+Email: unknown  
+
+---
+
+__Content__
+
+Hi, I’m Ivan Hernandez (user id ivan_hernandez_6923) from San Diego, 92133.  
+
+Could you please tell me when my air purifier is scheduled to arrive? If it hasn’t shipped yet, I’d like to cancel that item. If a standalone cancellation isn’t possible, I’d like the air purifier changed to the cheapest available model and the amount refunded to my gift card on file. If neither a cancellation nor a refund to the gift card can be processed, I will accept no further action.
+
+Thank you.

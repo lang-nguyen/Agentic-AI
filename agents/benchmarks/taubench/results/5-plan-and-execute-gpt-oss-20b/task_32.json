@@ -1,0 +1,267 @@
+{
+  "task_idx": 32,
+  "task": {
+    "user_id": "olivia_lopez_3865",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "kwargs": {
+          "first_name": "Olivia",
+          "last_name": "Lopez",
+          "zip": "76171"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "olivia_lopez_3865"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9319364"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9373487"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W2692684"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5481803"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7449508"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W9373487"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W9373487",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5481803"
+        }
+      },
+      {
+        "name": "cancel_pending_order",
+        "kwargs": {
+          "order_id": "#W5481803",
+          "reason": "no longer needed"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7449508"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7449508",
+          "item_ids": [
+            "6477915553"
+          ],
+          "payment_method_id": "gift_card_7711863"
+        }
+      }
+    ],
+    "instruction": "You are Olivia Lopez, and you live in Texas in 76171. You just lost your tablet you just received and are in a bad mood. You want to know the tracking number of the order, and if the agent can help you refund or reorder the tablet. (You know it's a long shot, but you want to try). If not, cancel the charger you just bought, because it goes with the tablet... Also cancel the boot and kettle, and return the sneaker. You like to do one thing at a time, and reveal minimal information about yourself.",
+    "outputs": [
+      "746342064230"
+    ],
+    "prompt": "Hi, I’m Olivia Lopez from Texas, 76171. I just received a tablet, but unfortunately I lost it. Could you please give me the tracking number for that order? If it’s possible, I’d like a refund or a replacement for the tablet. If a refund or reorder can’t be arranged, I’d also like to cancel the charger I just bought (since it’s meant to go with the tablet). In addition, please cancel the boot and kettle I ordered, and return the sneaker. I’d appreciate if we could handle each of these steps one at a time. Thank you."
+  },
+  "scores": {
+    "scores": {
+      "correct": 7,
+      "missing": 3,
+      "extra": 1,
+      "mismatch": 3
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_name_zip",
+        "args": {
+          "first_name": "Olivia",
+          "last_name": "Lopez",
+          "zip": "76171"
+        },
+        "id": "9281a244-ef92-422b-8165-9051953c4ff4",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "olivia_lopez_3865"
+        },
+        "id": "dce5257b-bd3f-4d6c-b10f-89ec364ec45b",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9319364"
+        },
+        "id": "0ac0604d-119a-4253-b1f1-dc57e02369ce",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W9373487"
+        },
+        "id": "625e3dbc-0ae6-4ca7-8dbe-58e37fa1aed2",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2692684"
+        },
+        "id": "2d7fad93-a9cf-406f-814f-9266c8992c12",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5481803"
+        },
+        "id": "ea455f97-f4b6-4b86-85d7-435add7d72f5",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7449508"
+        },
+        "id": "3622b316-3e56-43e3-83bc-b9353ea65d89",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W9373487",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "cancel_pending_order",
+        "args": {
+          "order_id": "#W5481803",
+          "reason": "no longer needed"
+        },
+        "id": null,
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W7449508",
+          "item_ids": [
+            "6477915553"
+          ],
+          "payment_method_id": "gift_card_7711863"
+        },
+        "id": null,
+        "type": "tool_call"
+      }
+    ],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W2692684"
+        },
+        "id": "f1f06c05-13fe-4d00-923b-940cc29b0bc7",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W2692684"
+          },
+          "id": "f1f06c05-13fe-4d00-923b-940cc29b0bc7",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W9373487"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W2692684"
+          },
+          "id": "f1f06c05-13fe-4d00-923b-940cc29b0bc7",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W5481803"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W2692684"
+          },
+          "id": "f1f06c05-13fe-4d00-923b-940cc29b0bc7",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "get_order_details",
+          "args": {
+            "order_id": "#W7449508"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fdb-10f8-7e61-aa31-3d4d9d746bc9?poll=true"
+}

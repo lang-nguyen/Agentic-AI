@@ -1,0 +1,13 @@
+#Ticket
+
+__metadata__
+Ticket ID: #934d268b-0b6e-47ef-9345-482c6234d95b
+User Name: Ivan Johnson
+ZIP Code: 94183
+Email: unknown
+
+---
+
+__Content__
+
+Hi, I’m Ivan Johnson and I recently ordered a perfume from your store. I tried a small amount and I love it! I’d like to upgrade to the maximum size you have available. If you’re unable to place a new order for that size, I’d appreciate it if you could exchange my current purchase for the largest size in stock. Let me know what steps I need to take.

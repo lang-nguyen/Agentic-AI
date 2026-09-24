@@ -1,0 +1,199 @@
+{
+  "task_idx": 11,
+  "task": {
+    "user_id": "mia_garcia_4516",
+    "annotator": "0",
+    "actions": [
+      {
+        "name": "find_user_id_by_email",
+        "kwargs": {
+          "email": "mia.garcia2723@example.com"
+        }
+      },
+      {
+        "name": "get_user_details",
+        "kwargs": {
+          "user_id": "mia_garcia_4516"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W5490111"
+        }
+      },
+      {
+        "name": "get_order_details",
+        "kwargs": {
+          "order_id": "#W7387996"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "1421289881",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "credit_card_3124723"
+        }
+      },
+      {
+        "name": "return_delivered_order_items",
+        "kwargs": {
+          "order_id": "#W7387996",
+          "item_ids": [
+            "5796612084"
+          ],
+          "payment_method_id": "paypal_9497703"
+        }
+      }
+    ],
+    "instruction": "You are mia_garcia_4516 (mia.garcia2723@example.com). For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the opposite order's payment method. If not possible, you are angry and swear for a few times, then agree to return all things with the original payment method. You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",
+    "outputs": [],
+    "prompt": "Hi, I’m Mia Garcia (mia_garcia_4516, mia.garcia2723@example.com).  \nI need to return everything I ordered. I have two orders and two payment methods, and I’d like each order refunded to the other payment method. If that can’t be done, I’m angry—fuck it, damn it, whatever—and will just return all items with the original payment method."
+  },
+  "scores": {
+    "scores": {
+      "correct": 4,
+      "missing": 0,
+      "extra": 3,
+      "mismatch": 2
+    },
+    "correct": [
+      {
+        "name": "find_user_id_by_email",
+        "args": {
+          "email": "mia.garcia2723@example.com"
+        },
+        "id": "d20e7dbe-4859-4c9d-b2be-265ca7380731",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_user_details",
+        "args": {
+          "user_id": "mia_garcia_4516"
+        },
+        "id": "026cb421-c768-47a9-80d7-f6bfe1d9a5ba",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": "7dae4b61-20a1-43cd-bee6-1b6cf96055e7",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": "5e9cb503-64c0-448f-a12f-8c1ad4c86e7a",
+        "type": "tool_call"
+      }
+    ],
+    "missing": [],
+    "extra": [
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W5490111"
+        },
+        "id": "5fd55b78-db4d-4015-a0fb-e2982f3c47d8",
+        "type": "tool_call"
+      },
+      {
+        "name": "get_order_details",
+        "args": {
+          "order_id": "#W7387996"
+        },
+        "id": "41022dc5-17cc-43b8-b7dd-19af5a247d8f",
+        "type": "tool_call"
+      },
+      {
+        "name": "return_delivered_order_items",
+        "args": {
+          "order_id": "#W5490111",
+          "item_ids": [
+            "4579334072",
+            "1421289881",
+            "6117189161",
+            "4947717507"
+          ],
+          "payment_method_id": "paypal_9497703"
+        },
+        "id": "f122a6e7-3a9a-4894-9b8c-dba30489370b",
+        "type": "tool_call"
+      }
+    ],
+    "mismatch": [
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "1421289881",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "id": "f122a6e7-3a9a-4894-9b8c-dba30489370b",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "1421289881",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "credit_card_3124723"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      },
+      {
+        "pred": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W5490111",
+            "item_ids": [
+              "4579334072",
+              "1421289881",
+              "6117189161",
+              "4947717507"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "id": "f122a6e7-3a9a-4894-9b8c-dba30489370b",
+          "type": "tool_call"
+        },
+        "true": {
+          "name": "return_delivered_order_items",
+          "args": {
+            "order_id": "#W7387996",
+            "item_ids": [
+              "5796612084"
+            ],
+            "payment_method_id": "paypal_9497703"
+          },
+          "id": null,
+          "type": "tool_call"
+        }
+      }
+    ]
+  },
+  "trace_url": "https://smith.langchain.com/o/b64b3846-9cc2-4137-ad53-8f4735598f0b/projects/p/815a58a0-4de2-454a-a718-485cee4da859/r/019e6fc0-cbbd-7a90-9eeb-a69bbdfb508e?poll=true"
+}
