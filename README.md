@@ -4,6 +4,9 @@
 
 **LKStore** is a full-stack e-commerce platform with an integrated **Agentic AI** system that autonomously handles return/exchange requests using a multi-step reasoning workflow (ReAct pattern).
 
+<img width="1897" height="907" alt="image" src="https://github.com/user-attachments/assets/dbb98449-96c4-4551-883b-9bd4c4f27e74" />
+
+
 ## Architecture
 
 ```
