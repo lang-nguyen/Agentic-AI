@@ -1,8 +1,8 @@
-# LKStore — E-Commerce & Agentic AI System
+# LakiShop — E-Commerce & Agentic AI System
 
 ![Java](https://img.shields.io/badge/Java-17+-orange?logo=openjdk) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?logo=springboot) ![MongoDB](https://img.shields.io/badge/MongoDB-7.x-brightgreen?logo=mongodb) ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-agentic-purple) ![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
 
-**LKStore** is a full-stack e-commerce platform with an integrated **Agentic AI** system that autonomously handles return/exchange requests using a multi-step reasoning workflow (ReAct pattern).
+**LakiShop** is a full-stack e-commerce platform with an integrated **Agentic AI** system that autonomously handles return/exchange requests using a multi-step reasoning workflow (ReAct pattern).
 
 <img width="1897" height="907" alt="image" src="https://github.com/user-attachments/assets/dbb98449-96c4-4551-883b-9bd4c4f27e74" />
 
